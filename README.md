@@ -26,9 +26,3 @@ rm -rf ./build
 ```
 TBD
 ```
-
-Probot
-
-Informations
-
-informaions
