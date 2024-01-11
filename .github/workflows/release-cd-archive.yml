@@ -11,6 +11,7 @@ jobs:
       run: |
         mkdir -p ./build/nolte-styles
         cp -R src/* ./build/nolte-styles/
+        cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
 
     - uses: vimtor/action-zip@v1.1
       with:
