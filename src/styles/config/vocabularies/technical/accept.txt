@@ -1,7 +1,7 @@
+[Pp]robot
 Ansible
 asdf
-mkdocs
-Probot
-zsh
-Taskfile
 dotfile
+mkdocs
+Taskfile
+zsh
