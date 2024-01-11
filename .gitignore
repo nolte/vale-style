@@ -1,4 +1,6 @@
 site
 
-.github/styles/*
-!.github/styles/config/
+build
+
+styles/Microsoft
+styles/RedHat
