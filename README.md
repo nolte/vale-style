@@ -20,9 +20,45 @@ zip -r nolte-style.zip nolte-style
 rm -rf ./build
 ```
 
+will be create a archive like
+
+```sh
+.
+├── nolte-style
+│   └── styles
+│       ├── config
+│       │   └── vocabularies
+│       │       └── technical
+│       │           └── accept.txt
+│       └── nolte-style
+│           └── .keep
+└── tree.txt
+
+6 directories, 3 files
+```
+
 
 ## Usage
 
+Add the Latest release as Package Dependency
+
 ```
-TBD
+...
+
+Packages =  https://github.com/nolte/vale-style/releases/download/v0.1.0/nolte-styles.zip
+
+
+Vocab = "technical"
+
+[*.md]
+BasedOnStyles =  Vale
+
+```
+
+```
+vale sync
+```
+
+```
+vale .
 ```
