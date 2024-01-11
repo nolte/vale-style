@@ -9,6 +9,53 @@
 [Vale](https://github.com/errata-ai/vale) Package, for share spelling style and vocabularies between different Projects.
 <!--intro-end-->
 
+Sharing a release archive with a structure like:
+
+<!--archive-structure-start-->
+```sh
+.
+└── nolte-style
+    ├── styles
+    │   ├── config
+    │   │   └── vocabularies
+    │   │       └── technical
+    │   │           └── accept.txt
+    │   └── nolte-style
+    │       └── .keep
+    └── .vale.ini
+
+6 directories, 3 files
+```
+<!--archive-structure-end-->
+
+## Usage
+
+<!--usage-start-->
+Add the Latest release as Package Dependency
+
+```ini
+...
+
+Packages =  https://github.com/nolte/vale-style/releases/download/v0.1.3/nolte-styles.zip
+
+
+Vocab = "technical"
+
+[*.md]
+BasedOnStyles =  Vale
+
+```
+*(latest release are [![GitHub LatestRelease](https://img.shields.io/github/release/nolte/vale-style.svg)](https://GitHub.com/nolte/vale-style) )*
+
+
+```sh
+vale sync
+```
+
+```sh
+vale .
+```
+<!--usage-end-->
 
 ## Develop
 
@@ -18,47 +65,4 @@ cp -R src/* ./build/nolte-style/
 cd ./build/
 zip -r nolte-style.zip nolte-style
 rm -rf ./build
-```
-
-will be create a archive like
-
-```sh
-.
-├── nolte-style
-│   └── styles
-│       ├── config
-│       │   └── vocabularies
-│       │       └── technical
-│       │           └── accept.txt
-│       └── nolte-style
-│           └── .keep
-└── tree.txt
-
-6 directories, 3 files
-```
-
-
-## Usage
-
-Add the Latest release as Package Dependency
-
-```
-...
-
-Packages =  https://github.com/nolte/vale-style/releases/download/v0.1.0/nolte-styles.zip
-
-
-Vocab = "technical"
-
-[*.md]
-BasedOnStyles =  Vale
-
-```
-
-```
-vale sync
-```
-
-```
-vale .
 ```
