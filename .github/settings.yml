@@ -1,0 +1,10 @@
+---
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+_extends: gh-plumbing:.github/commons-settings.yml
+
+repository:
+  name: vale-style
+  description: Collection of Reusable vale-style
+  homepage: https://nolte.github.io/vale-style
+  topics: vale
