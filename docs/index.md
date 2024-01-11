@@ -1,4 +1,4 @@
-# vale-style
+# Vale style
 
 {%
    include-markdown "../README.md"

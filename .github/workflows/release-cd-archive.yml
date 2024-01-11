@@ -1,0 +1,26 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Copy the Readmes
+      run: |
+        mkdir -p ./build/nolte-styles
+        cp -R src/* ./build/nolte-styles/
+
+    - uses: vimtor/action-zip@v1.1
+      with:
+        files: ./build/
+        dest: nolte-styles.zip
+        recursive: true
+
+    - name: Upload Release
+      uses: ncipollo/release-action@v1.13.0
+      with:
+          artifacts: "nolte-styles.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
