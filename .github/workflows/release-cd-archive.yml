@@ -20,7 +20,7 @@ jobs:
         recursive: true
 
     - name: Upload Release
-      uses: ncipollo/release-action@v1.14.0
+      uses: ncipollo/release-action@v1.20.0
       with:
           artifacts: "nolte-styles.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
