@@ -4,5 +4,6 @@ asdf
 dotfile
 ESPHome
 mkdocs
+Ulanzi
 Taskfile
 zsh
