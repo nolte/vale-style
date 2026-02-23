@@ -7,3 +7,4 @@ mkdocs
 Ulanzi
 Taskfile
 zsh
+untrusted
