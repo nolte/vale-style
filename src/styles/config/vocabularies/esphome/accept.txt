@@ -1,9 +1,14 @@
+automations
+Datetime
+[hH]ostnames?
+LEDs?
 Gosund
 SP111
 ESP8285
 HLW8012
 ESPHome
 GPIO
+gipo
 GPIO00
 GPIO02
 GPIO04
