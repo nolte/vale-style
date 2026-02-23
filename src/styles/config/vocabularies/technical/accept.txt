@@ -7,3 +7,5 @@ mkdocs
 Ulanzi
 Taskfile
 zsh
+untrusted
+env
