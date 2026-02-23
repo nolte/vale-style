@@ -8,3 +8,4 @@ Ulanzi
 Taskfile
 zsh
 untrusted
+env
