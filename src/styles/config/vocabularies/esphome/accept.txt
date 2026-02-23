@@ -1,6 +1,7 @@
 automations
 Datetime
 [hH]ostnames?
+dBm
 LEDs?
 Gosund
 SP111
