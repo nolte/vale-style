@@ -4,6 +4,10 @@ theme:
 docs_dir: docs/
 repo_name: 'nolte/vale-style'
 repo_url: 'https://github.com/nolte/vale-style'
+nav:
+  - Overview: index.md
+  - Vocabularies: vocabularies.md
+  - Contributing: contributing.md
 plugins:
   - include-markdown
 markdown_extensions:
