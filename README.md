@@ -6,63 +6,80 @@
 
 
 <!--intro-start-->
-[Vale](https://github.com/errata-ai/vale) Package, for share spelling style and vocabularies between different Projects.
+[Vale](https://github.com/errata-ai/vale) package for sharing spelling rules and vocabularies across projects. Ship one zip, consume it everywhere.
 <!--intro-end-->
 
-Sharing a release archive with a structure like:
-
 <!--archive-structure-start-->
+The release archive `nolte-styles.zip` unpacks to:
+
 ```sh
 .
-└── nolte-style
+└── nolte-styles
     ├── styles
-    │   ├── config
-    │   │   └── vocabularies
-    │   │       └── technical
-    │   │           └── accept.txt
-    │   └── nolte-style
-    │       └── .keep
+    │   ├── config
+    │   │   └── vocabularies
+    │   │       ├── esphome
+    │   │       │   └── accept.txt
+    │   │       └── technical
+    │   │           └── accept.txt
+    │   └── nolte-styles
+    │       └── .keep
     └── .vale.ini
-
-6 directories, 3 files
 ```
 <!--archive-structure-end-->
 
 ## Usage
 
 <!--usage-start-->
-Add the Latest release as Package Dependency
+Add the package to your project's `.vale.ini`. The `releases/latest` URL always points at the newest release, so you do not need to bump it manually:
 
 ```ini
-...
+StylesPath = styles
 
-Packages =  https://github.com/nolte/vale-style/releases/download/v0.1.3/nolte-styles.zip
+Packages = https://github.com/nolte/vale-style/releases/latest/download/nolte-styles.zip
 
-
-Vocab = "technical"
+Vocab = technical
 
 [*.md]
-BasedOnStyles =  Vale
-
+BasedOnStyles = Vale, nolte-styles
 ```
-*(latest release are [![GitHub LatestRelease](https://img.shields.io/github/release/nolte/vale-style.svg)](https://GitHub.com/nolte/vale-style) )*
 
+Pin a specific version if you prefer reproducible builds — the current tag is shown by the badge [![GitHub LatestRelease](https://img.shields.io/github/release/nolte/vale-style.svg)](https://GitHub.com/nolte/vale-style):
+
+```ini
+Packages = https://github.com/nolte/vale-style/releases/download/v0.1.7/nolte-styles.zip
+```
+
+Then sync and lint:
 
 ```sh
 vale sync
-```
-
-```sh
 vale .
 ```
 <!--usage-end-->
 
-## Develop
+## Available vocabularies
 
+- `technical` — general cross-project terminology and software-engineering vocabulary (Ansible, ESPHome, MkDocs, CI, PRs, Dockerfiles, runbooks, dogfooding, …)
+- `esphome` — ESPHome-specific hardware, pins, and YAML keys (GPIO, baud_rate, restore_from_flash, …)
+
+Activate additional vocabularies by listing them in `Vocab` — either comma-separated or via multiple lines in `.vale.ini`. See the [vocabularies docs](https://nolte.github.io/vale-style/vocabularies/) for the full list and contribution rules.
+
+## Build the archive locally
+
+```sh
+mkdir -p ./build/nolte-styles
+cp -R src/* ./build/nolte-styles/
+cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+(cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
-mkdir -p ./build/nolte-style
-cp -R src/* ./build/nolte-style/
-cd ./build/
-zip -r nolte-style.zip nolte-style
-rm -rf ./build
-```
+
+The second `cp` is required: `cp -R src/*` does not include the leading-dot `.vale.ini`. The release workflow (`.github/workflows/release-cd-archive.yml`) does the same two copies.
+
+## Specifications
+
+Curation rules for the vocabularies and for the `nolte-styles` placeholder style live under [`spec/`](spec/). The canonical language is English; every spec ships an EN and a DE version that must stay structurally in sync. Start with [`spec/README.md`](spec/README.md) for the index.
+
+## Releases
+
+Publishing a GitHub Release triggers the archive workflow, which attaches `nolte-styles.zip` to the release. Version bumps happen by cutting a release — there is no version file to edit.

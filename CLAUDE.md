@@ -9,20 +9,38 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 ## Layout that matters
 
 - `src/.vale.ini` — the `.vale.ini` that ships *inside* the zip. `StylesPath = styles` and `Vocab = technical` are resolved relative to the consumer's unpacked package, not this repo.
-- `/.vale.ini` (repo root) — only used when linting `*.md` in this repo itself; points at `.github/styles` (currently empty).
+- `/.vale.ini` (repo root) — dogfoods the shipped assets: `StylesPath = src/styles`, `Vocab = technical, esphome`. `task test` (`vale .`) lints this repo's own Markdown through the same vocabularies consumers get from the zip. Scope blocks exempt `CLAUDE.md`, `spec/README.md`, and `spec/**/de.md` from `Vale.Spelling`.
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Pp]robot` or `LEDs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
 
+## Task entry points
+
+`Taskfile.yml` wraps the canonical local commands:
+
+- `task lint` — pre-commit across the tree
+- `task test` — `vale .` against this repo's own Markdown
+- `task docs` — `mkdocs build --strict`
+- `task docs:serve` — live-reload MkDocs preview
+- `task build` — stages `src/` into `./build/nolte-styles/` and zips it
+
+Prefer the Taskfile targets over the raw commands; CI and local runs stay in sync that way.
+
 ## Build the archive locally
+
+`task build` is the shorthand. Raw form for reference (matches `.github/workflows/release-cd-archive.yml`):
 
 ```sh
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
 cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
-cd ./build && zip -r nolte-styles.zip nolte-styles
+(cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
-Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles, and the README's shorter snippet is incomplete for producing a valid package. The release workflow (`.github/workflows/release-cd-archive.yml`) does both copies.
+Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards.
+
+## Specs live under `spec/`
+
+Engineering specs — scope rules for vocabularies, curation process, acceptance criteria — live under `spec/<slug>/<lang>.md` with EN as canonical and DE as translation. Start at `spec/README.md` for the current index. When you change behaviour that a spec describes, update the canonical EN version and keep translations structurally in sync (same headings, same requirement bullets).
 
 ## Docs site
 
@@ -35,7 +53,7 @@ mkdocs serve
 
 ## CI and release flow
 
-All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (pinned to `v1.1.12`, except `spelling.yaml` which tracks `develop`):
+All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (all pinned to `v1.1.12`):
 
 - `build-static-tests.yaml` — pre-commit, Trivy, chain-bench on every push.
 - `spelling.yaml` — runs Vale against the PR using this package's own vocab.

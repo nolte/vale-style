@@ -1,0 +1,31 @@
+version: '3'
+
+tasks:
+  lint:
+    desc: Run pre-commit hooks across the repository
+    cmds:
+      - pre-commit run --all-files
+
+  test:
+    desc: Lint this repo's Markdown with the shipped vocabularies
+    cmds:
+      - vale .
+
+  docs:
+    desc: Build the MkDocs site in strict mode
+    cmds:
+      - mkdocs build --strict
+
+  docs:serve:
+    desc: Serve the MkDocs site locally with live reload
+    cmds:
+      - mkdocs serve
+
+  build:
+    desc: Build the nolte-styles.zip release artefact
+    cmds:
+      - rm -rf ./build/nolte-styles
+      - mkdir -p ./build/nolte-styles
+      - cp -R src/* ./build/nolte-styles/
+      - cp src/.vale.ini ./build/nolte-styles/.vale.ini
+      - (cd ./build && zip -r nolte-styles.zip nolte-styles)
