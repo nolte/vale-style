@@ -60,9 +60,8 @@ vale .
 
 ## Available vocabularies
 
-- `technical` — general cross-project terminology (Ansible, ESPHome, MkDocs, zsh, …)
+- `technical` — general cross-project terminology and software-engineering vocabulary (Ansible, ESPHome, MkDocs, CI, PRs, Dockerfiles, runbooks, dogfooding, …)
 - `esphome` — ESPHome-specific hardware, pins, and YAML keys (GPIO, baud_rate, restore_from_flash, …)
-- `claude-shared` — software-engineering and Claude-related terminology (CI, PRs, namespaces, dogfooding, runbooks, …)
 
 Activate additional vocabularies by listing them in `Vocab` — either comma-separated or via multiple lines in `.vale.ini`. See the [vocabularies docs](https://nolte.github.io/vale-style/vocabularies/) for the full list and contribution rules.
 

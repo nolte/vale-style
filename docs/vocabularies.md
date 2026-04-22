@@ -10,21 +10,18 @@ Vale loads each listed group from `styles/config/vocabularies/<name>/accept.txt`
 
 ## `technical`
 
-General-purpose terminology that shows up across mixed-stack projects — Ansible, ESPHome, MkDocs, Taskfile, zsh, and similar tool names; plus a handful of words that plain English dictionaries flag as typos (`dotfile`, `untrusted`, `env`).
+The default vocabulary for most repos. Covers four loose families:
 
-Use this as the default vocabulary for most repos.
+- **Tool and product names** — `Ansible`, `ESPHome`, `MkDocs`, `Taskfile`, `Renovate`, `Trivy`, `Probot`, `gh-plumbing`, `Claude`, `zsh`, `asdf`, `nolte`, `Ulanzi`.
+- **Software-engineering and CI/CD terms** — `CI`, `CLIs`, `PRs`, `MRs`, `Dockerfiles`, `docstrings`, `frontmatter`, `runbooks`, `hotfixes`, `automerge`, `rebase`, `rebasing`, `cron`, `formatters`.
+- **Naming, lifecycle, and workflow words** — `namespace`, `namespaced`, `dogfooding`, `onboarding`, `rollout`, `vendoring`, `toolchain`, `subprojects`, `subfolders`, `triages`, `routable`, `dispatchable`, `invocable`, `auditable`, `browsable`, `overridable`, `operationalize`.
+- **Words plain English dictionaries flag as typos** — `dotfile`, `untrusted`, `env`, `config`, `repo`, `gitignored`, `untracked`, `unversioned`, `lowercased`, `deduplicated`, `stylers`, `READMEs`, `PDFs`, `NFRs`.
 
 ## `esphome`
 
 ESPHome-specific terms: hardware identifiers (`ESP8285`, `HLW8012`, `SP111`), GPIO pin names (`GPIO00`–`GPIO15`), YAML config keys (`baud_rate`, `status_led`, `restore_mode`, `restore_from_flash`, `early_pin_init`, `turn_on_action`, `turn_off_action`), and related domain words (`automations`, `Datetime`, `dBm`).
 
 Activate it additionally to `technical` when your docs cover ESPHome device configuration.
-
-## `claude-shared`
-
-Software-engineering and workflow terminology that comes up in Claude Code, agent, and shared-tooling repos: CI/CD vocabulary (`CI`, `PR`, `MRs`, `automerge`, `hotfix`, `Renovate`), code/docs nouns (`docstring`, `frontmatter`, `Dockerfile`, `runbook`, `subproject`), naming/lifecycle words (`namespace`, `namespaced`, `dogfooding`, `onboarding`, `rollout`), and proper nouns like `Claude`, `Probot`, `Taskfile`, `gh-plumbing`.
-
-Activate it whenever you write docs about repository workflow, agent design, or shared developer tooling.
 
 ## How entries are matched
 
