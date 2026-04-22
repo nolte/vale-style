@@ -20,7 +20,6 @@ GPIO14
 GPIO15
 NOUS
 A1T
-YAML
 baud_rate
 status_led
 restore_mode
