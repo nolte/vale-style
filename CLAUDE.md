@@ -9,7 +9,7 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 ## Layout that matters
 
 - `src/.vale.ini` — the `.vale.ini` that ships *inside* the zip. `StylesPath = styles` and `Vocab = technical` are resolved relative to the consumer's unpacked package, not this repo.
-- `/.vale.ini` (repo root) — only used when linting `*.md` in this repo itself; points at `.github/styles` (currently empty).
+- `/.vale.ini` (repo root) — dogfoods the shipped assets: `StylesPath = src/styles`, `Vocab = technical, esphome`. `task test` (`vale .`) lints this repo's own Markdown through the same vocabularies consumers get from the zip. Scope blocks exempt `CLAUDE.md`, `spec/README.md`, and `spec/**/de.md` from `Vale.Spelling`.
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Pp]robot` or `LEDs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
 
