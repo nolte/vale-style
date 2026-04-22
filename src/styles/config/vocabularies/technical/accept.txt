@@ -12,7 +12,7 @@ deduplicated
 dispatchable
 Dockerfiles?
 docstrings?
-[Dd]ogfooding
+[Dd]ogfood(ing|s)?
 [Dd]otfiles?
 env
 ESPHome
@@ -54,4 +54,5 @@ untracked
 untrusted
 unversioned
 vendoring
+YAMLs?
 zsh

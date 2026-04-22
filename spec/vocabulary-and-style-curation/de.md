@@ -6,7 +6,7 @@ Status: Entwurf
 
 Dieses Repository erzeugt genau ein Artefakt, `nolte-styles.zip`, das nachgelagerte Projekte als Vale-`Packages`-Eintrag konsumieren. Jede Änderung an einem Vocabulary oder Style wirkt sich beim nächsten Release auf jedes konsumierende Repo aus. Ohne dokumentierten Pflegeprozess treten drei wiederkehrende Probleme auf:
 
-- Einträge sammeln sich ad hoc, überschneiden sich zwischen Gruppen oder überdecken echte Tippfehler, die Vale melden sollte.
+- Einträge sammeln sich stückweise, überschneiden sich zwischen Gruppen oder überdecken echte Tippfehler, die Vale melden sollte.
 - Die Vocabulary-Gruppen auf der Platte driften gegen die Beschreibung in `README.md` und `docs/vocabularies.md` — so geschehen, als `claude-shared` in der Doku auftauchte, obwohl es bereits wieder in `technical` aufgegangen war.
 - Das Verzeichnis `src/styles/nolte-styles/` ist über `BasedOnStyles` bereits eingebunden, enthält aber nur eine `.keep`-Datei; unklar bleibt, unter welchen Bedingungen die erste echte Regel dort landen darf.
 

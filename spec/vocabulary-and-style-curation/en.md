@@ -6,7 +6,7 @@ Status: draft
 
 This repository produces a single artefact, `nolte-styles.zip`, that downstream projects consume as a Vale `Packages` entry. Any change to a vocabulary or style therefore propagates to every consuming repo on the next release. Without a written curation process, three recurring problems appear:
 
-- Entries accumulate ad hoc, duplicate across groups, or mask legitimate typos that Vale should flag.
+- Entries accumulate piecemeal, duplicate across groups, or mask legitimate typos that Vale should flag.
 - The on-disk vocabulary groups drift away from how `README.md` and `docs/vocabularies.md` describe them — as happened when `claude-shared` was referenced in docs after it had been folded back into `technical`.
 - The `src/styles/nolte-styles/` directory is wired into `BasedOnStyles` but holds only a `.keep` file, so it is unclear under which conditions the first real rule can land.
 
