@@ -19,10 +19,14 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
 cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
-cd ./build && zip -r nolte-styles.zip nolte-styles
+(cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
-Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles, and the README's shorter snippet is incomplete for producing a valid package. The release workflow (`.github/workflows/release-cd-archive.yml`) does both copies.
+Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards. The release workflow (`.github/workflows/release-cd-archive.yml`) does both copies.
+
+## Specs live under `spec/`
+
+Engineering specs — scope rules for vocabularies, curation process, acceptance criteria — live under `spec/<slug>/<lang>.md` with EN as canonical and DE as translation. Start at `spec/README.md` for the current index. When you change behaviour that a spec describes, update the canonical EN version and keep translations structurally in sync (same headings, same requirement bullets).
 
 ## Docs site
 

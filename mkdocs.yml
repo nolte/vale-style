@@ -8,6 +8,7 @@ nav:
   - Overview: index.md
   - Vocabularies: vocabularies.md
   - Contributing: contributing.md
+  - Specifications: specifications.md
 plugins:
   - include-markdown
 markdown_extensions:

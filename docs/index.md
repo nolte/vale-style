@@ -26,3 +26,4 @@
 
 - [Vocabularies](vocabularies.md) — what ships in each group and how `accept.txt` regex matching works.
 - [Contributing](contributing.md) — add terms, test locally, cut a release.
+- [Specifications](specifications.md) — the curation spec every change in this repo conforms to.

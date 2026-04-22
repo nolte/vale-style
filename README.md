@@ -76,6 +76,10 @@ cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
 
 The second `cp` is required: `cp -R src/*` does not include the leading-dot `.vale.ini`. The release workflow (`.github/workflows/release-cd-archive.yml`) does the same two copies.
 
+## Specifications
+
+Curation rules for the vocabularies and for the `nolte-styles` placeholder style live under [`spec/`](spec/). The canonical language is English; every spec ships an EN and a DE version that must stay structurally in sync. Start with [`spec/README.md`](spec/README.md) for the index.
+
 ## Releases
 
 Publishing a GitHub Release triggers the archive workflow, which attaches `nolte-styles.zip` to the release. Version bumps happen by cutting a release — there is no version file to edit.
