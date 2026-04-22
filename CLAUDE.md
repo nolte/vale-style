@@ -13,7 +13,21 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Pp]robot` or `LEDs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
 
+## Task entry points
+
+`Taskfile.yml` wraps the canonical local commands:
+
+- `task lint` — pre-commit across the tree
+- `task test` — `vale .` against this repo's own Markdown
+- `task docs` — `mkdocs build --strict`
+- `task docs:serve` — live-reload MkDocs preview
+- `task build` — stages `src/` into `./build/nolte-styles/` and zips it
+
+Prefer the Taskfile targets over the raw commands; CI and local runs stay in sync that way.
+
 ## Build the archive locally
+
+`task build` is the shorthand. Raw form for reference (matches `.github/workflows/release-cd-archive.yml`):
 
 ```sh
 mkdir -p ./build/nolte-styles
@@ -22,7 +36,7 @@ cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
-Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards. The release workflow (`.github/workflows/release-cd-archive.yml`) does both copies.
+Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards.
 
 ## Specs live under `spec/`
 
@@ -39,7 +53,7 @@ mkdocs serve
 
 ## CI and release flow
 
-All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (pinned to `v1.1.12`, except `spelling.yaml` which tracks `develop`):
+All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (all pinned to `v1.1.12`):
 
 - `build-static-tests.yaml` — pre-commit, Trivy, chain-bench on every push.
 - `spelling.yaml` — runs Vale against the PR using this package's own vocab.
