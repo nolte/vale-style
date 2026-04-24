@@ -9,13 +9,13 @@ auditable
 [Aa]utoload(s|ed|ing)?
 [Aa]utolink(s|ed|ing)?
 [Aa]utomatable
-[Aa]utomerge
+automerge
 [Bb]ackend
 basename
 browsable
 [Cc]allouts
-[Cc][Ii]
-[Cc]laude
+CI
+Claude
 CLIs?
 [Cc]onfigs?
 cron
@@ -23,7 +23,7 @@ CTAs
 CVEs?
 dedup
 deduplicate[ds]?
-[Dd]ependabot
+Dependabot
 dispatchable
 Dockerfiles?
 docstrings?
@@ -50,11 +50,11 @@ MkDocs
 [Mm]onorepos?
 MRs
 MUSTs
-[Mm]ypy
+mypy
 [Nn]amespaced?
 NFRs
 nolte
-[Nn]pm
+npm
 onboarding
 [Oo]perationali[sz]e[ds]?
 OQs?
@@ -62,8 +62,8 @@ OQs?
 [Pp]arseable
 PDFs
 PRs?
-[Pp]robot
-pyright
+Probot
+[Pp]yright
 PYSECs?
 READMEs?
 rebase
@@ -76,7 +76,7 @@ Renovate
 rollout
 [Rr]outable
 runbooks?
-[Ss]emver
+SemVer
 severities
 SHAs
 SHOULDs
@@ -103,6 +103,6 @@ unversioned
 [Uu]pgraders?
 [Uu]pstreamed
 vendoring
-[Vv]itest
+Vitest
 YAMLs?
 zsh

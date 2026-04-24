@@ -32,7 +32,9 @@ Diese Spec definiert den Pflegeprozess, damit das ausgelieferte Paket über alle
 - **MUSS [MUST]**
   - Jede Vocabulary-Gruppe MUSS unter `src/styles/config/vocabularies/<gruppe>/accept.txt` liegen, ein Eintrag pro Zeile.
   - Jeder Eintrag MUSS ein gültiger Vale-Regex sein. Literale Strings sind gültige Regex und damit erlaubt.
-  - Einträge MÜSSEN standardmäßig groß-/kleinschreibungssensitiv sein (z. B. `[Pp]robot`, nicht `(?i)probot`), damit das Vocabulary falsche Schreibungen weiterhin moniert.
+  - Einträge MÜSSEN standardmäßig groß-/kleinschreibungssensitiv sein (z. B. `[Aa]llowlist`, nicht `(?i)allowlist`), damit das Vocabulary falsche Schreibungen weiterhin moniert.
+  - Einträge für Produkt- oder Markennamen MÜSSEN die vom Hersteller veröffentlichte kanonische Schreibweise verwenden (z. B. `MkDocs`, `Probot`, `Claude`, `Dependabot`, `Vitest`, `npm`, `mypy`) und DÜRFEN KEINE Klammer-Klasse wie `[Pp]robot` benutzen, weil Klammer-Klassen abweichende Schreibweisen in Prosa stillschweigend akzeptieren. Für generische englische Wörter, deren Anfangsbuchstabe legitim mit der Satzposition variiert, bleiben Klammer-Klassen korrekt (z. B. `[Aa]llowlist`, `[Ff]rontend`).
+  - Jeder Eintrag, der sich auf ein Produkt oder eine Marke bezieht, MUSS vor dem Einchecken gegen die kanonische Upstream-Quelle geprüft werden (README, Logo oder offizieller Styleguide des Projekts). Die PR-Beschreibung MUSS die geprüfte Quelle nennen, damit ein Reviewer die Entscheidung nachvollziehen kann; dasselbe gilt für jede Casing-Änderung und jedes Entfernen.
   - Jeder Commit, der eine Vocabulary-Gruppe hinzufügt oder entfernt, MUSS im selben Commit `docs/vocabularies.md` und den Abschnitt „Available vocabularies" in `README.md` aktualisieren.
   - `src/.vale.ini` (im Archiv ausgeliefert) und die Repo-Root-`.vale.ini` (für Dogfooding) DÜRFEN nur Gruppen referenzieren, die auf der Platte existieren.
   - `accept.txt`-Dateien DÜRFEN ausschließlich Regex-Einträge enthalten — keine Leerzeilen, keine Kommentarzeilen —, weil Vale jede Zeile als Muster interpretiert.
@@ -53,6 +55,7 @@ Diese Spec definiert den Pflegeprozess, damit das ausgelieferte Paket über alle
 - [ ] `docs/vocabularies.md` beschreibt genau die auf der Platte vorhandenen Gruppen — kein überzähliger, kein fehlender Abschnitt.
 - [ ] Die Liste „Available vocabularies" in `README.md` nennt dieselben Gruppen, in derselben Reihenfolge, wie `docs/vocabularies.md`.
 - [ ] Jede `accept.txt` im Repo enthält ausschließlich nicht-leere Zeilen und keine Kommentare.
+- [ ] Jeder Produkt- oder Markennamen-Eintrag in jeder `accept.txt` trifft die kanonische Upstream-Schreibweise (keine Klammer-Klasse für Marken), und der einführende oder ändernde PR nennt die geprüfte Upstream-Quelle.
 - [ ] `vale sync && vale .` läuft im Repo-Root erfolgreich, ausschließlich mit den Vocabularies, die dieses Paket ausliefert.
 - [ ] Das über den Abschnitt „Build the archive locally" in `README.md` gebaute Archiv entpackt zur dort dokumentierten Struktur, inklusive `.vale.ini`.
 - [ ] Das Hinzufügen einer neuen Regeldatei unter `src/styles/nolte-styles/` erfordert keine Änderung an `src/.vale.ini`.

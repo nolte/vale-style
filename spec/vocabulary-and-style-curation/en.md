@@ -32,7 +32,9 @@ This spec defines the maintenance process so that the shipped package produces a
 - **MUST**
   - Each vocabulary group MUST live at `src/styles/config/vocabularies/<group>/accept.txt`, one entry per line.
   - Every entry MUST be a valid Vale regex. Literal strings are valid regex and are allowed.
-  - Entries MUST default to case-sensitive matching (e.g. `[Pp]robot`, not `(?i)probot`) so the vocabulary still flags wrong-case variants.
+  - Entries MUST default to case-sensitive matching (e.g. `[Aa]llowlist`, not `(?i)allowlist`) so the vocabulary still flags wrong-case variants.
+  - Entries for product or brand names MUST use the canonical casing the upstream publishes (e.g. `MkDocs`, `Probot`, `Claude`, `Dependabot`, `Vitest`, `npm`, `mypy`) and MUST NOT use a bracket-class entry like `[Pp]robot`, because a bracket class silently accepts off-brand casings in prose. Bracket classes remain correct for generic English words whose leading letter legitimately varies with sentence position (e.g. `[Aa]llowlist`, `[Ff]rontend`).
+  - Every entry that refers to a product or brand MUST be verified against its upstream canonical source (the project's README, logo, or official style guide) before it lands. The PR description MUST name the source that was checked so a reviewer can reproduce the decision; the same applies to any change of casing or removal.
   - Any commit that adds or removes a vocabulary group MUST update `docs/vocabularies.md` and the "Available vocabularies" section in `README.md` in the same commit.
   - `src/.vale.ini` (shipped in the archive) and the repo-root `.vale.ini` (used for dogfooding) MUST reference only groups that exist on disk.
   - `accept.txt` files MUST contain only regex entries — no blank lines, no comment lines — because Vale interprets every line as a pattern.
@@ -53,6 +55,7 @@ This spec defines the maintenance process so that the shipped package produces a
 - [ ] `docs/vocabularies.md` describes exactly the set of groups present on disk — no extra section, no missing section.
 - [ ] The "Available vocabularies" list in `README.md` names the same groups, in the same order, as `docs/vocabularies.md`.
 - [ ] Every `accept.txt` in the repo contains only non-empty lines and no comments.
+- [ ] Every product or brand name entry in every `accept.txt` matches the upstream project's canonical casing (no bracket-class entry for brands), and each such entry's introducing or modifying PR cites the upstream source that was checked.
 - [ ] Running `vale sync && vale .` at the repo root passes using only the vocabularies this package ships.
 - [ ] The archive built via the `Build the archive locally` snippet in `README.md` unpacks to the structure documented in the same file, including `.vale.ini`.
 - [ ] Adding a new rule file under `src/styles/nolte-styles/` does not require editing `src/.vale.ini`.
