@@ -5,6 +5,7 @@ ADRs?
 Ansible
 Anthropic('s)?
 asdf
+auditability
 auditable
 [Aa]utoallow(s|ed|ing)?
 [Aa]utofix(es|ed|ing)?
@@ -15,6 +16,7 @@ automerge
 [Bb]ackend
 backlink
 basename
+[Bb]ikeshedding
 [Bb]oolean
 browsable
 [Cc]allouts
@@ -24,6 +26,7 @@ CLIs?
 closeable
 commit's
 [Cc]onfigs?
+conformant
 criteria's
 cron
 CTAs
@@ -35,6 +38,7 @@ deduplicate[ds]?
 Dependabot
 deps
 devcontainer
+discoverability
 dispatchable
 Dockerfiles?
 docstrings?
