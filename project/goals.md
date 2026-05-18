@@ -12,7 +12,7 @@ repository.
   `.vale.ini` `Packages` entry and get a working lint setup without
   duplicating vocabularies. _(audience: nolte/\* consumer repositories)_
 - **O-2** — CI pipelines in consumer repos stay deterministic across
-  releases; vocabulary changes ship through semver-versioned release tags
+  releases; vocabulary changes ship through SemVer-versioned release tags
   rather than silent drift. _(audience: CI pipelines in consumer repos)_
 - **O-3** — Local developers see identical lint behaviour locally and in CI,
   so corrections happen before push. _(audience: local developers in consumer repos)_

@@ -30,7 +30,7 @@ peripheral). A whole category is marked `none — <reason>` when it does not app
 
 ### Direct consumers
 
-- **nolte/* consumer repositories** — _category_: direct-consumer · _surface_: `.vale.ini` `Packages` entry, GitHub release URL · _expects_: stable, semver-versioned ZIP URL; runnable vocabularies; backwards-compatible vocabulary names (`technical`, `esphome`) · _status_: `assumed` · _criticality_: primary
+- **nolte/* consumer repositories** — _category_: direct-consumer · _surface_: `.vale.ini` `Packages` entry, GitHub release URL · _expects_: stable, SemVer-versioned ZIP URL; runnable vocabularies; backwards-compatible vocabulary names (`technical`, `esphome`) · _status_: `assumed` · _criticality_: primary
   - Open questions: which `nolte/*` repos actually consume this package today? Is the list discoverable via a search across `nolte/*` for `Packages = nolte-styles` style strings?
 - **CI pipelines in consumer repos** — _category_: direct-consumer · _surface_: `vale-action` or `vale .` in GitHub Actions workflows · _expects_: reproducible lint runs, no flaky vocabulary drift, no breaking changes without a major version bump · _status_: `assumed` · _criticality_: primary
   - Open questions: do consumers pin to a specific release tag, or do they float on `latest`? The answer changes the blast radius of every release.
@@ -41,7 +41,7 @@ peripheral). A whole category is marked `none — <reason>` when it does not app
 
 ### Operators
 
-- **nolte (repository maintainer)** — _category_: operator · _surface_: GitHub Releases UI, `Taskfile.yml`, `.github/workflows/release-*` · _expects_: runnable `task build` / `task test` / `task docs`; reproducible release cuts via release-drafter → `release-cd-archive.yml`; predictable semver bumps · _status_: `assumed` · _criticality_: primary
+- **nolte (repository maintainer)** — _category_: operator · _surface_: GitHub Releases UI, `Taskfile.yml`, `.github/workflows/release-*` · _expects_: runnable `task build` / `task test` / `task docs`; reproducible release cuts via release-drafter → `release-cd-archive.yml`; predictable SemVer bumps · _status_: `assumed` · _criticality_: primary
   - Open questions: none beyond ordinary release hygiene.
 - **GitHub Actions runners / platform** — _category_: operator · _surface_: workflow YAML, reusable workflows pinned to `nolte/gh-plumbing@v1.1.12` · _expects_: stable pinned versions, deterministic builds, no unpinned actions · _status_: `assumed` · _criticality_: secondary
   - Open questions: none.
@@ -59,7 +59,7 @@ peripheral). A whole category is marked `none — <reason>` when it does not app
 
 ### Governing parties
 
-- **nolte (repo owner)** — _category_: governing · _surface_: branch protection rules, `.github/settings.yml` via Probot Settings, spec approval · _expects_: veto authority on vocabulary and style changes; final say on semver-major cuts · _status_: `assumed` · _criticality_: primary
+- **nolte (repo owner)** — _category_: governing · _surface_: branch protection rules, `.github/settings.yml` via Probot Settings, spec approval · _expects_: veto authority on vocabulary and style changes; final say on SemVer-major cuts · _status_: `assumed` · _criticality_: primary
   - Open questions: none.
 - **nolte portfolio consensus** (specs under `claude-shared/spec/`) — _category_: governing · _surface_: pull-request-workflow, branching-model, release-automation, project-structure specs · _expects_: repo stays conformant; deviations propagate via spec update, not silently · _status_: `assumed` · _criticality_: primary
   - Open questions: does this repo need its own per-spec opt-out tracking, or does conformance suffice?
