@@ -1,0 +1,39 @@
+capabilities:
+  - name: vale-style-package
+    description: >-
+      A curated Vale style package distributed as `nolte-styles.zip` via
+      GitHub releases. Consumer repositories integrate it via a single
+      `.vale.ini` `Packages` entry to lint markdown consistently across the
+      portfolio.
+    audience:
+      - "nolte/* consumer repositories"
+      - "CI pipelines in consumer repos"
+      - "local developers in consumer repos"
+    status: active
+    rationale: >-
+      vale-style is the only nolte/* repo that ships a Vale style package
+      — the portfolio's single source of truth for shared vocabularies
+      and (future) style rules. Consolidating this into a single repo
+      prevents the vocabulary-drift problem named in
+      `spec/vocabulary-and-style-curation/en.md` Context section.
+
+  - name: vocabulary-curation-spec
+    description: >-
+      A written specification under
+      `spec/vocabulary-and-style-curation/{en,de}.md` that codifies
+      inclusion criteria, removal policy, and group scoping for the
+      vocabularies shipped in `vale-style-package`. Curator agents from
+      `nolte/claude-shared` (`prose-vale-curator`, `vocab-drift-audit`)
+      cite this spec to ground automated curation decisions.
+    audience:
+      - "nolte (primary maintainer)"
+      - "Claude Code agents / skills"
+      - "External contributors"
+    status: experimental
+    rationale: >-
+      The curation spec lives next to the package it governs; placing it
+      elsewhere would split the source of truth from the artefact and
+      re-introduce the vocabulary-drift problem the spec exists to
+      prevent. Status is `experimental` because the spec ships at
+      `Status: draft` with four Open Questions; R-1 (the MVP item)
+      promotes it to a settled state.
