@@ -53,7 +53,7 @@ GHSAs?
 gitignored
 Graphviz
 hoc
-hotfixes?
+hotfix(es)?
 [Ii]nspectable
 invocable
 Jira
