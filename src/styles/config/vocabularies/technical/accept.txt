@@ -1,6 +1,7 @@
 ACs?
 achievability
 ADRs?
+[Aa]gents?
 [Aa]llowlist
 Ansible
 Anthropic('s)?
