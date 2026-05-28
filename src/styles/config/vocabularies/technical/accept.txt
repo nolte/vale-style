@@ -5,6 +5,7 @@ ADRs?
 [Aa]llowlist
 Ansible
 Anthropic('s)?
+APIs?
 asdf
 auditability
 auditable
@@ -27,6 +28,7 @@ CLIs?
 closeable
 commit's
 [Cc]onfigs?
+[Cc]ookiecutter
 conformant
 criteria's
 cron
@@ -59,6 +61,8 @@ gitignored
 Graphviz
 hoc
 hotfix(es)?
+idempotency
+[Ii]nlining
 [Ii]nspectable
 invocable
 Jira
@@ -70,6 +74,7 @@ lookups?
 lowercased
 Midjourney
 misclassification
+mitigations
 MkDocs
 [Mm]onorepos?
 MRs
@@ -108,8 +113,10 @@ rollout
 [Rr]outable
 runbooks?
 runtimes
+[Ss]cannability
 [Ss]caffold(s|ed|ing)?
 SemVer
+[Ss]kimmable
 severities
 SHAs
 SHOULDs
@@ -144,6 +151,7 @@ validator(s|'s)?
 [Vv]ectoris(e|er|ers|ing|ed)?
 vendoring
 venv
+virtualenv
 Vitest
 vtracer
 [Ww]orktree(s|'s)?
