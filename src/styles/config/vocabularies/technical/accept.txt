@@ -18,6 +18,7 @@ attestation
 [Aa]uditability
 auditable
 [Aa]utoallow(s|ed|ing)?
+[Aa]utodetect(s|ed|ing|ion)?
 [Aa]utofix(es|ed|ing)?
 autofocus
 [Aa]utolink(s|ed|ing)?
