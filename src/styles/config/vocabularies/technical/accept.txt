@@ -30,7 +30,7 @@ backlink
 Bamberger
 basename
 [Bb]ikeshedding
-Bluetooth
+[Bb]luetooth
 [Bb]oolean
 browsable
 Bun
