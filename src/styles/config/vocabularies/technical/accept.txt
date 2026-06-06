@@ -39,6 +39,7 @@ bundlers?
 [Bb]ypassable
 [Cc]allouts?
 Carliner
+[Cc]hezmoi
 Chissom
 CI
 Claude
