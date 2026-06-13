@@ -30,8 +30,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Claude`
 :   Anthropics Familie großer Sprachmodelle.
 
+`Cloudflare`
+:   Anbieter von Edge-Netzwerk, CDN und Sicherheitsdiensten.
+
 `Contentful`
 :   API-first Headless-Content-Management-System.
+
+`ControlNet`
+:   Eine Netzwerk-Erweiterung, die die Bildgenerierung an Vorgaben wie Kanten oder Pose koppelt.
 
 `cookiecutter`
 :   Scaffolding-Werkzeug, das aus Antworten eine Projektvorlage rendert.
@@ -44,6 +50,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Deque`
 :   Unternehmen für Accessibility-Werkzeuge, Urheber der axe-Engine.
+
+`Docusaurus`
+:   Ein React-basierter Static-Site-Generator für Dokumentation.
 
 `DOMPurify`
 :   Clientseitiger HTML-Sanitizer, der XSS-anfälliges Markup entfernt.
@@ -60,6 +69,15 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Figma`
 :   Browserbasiertes, kollaboratives Werkzeug für Interface-Design.
 
+`FLUX`
+:   Eine Familie von Text-zu-Bild-Modellen von Black Forest Labs.
+
+`Gemini`
+:   Googles Familie multimodaler großer Sprachmodelle.
+
+`Gemma`
+:   Googles Familie von Sprachmodellen mit offenen Gewichten.
+
 `gh-plumbing`
 :   noltes geteiltes Repository mit wiederverwendbaren GitHub-Actions-Workflows und Probot-Konfigurationen.
 
@@ -72,6 +90,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Graphviz`
 :   Toolkit zur Graph-Visualisierung, gesteuert über die Sprache DOT.
 
+`Imagen`
+:   Googles Text-zu-Bild-Modell.
+
 `Inkbot`
 :   Drittanbieter-Designstudio, auf das in den Specs des Projekts verwiesen wird.
 
@@ -80,6 +101,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `JUnit`
 :   Java-Unit-Test-Framework, dessen XML-Reportformat ein CI-Standard ist.
+
+`kamerplanter`
+:   Ein nolte-Projekt (ein Zimmerpflanzen-Pflegehelfer).
 
 `Mailchimp`
 :   Plattform für E-Mail-Marketing und Newsletter.
@@ -93,11 +117,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `MkDocs`
 :   Static-Site-Generator für Projektdokumentation, hier mit dem Material-Theme genutzt.
 
+`Mockito`
+:   Ein Mocking-Framework für Java-Unit-Tests.
+
 `MUI`
 :   Material UI, eine React-Komponentenbibliothek, die Material Design umsetzt.
 
+`mutmut`
+:   Ein Mutation-Testing-Werkzeug für Python.
+
 `mypy`
 :   Statischer Typprüfer für Python.
+
+`Netlify`
+:   Eine Hosting- und Deployment-Plattform für Web-Frontends.
 
 `nginx`
 :   Performanter Webserver und Reverse Proxy.
@@ -114,11 +147,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Numonic`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
 
+`pitest`
+:   Ein Mutation-Testing-Framework für Java (PIT).
+
+`Pollinations`
+:   Eine offene API für generative KI-Medien.
+
 `Probot`
 :   Framework zum Bau von GitHub Apps; trägt die geteilten Settings- und Labelling-Bots.
 
 `Pyright`
 :   Microsofts statischer Typprüfer für Python.
+
+`pytest`
+:   Das De-facto-Test-Framework für Python.
 
 `Recharts`
 :   React-Charting-Bibliothek auf Basis von D3.
@@ -126,14 +168,29 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Renovate`
 :   Werkzeug zur automatisierten Aktualisierung von Abhängigkeiten, hier über ein geteiltes Preset konfiguriert.
 
+`SDXL`
+:   Stable Diffusion XL, ein Text-zu-Bild-Modell.
+
 `Shiki`
 :   Syntax-Highlighter, der TextMate-Grammatiken und Editor-Themes nutzt.
+
+`Sinon`
+:   Eine JavaScript-Bibliothek für Test-Spies, -Stubs und -Mocks.
 
 `Skywork`
 :   Drittanbieter-KI-Dienst, auf den in den Specs des Projekts verwiesen wird.
 
+`Spotify`
+:   Der Musik-Streaming-Dienst.
+
+`Stryker`
+:   Ein Mutation-Testing-Framework für JavaScript, C# und Scala.
+
 `Supabase`
 :   Quelloffene Backend-Plattform auf Basis von PostgreSQL.
+
+`Syft`
+:   Ein Werkzeug, das eine Software-Stückliste (SBOM) aus Images und Dateisystemen erzeugt.
 
 `Tailwind`
 :   Utility-first-CSS-Framework.
@@ -144,8 +201,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Tauri`
 :   Framework zum Bau von Desktop-Apps mit Web-Frontend und Rust-Kern.
 
+`Testcontainers`
+:   Eine Bibliothek, die Wegwerf-Docker-Container für Integrationstests bereitstellt.
+
 `textstat`
 :   Python-Bibliothek, die Lesbarkeitsmetriken berechnet.
+
+`Thoughtworks`
+:   Eine Software-Beratung, bekannt für das Technology Radar.
 
 `Trivy`
 :   Quelloffener Security- und Schwachstellen-Scanner.
@@ -171,8 +234,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Vue`
 :   Progressives JavaScript-Framework zum Bau von Benutzeroberflächen.
 
+`Wayback`
+:   Wie in Wayback Machine, dem Web-Snapshot-Dienst des Internet Archive.
+
 `Webheads`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
+
+`Zlib`
+:   Eine verlustfreie Datenkompressionsbibliothek; auch der Name ihrer permissiven Lizenz.
 
 `Zod`
 :   TypeScript-first-Bibliothek zur Schema-Deklaration und -Validierung.
@@ -202,6 +271,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `allowlist`
 :   Eine explizite Menge erlaubter Einheiten; das einschließende Gegenstück zur Denylist.
+
+`alphanumerics`
+:   Zeichen, die Buchstaben oder Ziffern sind.
+
+`anonymisation`
+:   Das irreversible Entfernen personenbezogener Daten, sodass Personen nicht mehr identifizierbar sind.
 
 `API`
 :   Application Programming Interface — ein definierter Vertrag zwischen Softwarekomponenten.
@@ -236,6 +311,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `backlink`
 :   Ein Link, der auf eine verweisende Seite zurückzeigt.
 
+`backoff`
+:   Das schrittweise Erhöhen der Wartezeit zwischen Wiederholungen.
+
 `bluetooth`
 :   Standard für drahtlose Verbindung über kurze Distanz.
 
@@ -248,17 +326,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `callout`
 :   Ein optisch hervorgehobener Hinweis bzw. eine Admonition in der Dokumentation.
 
+`CDN`
+:   Content Delivery Network — geografisch verteilte Server, die Inhalte nutzernah zwischenspeichern und ausliefern.
+
+`charset`
+:   Zeichensatz — die Kodierung, die Bytes auf Zeichen abbildet.
+
 `CI`
 :   Continuous Integration — das automatische Bauen und Testen jeder Änderung.
 
 `CLI`
 :   Command-Line Interface (Kommandozeilen-Schnittstelle).
 
+`clickability`
+:   Wie leicht erkennbar und anklickbar ein Element ist.
+
 `closeable`
 :   Schließbar — von einer Ressource, die freigegeben werden muss.
 
+`colocated`
+:   Am selben Ort abgelegt, z. B. eine Testdatei neben dem getesteten Code.
+
 `conformant`
 :   Einer Spezifikation oder einem Standard entsprechend.
+
+`copyrightability`
+:   Ob ein Werk urheberrechtlich schützbar ist.
 
 `cron`
 :   Zeitbasierter Job-Scheduler; auch die Syntax seiner Zeitpläne.
@@ -272,8 +365,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `CVE`
 :   Common Vulnerabilities and Exposures — eine öffentliche Kennung für eine Sicherheitslücke.
 
+`datastore`
+:   Ein System, das Daten persistiert (Datenbank, Key-Value-Store, Objektspeicher).
+
 `debounce`
 :   Schnelle, wiederholte Ereignisse erst behandeln, wenn sie sich beruhigt haben.
+
+`decompounding`
+:   Das Zerlegen eines zusammengesetzten Wortes in seine Bestandteile, in der deutschen Textverarbeitung üblich; die zuständige Komponente ist ein Decompounder.
 
 `dedup`
 :   Kurzform von deduplicate.
@@ -283,6 +382,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `denylist`
 :   Eine explizite Menge blockierter Einheiten; Gegenstück zur Allowlist.
+
+`deserialise`
+:   Ein In-Memory-Objekt aus einer serialisierten Form rekonstruieren; der Vorgang ist die Deserialisierung.
 
 `devcontainer`
 :   Eine per Container definierte, reproduzierbare Entwicklungsumgebung.
@@ -302,8 +404,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `docstring`
 :   Ein in den Quellcode eingebetteter Dokumentationsstring.
 
+`DTOs`
+:   Data Transfer Objects — einfache Strukturen, die Daten über Grenzen transportieren.
+
 `enum`
 :   Aufzählung — ein Typ mit einer festen Menge benannter Werte.
+
+`ePrivacy`
+:   Die EU-ePrivacy-Richtlinie, die elektronische Kommunikation und Cookies regelt.
 
 `favicon`
 :   Das kleine Icon, das ein Browser für eine Seite anzeigt.
@@ -320,6 +428,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `frontmatter`
 :   Der Metadatenblock, oft YAML, am Anfang einer Markdown-Datei.
 
+`Gedankenstrich`
+:   Der Gedankenstrich, als Einschub- oder Bis-Strich verwendet.
+
+`generativelanguage`
+:   Das Host-Segment von Googles Generative Language API (`generativelanguage.googleapis.com`).
+
 `geoblocking`
 :   Das Beschränken des Zugriffs auf Inhalte nach geografischer Region.
 
@@ -329,8 +443,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `GHSA`
 :   Kennung eines GitHub Security Advisory.
 
+`Goodhart`
+:   Wie in Goodharts Gesetz: Wird ein Maß zum Ziel, taugt es nicht mehr als gutes Maß.
+
 `Guillemets`
 :   Winkelförmige Anführungszeichen (« »).
+
+`hardcoded`
+:   Als fester Literalwert im Code geschrieben statt konfiguriert.
 
 `HMAC`
 :   Hash-based Message Authentication Code — eine schlüsselbasierte Integritäts- und Echtheitsprüfung.
@@ -356,14 +476,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `inspectable`
 :   Zur Laufzeit oder per Werkzeug untersuchbar.
 
+`Komposita`
+:   Zusammengesetzte Wörter, etwa in der Lesbarkeitsanalyse.
+
+`latents`
+:   Die komprimierten Latent-Space-Repräsentationen, in denen ein generatives Modell arbeitet.
+
 `lede`
 :   Der Einstieg eines Artikels, der dessen Kernaussage nennt; Plural ledes.
+
+`lektorat`
+:   Eine redaktionelle Durchsicht und Überarbeitung von Prosa.
+
+`liveness`
+:   Ob ein laufender Prozess gesund genug ist, um weiter zu bedienen, wie bei einer Liveness-Probe.
+
+`LIX`
+:   Ein Lesbarkeitsindex auf Basis von Wort- und Satzlänge.
 
 `lockfile`
 :   Eine Datei, die exakt aufgelöste Abhängigkeitsversionen festschreibt.
 
 `lookup`
 :   Das Abrufen eines Werts über einen Schlüssel.
+
+`LoRA`
+:   Low-Rank Adaptation — eine effiziente Feinabstimmungsmethode für große Modelle.
 
 `lossy`
 :   Information verwerfend, wie bei verlustbehafteter Kompression.
@@ -380,20 +518,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `mitigation`
 :   Eine Maßnahme, die Wahrscheinlichkeit oder Auswirkung eines Risikos senkt.
 
+`mockist`
+:   Ein Teststil, der Mocks bevorzugt, um die getestete Einheit zu isolieren, im Gegensatz zum klassizistischen Stil.
+
 `monorepo`
 :   Ein einzelnes Repository, das viele Projekte enthält.
 
 `MR`
 :   Merge Request — GitLabs Bezeichnung für einen Pull Request.
 
+`multimodal`
+:   Mehr als eine Ein- oder Ausgabemodalität verarbeitend, etwa Text und Bilder.
+
 `MUSTs` / `SHOULDs`
 :   Pluralisierte RFC-2119-Anforderungsschlüsselwörter.
+
+`nano`
+:   Die kleinste Variante einer Modellfamilie, z. B. Gemini Nano.
 
 `Newswire`
 :   Ein Dienst, der Nachrichtenmeldungen an Redaktionen verteilt.
 
 `NFR`
 :   Non-Functional Requirement — eine Qualitätsanforderung wie Performance oder Security.
+
+`nominalisation`
+:   Das Umwandeln eines Verbs oder Adjektivs in ein Substantiv, oft ein Lesbarkeitsproblem.
 
 `OAuth`
 :   Offener Standard für delegierte Autorisierung.
@@ -404,6 +554,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `parseable`
 :   Parsebar.
 
+`permalink`
+:   Eine dauerhafte URL, die stets auf dieselbe Ressource zeigt.
+
 `postcondition`
 :   Eine Bedingung, die nach einer Operation garantiert gilt.
 
@@ -412,6 +565,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `PR`
 :   Pull Request — eine zur Review und zum Merge eingereichte Änderung.
+
+`pseudonymisation`
+:   Das Ersetzen identifizierender Felder durch Pseudonyme, sodass eine Re-Identifizierung Zusatzdaten braucht.
 
 `px`
 :   CSS-Pixel-Einheit.
@@ -434,8 +590,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `reflog`
 :   Gits Protokoll darüber, wohin Referenzen gezeigt haben (`git reflog`).
 
+`renderer`
+:   Eine Komponente, die ein Modell oder Markup in visuelle Ausgabe umwandelt.
+
 `reusable`
 :   In anderem Kontext wiederverwendbar.
+
+`ruleset`
+:   Eine benannte, gruppierte Sammlung von Regeln.
 
 `runbook`
 :   Eine dokumentierte Prozedur zum Betreiben oder Wiederherstellen eines Systems.
@@ -443,11 +605,26 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `runtime`
 :   Die Umgebung, in der ein Programm ausgeführt wird; Plural runtimes.
 
+`Sachtextformel`
+:   Eine deutsche Lesbarkeitsformel für Sachtexte (Wiener Sachtextformel).
+
 `sandboxing`
 :   Code so isolieren, dass er den Host nicht über eine erlaubte Grenze hinaus beeinflusst.
 
 `scannability`
 :   Wie leicht sich Text mit dem Auge überfliegen lässt.
+
+`schnell`
+:   Wie im schnellen Bildmodell FLUX.1 [schnell].
+
+`scriptable`
+:   Per Skript steuerbar statt nur interaktiv.
+
+`SDKs`
+:   Software Development Kits — Bibliotheken und Werkzeuge zum Entwickeln auf einer Plattform.
+
+`segmenter`
+:   Eine Komponente, die Text in Einheiten wie Sätze oder Wörter zerlegt.
 
 `SemVer`
 :   Semantic Versioning — das Schema `MAJOR.MINOR.PATCH`.
@@ -464,11 +641,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `snackbar`
 :   Eine kurze, nicht-blockierende Benachrichtigung an einem Bildschirmrand.
 
+`snapshot`
+:   Ein festgehaltener Referenzzustand, gegen den spätere Läufe verglichen werden, wie beim Snapshot-Testing.
+
+`Spatien`
+:   Typografische Bezeichnung für die schmalen Zwischenräume um bestimmte Zeichen.
+
 `sref`
 :   Midjourneys Parameter für Stilreferenzen (`--sref`).
 
 `SRE`
 :   Site Reliability Engineering bzw. ein Site Reliability Engineer.
+
+`subcommand`
+:   Ein verschachtelter Befehl unter einem CLI-Hauptbefehl, z. B. `git commit`.
 
 `Subresource`
 :   Eine Ressource, die eine Seite zusätzlich zu sich selbst lädt, wie bei Subresource Integrity.
@@ -476,14 +662,26 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `stylers`
 :   Komponenten oder Werkzeuge, die visuelle Gestaltung anwenden.
 
+`superset`
+:   Eine Menge, die eine andere vollständig enthält, z. B. TypeScript über JavaScript.
+
+`suppression`
+:   Eine Anweisung, die einen bestimmten Lint- oder Scanner-Befund unterdrückt.
+
 `symbolication`
 :   Das Rückführen von Speicheradressen eines Absturzes auf Quellcode-Symbole.
 
 `teardown`
 :   Aufräumarbeiten nach einem Test oder Prozess.
 
+`telemedia`
+:   Online-Dienste im Sinne des deutschen Telemedienrechts zu Datenschutz und Cookies.
+
 `thresholding`
 :   Das Anwenden eines Schwellenwerts zum Klassifizieren oder Filtern.
+
+`tokenizer`
+:   Eine Komponente, die Text in Tokens zerlegt; der Vorgang ist die Tokenisierung.
 
 `tooltip`
 :   Ein kleiner Hinweis, der bei Hover oder Fokus erscheint.
@@ -491,8 +689,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `typecheck`
 :   Ein Programm gegen seine Typregeln prüfen.
 
+`Unlicense`
+:   Eine Software-Lizenz, die einer Public-Domain-Freigabe gleichkommt.
+
 `unparseable`
 :   Nicht parsebar.
+
+`untyped`
+:   Ohne statische Typinformation.
 
 `validator`
 :   Eine Komponente, die Eingaben gegen Regeln prüft.
@@ -505,6 +709,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `worktree`
 :   Ein verknüpftes Arbeitsverzeichnis eines Git-Repositories.
+
+`XPath`
+:   Eine Abfragesprache zum Auswählen von Knoten in einem XML- oder HTML-Dokument.
 
 `YAML`
 :   YAML Ain't Markup Language — ein menschenlesbares Datenserialisierungsformat.
@@ -571,11 +778,17 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `mandatoriness`
 :   Das Maß, in dem etwas verpflichtend ist.
 
+`monolingually`
+:   Nur in einer einzigen Sprache.
+
 `namespace`
 :   Ein benannter Geltungsbereich, der Bezeichner eindeutig macht; namespaced.
 
 `onboarding`
 :   Einen neuen Nutzer, Beitragenden oder ein Repo auf den aktuellen Stand bringen.
+
+`operationalisation`
+:   Das Überführen eines Konzepts in eine konkrete, ausführbare Prozedur.
 
 `operationalize`
 :   Ein Konzept in eine konkrete, ausführbare Prozedur überführen.
@@ -622,8 +835,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `scaffold`
 :   Ein Startgerüst aus Dateien erzeugen; scaffolding.
 
+`scaffolder`
+:   Ein Werkzeug, das ein Startgerüst aus Dateien erzeugt.
+
 `slugification`
 :   Das Umwandeln einer Zeichenkette in einen URL-tauglichen Slug.
+
+`slugify`
+:   Eine Zeichenkette in einen URL-tauglichen Slug umwandeln.
 
 `subagent`
 :   Ein Agent, der von einem anderen Agenten beauftragt wird.
@@ -643,6 +862,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `subtask`
 :   Eine Aufgabe, die Teil einer größeren ist.
 
+`swappable`
+:   Gegen eine gleichwertige Komponente austauschbar.
+
 `toolchain`
 :   Die Gesamtheit der Werkzeuge zum Bauen und Ausliefern von Software.
 
@@ -651,6 +873,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `triggerer`
 :   Der Akteur oder das Ereignis, das etwas auslöst.
+
+`unautomated`
+:   Noch nicht automatisiert; weiterhin von Hand erledigt.
 
 `underperforming`
 :   Unter der Erwartung abschneidend.
@@ -681,7 +906,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 ### Eigennamen — Quellen aus Schreiben, Lesbarkeit und Barrierefreiheit
 
-Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in den Specs des Projekts zu Lesbarkeit, redaktionellem Stil und Barrierefreiheit auftauchen; die drei Begriffe zur Farbwahrnehmung stammen aus dem Bereich Barrierefreiheit.
+Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in den Specs des Projekts zu Lesbarkeit, redaktionellem Stil, Testing, Software-Handwerk und Datenschutz auftauchen; die drei Begriffe zur Farbwahrnehmung stammen aus dem Bereich Barrierefreiheit.
 
 `Bamberger`
 :   Mitbegründer der deutschsprachigen Lesbarkeitsforschung, gemeinsam mit Vanecek.
@@ -692,14 +917,26 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Chissom`
 :   Mitautor der Flesch-Kincaid-Klassenstufen-Studie.
 
+`Cohn`
+:   Mike Cohn, Autor zu agiler Schätzung und der Testpyramide.
+
 `Desrosiers`
 :   Nachname, der als Quelle in den Specs zu Lesbarkeit/Schreiben zitiert wird.
+
+`Dodds`
+:   Kent C. Dodds, Autor zu Testing und React (die Testing-Trophy).
+
+`Duden`
+:   Das maßgebliche deutsche Rechtschreibwörterbuch.
 
 `Fishburne`
 :   Mitautor der Flesch-Kincaid-Klassenstufen-Studie.
 
 `Flesch`
 :   Rudolf Flesch, Urheber des Flesch-Reading-Ease-Werts.
+
+`Habib`
+:   Nachname, der als Quelle in den Specs des Projekts zitiert wird.
 
 `Kalzumeus`
 :   Blog und Handle des Software-Autors Patrick McKenzie.
@@ -716,6 +953,24 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Matuschak`
 :   Andy Matuschak, bekannt für Arbeiten zu Notizen und Wissenswerkzeugen.
 
+`Meszaros`
+:   Gerard Meszaros, Autor eines grundlegenden Buchs über Unit-Test-Muster und Test-Doubles.
+
+`Ottinger`
+:   Tim Ottinger, Autor im Bereich Software-Handwerk.
+
+`Pradel`
+:   Nachname, der als Quelle in den Test-Specs des Projekts zitiert wird.
+
+`Sadowski`
+:   Nachname, der als Quelle in den Software-Engineering-Specs des Projekts zitiert wird.
+
+`Schrems`
+:   Max Schrems, der Datenschutzaktivist hinter den Schrems-Urteilen zum Datentransfer.
+
+`Schuchert`
+:   Brett Schuchert, Autor im Bereich Software-Handwerk.
+
 `Stockton`
 :   Nachname, der als Quelle in den Specs zu Schreiben/Lesbarkeit zitiert wird.
 
@@ -724,6 +979,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `Vanecek`
 :   Mitbegründer der deutschsprachigen Lesbarkeitsforschung, gemeinsam mit Bamberger.
+
+`Vocke`
+:   Ham Vocke, Autor eines viel zitierten Artikels zur Testpyramide.
 
 `Zinsser`
 :   William Zinsser, Autor von „On Writing Well“.
@@ -790,6 +1048,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `stderr`
 :   Standard-Fehlerausgabe (Standard error).
 
+`stdlib`
+:   Kurzform für die Standardbibliothek einer Sprache.
+
 `stdout`
 :   Standardausgabe (Standard output).
 
@@ -810,7 +1071,7 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 ### Beugungs- und Possessivformen
 
-Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `maintainer's`, `README's` und `navigations`.
+Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `Gemma's`, `maintainer's`, `navigations`, `README's` und `rebased`.
 
 ## Vokabular `esphome`
 
