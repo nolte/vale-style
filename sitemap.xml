@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://nolte.github.io/vale-style/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/contributing/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/contributing/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/glossary/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/glossary/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/glossary/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/specifications/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/specifications/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/specifications/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/vocabularies/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/vocabularies/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/vocabularies/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/de/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/de/contributing/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/contributing/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/de/glossary/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/glossary/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/glossary/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/de/specifications/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/specifications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/specifications/"/>
+    </url>
+    <url>
+        <loc>https://nolte.github.io/vale-style/de/vocabularies/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://nolte.github.io/vale-style/de/vocabularies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://nolte.github.io/vale-style/vocabularies/"/>
+    </url>
+</urlset>
