@@ -3,6 +3,9 @@ repos:
     rev: v6.0.0
     hooks:
     -   id: check-yaml
+        # --unsafe: syntax-only check, so mkdocs.yml's `!!python/name:` tags
+        # (Material icon/emoji generator) don't trip the safe YAML loader.
+        args: ['--unsafe']
         exclude: "{{cookiecutter.module_slug}}/*"
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
