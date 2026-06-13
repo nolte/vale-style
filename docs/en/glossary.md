@@ -30,8 +30,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Claude`
 :   Anthropic's family of large language models.
 
+`Cloudflare`
+:   Edge-network, CDN, and security provider.
+
 `Contentful`
 :   API-first headless content-management system.
+
+`ControlNet`
+:   A neural add-on that conditions image generation on an input like edges or pose.
 
 `cookiecutter`
 :   Project-scaffolding tool that renders a template from a set of answers.
@@ -44,6 +50,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Deque`
 :   Accessibility-tooling company behind the axe testing engine.
+
+`Docusaurus`
+:   A React-based static-site generator for documentation.
 
 `DOMPurify`
 :   Client-side HTML sanitiser that strips XSS-prone markup.
@@ -60,6 +69,15 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Figma`
 :   Browser-based collaborative interface-design tool.
 
+`FLUX`
+:   A family of text-to-image generation models by Black Forest Labs.
+
+`Gemini`
+:   Google's family of multimodal large language models.
+
+`Gemma`
+:   Google's family of open-weight language models.
+
 `gh-plumbing`
 :   nolte's shared repository of reusable GitHub Actions workflows and Probot configurations.
 
@@ -72,14 +90,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Graphviz`
 :   Graph-visualisation toolkit driven by the DOT language.
 
+`Imagen`
+:   Google's text-to-image generation model.
+
 `Inkbot`
-:   Third-party design studio/brand referenced in the project's asset specs.
+:   Third-party design studio referenced in the project's specs.
 
 `Jira`
 :   Atlassian's issue- and project-tracking tool.
 
 `JUnit`
 :   Java unit-testing framework whose XML report format is a CI standard.
+
+`kamerplanter`
+:   A nolte project (a houseplant-care assistant).
 
 `Mailchimp`
 :   Email-marketing and newsletter platform.
@@ -93,11 +117,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `MkDocs`
 :   Static-site generator for project documentation, used here with the Material theme.
 
+`Mockito`
+:   A mocking framework for Java unit tests.
+
 `MUI`
 :   Material UI, a React component library implementing Material Design.
 
+`mutmut`
+:   A mutation-testing tool for Python.
+
 `mypy`
 :   Static type checker for Python.
+
+`Netlify`
+:   A hosting and deployment platform for web frontends.
 
 `nginx`
 :   High-performance web server and reverse proxy.
@@ -114,11 +147,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Numonic`
 :   Third-party brand referenced in the project's specs.
 
+`pitest`
+:   A mutation-testing framework for Java (PIT).
+
+`Pollinations`
+:   An open generative-AI media API.
+
 `Probot`
 :   Framework for building GitHub Apps; backs the shared settings and labelling bots.
 
 `Pyright`
 :   Microsoft's static type checker for Python.
+
+`pytest`
+:   The de-facto testing framework for Python.
 
 `Recharts`
 :   React charting library built on D3.
@@ -126,14 +168,29 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Renovate`
 :   Automated dependency-update tool, configured here via a shared preset.
 
+`SDXL`
+:   Stable Diffusion XL, a text-to-image generation model.
+
 `Shiki`
 :   Syntax highlighter that uses TextMate grammars and editor themes.
 
+`Sinon`
+:   A JavaScript library for test spies, stubs, and mocks.
+
 `Skywork`
-:   Third-party AI model/service referenced in the project.
+:   Third-party AI service referenced in the project's specs.
+
+`Spotify`
+:   The music-streaming service.
+
+`Stryker`
+:   A mutation-testing framework for JavaScript, C#, and Scala.
 
 `Supabase`
 :   Open-source backend platform built on PostgreSQL.
+
+`Syft`
+:   A tool that generates a software bill of materials (SBOM) from images and filesystems.
 
 `Tailwind`
 :   Utility-first CSS framework.
@@ -144,8 +201,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Tauri`
 :   Framework for building desktop apps with a web frontend and a Rust core.
 
+`Testcontainers`
+:   A library that runs throwaway Docker containers for integration tests.
+
 `textstat`
 :   Python library that computes readability metrics.
+
+`Thoughtworks`
+:   A software consultancy, known for the Technology Radar.
 
 `Trivy`
 :   Open-source security and vulnerability scanner.
@@ -171,8 +234,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Vue`
 :   Progressive JavaScript framework for building user interfaces.
 
+`Wayback`
+:   As in the Wayback Machine, the Internet Archive's web-snapshot service.
+
 `Webheads`
-:   Third-party brand/community referenced in the project.
+:   Third-party brand referenced in the project's specs.
+
+`Zlib`
+:   A lossless data-compression library; also the name of its permissive licence.
 
 `Zod`
 :   TypeScript-first schema declaration and validation library.
@@ -202,6 +271,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `allowlist`
 :   An explicit set of permitted entities; the inclusive counterpart to a denylist.
+
+`alphanumerics`
+:   Characters that are letters or digits.
+
+`anonymisation`
+:   Irreversibly stripping personal data so individuals can no longer be identified.
 
 `API`
 :   Application Programming Interface — a defined contract between software components.
@@ -236,6 +311,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `backlink`
 :   A link pointing back to a page that references it.
 
+`backoff`
+:   Progressively increasing the delay between retries.
+
 `bluetooth`
 :   Short-range wireless connectivity standard.
 
@@ -248,17 +326,32 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `callout`
 :   A visually set-off note or admonition in documentation.
 
+`CDN`
+:   Content Delivery Network — geographically distributed servers that cache and serve content close to users.
+
+`charset`
+:   Character set — the encoding that maps bytes to characters.
+
 `CI`
 :   Continuous Integration — automatically building and testing every change.
 
 `CLI`
 :   Command-Line Interface.
 
+`clickability`
+:   How easily a user can tell an element is clickable and hit it.
+
 `closeable`
-:   Able to be closed, e.g. a releasable resource.
+:   Able to be closed — said of a resource that must be released.
+
+`colocated`
+:   Placed in the same location, e.g. a test file beside the code it tests.
 
 `conformant`
 :   Adhering to a specification or standard.
+
+`copyrightability`
+:   Whether a work is eligible for copyright protection.
 
 `cron`
 :   Time-based job scheduler; also the syntax for its schedules.
@@ -272,8 +365,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `CVE`
 :   Common Vulnerabilities and Exposures — a public identifier for a security flaw.
 
+`datastore`
+:   A system that persists data (database, key-value store, object store).
+
 `debounce`
 :   To delay handling of rapid repeated events until they settle.
+
+`decompounding`
+:   Splitting a compound word into its parts, common in German text processing; the component that does it is a decompounder.
 
 `dedup`
 :   Short for deduplicate.
@@ -283,6 +382,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `denylist`
 :   An explicit set of blocked entities; the counterpart to an allowlist.
+
+`deserialise`
+:   To reconstruct an in-memory object from a serialised form; the act is deserialisation.
 
 `devcontainer`
 :   A container-defined, reproducible development environment.
@@ -302,8 +404,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `docstring`
 :   An inline documentation string embedded in source code.
 
+`DTOs`
+:   Data Transfer Objects — plain structures that carry data across boundaries.
+
 `enum`
 :   Enumeration — a type with a fixed set of named values.
+
+`ePrivacy`
+:   The EU ePrivacy Directive governing electronic communications and cookies.
 
 `favicon`
 :   The small icon a browser shows for a site.
@@ -320,6 +428,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `frontmatter`
 :   The metadata block, often YAML, at the top of a Markdown file.
 
+`Gedankenstrich`
+:   German for the em or en dash used as a parenthetical or range mark.
+
+`generativelanguage`
+:   The host segment of Google's Generative Language API (`generativelanguage.googleapis.com`).
+
 `geoblocking`
 :   Restricting access to content by geographic region.
 
@@ -329,8 +443,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `GHSA`
 :   GitHub Security Advisory identifier.
 
+`Goodhart`
+:   As in Goodhart's law: once a measure becomes a target, it stops being a good measure.
+
 `Guillemets`
 :   Angle-shaped quotation marks (« »).
+
+`hardcoded`
+:   Written as a fixed literal in source rather than configured.
 
 `HMAC`
 :   Hash-based Message Authentication Code — a keyed integrity and authenticity check.
@@ -356,14 +476,32 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `inspectable`
 :   Able to be examined at runtime or via tooling.
 
+`Komposita`
+:   German for compound words, e.g. in readability analysis.
+
+`latents`
+:   The compressed latent-space representations a generative model works in.
+
 `lede`
 :   The opening of an article that states its core point; plural ledes.
+
+`lektorat`
+:   German for a copy-edit or editorial review pass over prose.
+
+`liveness`
+:   Whether a running process is healthy enough to keep serving, as in a liveness probe.
+
+`LIX`
+:   A readability index based on word and sentence length.
 
 `lockfile`
 :   A file pinning exact resolved dependency versions.
 
 `lookup`
 :   A retrieval of a value by key.
+
+`LoRA`
+:   Low-Rank Adaptation — an efficient fine-tuning method for large models.
 
 `lossy`
 :   Discarding some information, as in lossy compression.
@@ -380,20 +518,32 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `mitigation`
 :   A measure that reduces a risk's likelihood or impact.
 
+`mockist`
+:   A testing style that favours mocks to isolate the unit under test, as opposed to classicist.
+
 `monorepo`
 :   A single repository holding many projects.
 
 `MR`
 :   Merge Request — GitLab's term for a pull request.
 
+`multimodal`
+:   Handling more than one input or output modality, such as text and images.
+
 `MUSTs` / `SHOULDs`
 :   Pluralised RFC 2119 requirement keywords.
+
+`nano`
+:   The smallest variant of a model family, e.g. Gemini Nano.
 
 `Newswire`
 :   A service that distributes news copy to outlets.
 
 `NFR`
 :   Non-Functional Requirement — a quality constraint such as performance or security.
+
+`nominalisation`
+:   Turning a verb or adjective into a noun, often a readability smell.
 
 `OAuth`
 :   Open standard for delegated authorization.
@@ -404,6 +554,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `parseable`
 :   Able to be parsed.
 
+`permalink`
+:   A permanent URL that keeps pointing at the same resource.
+
 `postcondition`
 :   A condition guaranteed to hold after an operation.
 
@@ -412,6 +565,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `PR`
 :   Pull Request — a proposed change submitted for review and merge.
+
+`pseudonymisation`
+:   Replacing identifying fields with pseudonyms so re-identification needs extra data.
 
 `px`
 :   CSS pixel unit.
@@ -434,8 +590,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `reflog`
 :   A log of where Git references have pointed (`git reflog`).
 
+`renderer`
+:   A component that turns a model or markup into visual output.
+
 `reusable`
 :   Able to be used again in another context.
+
+`ruleset`
+:   A named, grouped collection of rules.
 
 `runbook`
 :   A documented procedure for operating or recovering a system.
@@ -443,11 +605,26 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `runtime`
 :   The environment in which a program executes; plural runtimes.
 
+`Sachtextformel`
+:   A German readability formula for non-fiction text.
+
 `sandboxing`
 :   Isolating code so it cannot affect the host beyond a permitted boundary.
 
 `scannability`
 :   How easily text can be skimmed by eye.
+
+`schnell`
+:   German for fast; as in the FLUX.1 [schnell] image model.
+
+`scriptable`
+:   Drivable through a script rather than only interactively.
+
+`SDKs`
+:   Software Development Kits — libraries and tools for building on a platform.
+
+`segmenter`
+:   A component that splits text into units such as sentences or words.
 
 `SemVer`
 :   Semantic Versioning — the `MAJOR.MINOR.PATCH` version scheme.
@@ -464,11 +641,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `snackbar`
 :   A brief, non-blocking notification shown at a screen edge.
 
+`snapshot`
+:   A captured reference state compared against on later runs, as in snapshot testing.
+
+`Spatien`
+:   German typographic term for the thin spaces set around certain marks.
+
 `sref`
 :   Midjourney's style-reference parameter (`--sref`).
 
 `SRE`
 :   Site Reliability Engineering, or a Site Reliability Engineer.
+
+`subcommand`
+:   A nested command under a top-level CLI command, e.g. `git commit`.
 
 `Subresource`
 :   A resource a page loads in addition to itself, as in Subresource Integrity.
@@ -476,14 +662,26 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `stylers`
 :   Components or tools that apply visual styling.
 
+`superset`
+:   A set that fully contains another, e.g. TypeScript over JavaScript.
+
+`suppression`
+:   A directive that silences a specific lint or scanner finding.
+
 `symbolication`
 :   Mapping memory addresses in a crash back to source symbols.
 
 `teardown`
 :   Cleanup run after a test or process.
 
+`telemedia`
+:   Online services regulated under German tele-media law on privacy and cookies.
+
 `thresholding`
 :   Applying a cut-off value to classify or filter.
+
+`tokenizer`
+:   A component that splits text into tokens; the act is tokenization.
 
 `tooltip`
 :   A small hint shown on hover or focus.
@@ -491,8 +689,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `typecheck`
 :   To verify a program against its type rules.
 
+`Unlicense`
+:   A public-domain-equivalent software licence.
+
 `unparseable`
 :   Not able to be parsed.
+
+`untyped`
+:   Without static type information.
 
 `validator`
 :   A component that checks input against rules.
@@ -505,6 +709,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `worktree`
 :   A linked working directory of a Git repository.
+
+`XPath`
+:   A query language for selecting nodes in an XML or HTML document.
 
 `YAML`
 :   YAML Ain't Markup Language — a human-readable data-serialisation format.
@@ -571,11 +778,17 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `mandatoriness`
 :   The degree to which something is mandatory.
 
+`monolingually`
+:   In a single language only.
+
 `namespace`
 :   A named scope that keeps identifiers distinct; namespaced.
 
 `onboarding`
 :   Bringing a new user, contributor, or repository up to speed.
+
+`operationalisation`
+:   Turning a concept into a concrete, runnable procedure.
 
 `operationalize`
 :   To turn a concept into a concrete, runnable procedure.
@@ -622,8 +835,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `scaffold`
 :   To generate a starting skeleton of files; scaffolding.
 
+`scaffolder`
+:   A tool that generates a starting skeleton of files.
+
 `slugification`
 :   Converting a string into a URL-safe slug.
+
+`slugify`
+:   To convert a string into a URL-safe slug.
 
 `subagent`
 :   An agent dispatched by another agent.
@@ -643,6 +862,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `subtask`
 :   A task that is part of a larger one.
 
+`swappable`
+:   Able to be exchanged for an equivalent component.
+
 `toolchain`
 :   The set of tools used to build and ship software.
 
@@ -651,6 +873,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `triggerer`
 :   The actor or event that triggers something.
+
+`unautomated`
+:   Not yet automated; still done by hand.
 
 `underperforming`
 :   Performing below expectation.
@@ -681,7 +906,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 ### Proper names — writing, readability, and accessibility sources
 
-These surnames are accepted because they appear as cited authors or sources in the project's readability, editorial-style, and accessibility specs; the three colour-vision terms come from the accessibility domain.
+These surnames are accepted because they appear as cited authors or sources in the project's specs on readability, editorial style, testing, software craft, and data protection; the three colour-vision terms come from the accessibility domain.
 
 `Bamberger`
 :   Co-originator, with Vanecek, of German-language readability research.
@@ -692,14 +917,26 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Chissom`
 :   Co-author of the Flesch–Kincaid grade-level study.
 
+`Cohn`
+:   Mike Cohn, an author on agile estimation and the test pyramid.
+
 `Desrosiers`
 :   Surname cited as a source in the readability/writing specs.
+
+`Dodds`
+:   Kent C. Dodds, a testing and React author (the testing trophy).
+
+`Duden`
+:   The authoritative German-language spelling dictionary.
 
 `Fishburne`
 :   Co-author of the Flesch–Kincaid grade-level study.
 
 `Flesch`
 :   Rudolf Flesch, originator of the Flesch Reading Ease score.
+
+`Habib`
+:   Surname cited as a source in the project's specs.
 
 `Kalzumeus`
 :   The blog and handle of software writer Patrick McKenzie.
@@ -716,6 +953,24 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Matuschak`
 :   Andy Matuschak, known for work on notes and knowledge tools.
 
+`Meszaros`
+:   Gerard Meszaros, author of a foundational book on unit-test patterns and test doubles.
+
+`Ottinger`
+:   Tim Ottinger, a software-craft author.
+
+`Pradel`
+:   Surname cited as a source in the project's testing specs.
+
+`Sadowski`
+:   Surname cited as a source in the project's software-engineering specs.
+
+`Schrems`
+:   Max Schrems, the privacy advocate behind the Schrems data-transfer rulings.
+
+`Schuchert`
+:   Brett Schuchert, a software-craft author.
+
 `Stockton`
 :   Surname cited as a source in the writing/readability specs.
 
@@ -724,6 +979,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `Vanecek`
 :   Co-originator, with Bamberger, of German-language readability research.
+
+`Vocke`
+:   Ham Vocke, author of a widely cited article on the test pyramid.
 
 `Zinsser`
 :   William Zinsser, author of "On Writing Well".
@@ -790,6 +1048,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 `stderr`
 :   Standard error stream.
 
+`stdlib`
+:   Short for a language's standard library.
+
 `stdout`
 :   Standard output stream.
 
@@ -810,7 +1071,7 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 ### Inflected and possessive forms
 
-A few entries exist only so the spell-checker accepts an inflected or possessive form and carry no meaning beyond their base word: `commit's`, `criteria's`, `else's`, `maintainer's`, `README's`, and `navigations`.
+A few entries exist only so the spell-checker accepts an inflected or possessive form and carry no meaning beyond their base word: `commit's`, `criteria's`, `else's`, `Gemma's`, `maintainer's`, `navigations`, `README's`, and `rebased`.
 
 ## `esphome` vocabulary
 
