@@ -47,6 +47,7 @@ theme:
 nav:
   - Overview: index.md
   - Vocabularies: vocabularies.md
+  - Glossary: glossary.md
   - Contributing: contributing.md
   - Specifications: specifications.md
 
@@ -66,12 +67,14 @@ plugins:
           nav_translations:
             Overview: Überblick
             Vocabularies: Vokabulare
+            Glossary: Glossar
             Contributing: Mitwirken
             Specifications: Spezifikationen
 
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - md_in_html
   - tables
   - toc:
