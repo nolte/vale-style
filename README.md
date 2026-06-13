@@ -47,7 +47,7 @@ BasedOnStyles = Vale, nolte-styles
 Pin a specific version if you prefer reproducible builds — the current tag is shown by the badge [![GitHub LatestRelease](https://img.shields.io/github/release/nolte/vale-style.svg)](https://GitHub.com/nolte/vale-style):
 
 ```ini
-Packages = https://github.com/nolte/vale-style/releases/download/v0.1.7/nolte-styles.zip
+Packages = https://github.com/nolte/vale-style/releases/download/v0.1.14/nolte-styles.zip
 ```
 
 Then sync and lint:

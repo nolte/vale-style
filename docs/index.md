@@ -24,6 +24,30 @@
 
 ## Next steps
 
-- [Vocabularies](vocabularies.md) — what ships in each group and how `accept.txt` regex matching works.
-- [Contributing](contributing.md) — add terms, test locally, cut a release.
-- [Specifications](specifications.md) — the curation spec every change in this repo conforms to.
+<div class="grid cards" markdown>
+
+-   :material-book-open-variant: __Vocabularies__
+
+    ---
+
+    What ships in each group and how `accept.txt` regex matching works.
+
+    [:octicons-arrow-right-24: Browse the vocabularies](vocabularies.md)
+
+-   :material-source-pull: __Contributing__
+
+    ---
+
+    Add terms, test locally against a real consumer, and cut a release.
+
+    [:octicons-arrow-right-24: Contribution guide](contributing.md)
+
+-   :material-file-document-outline: __Specifications__
+
+    ---
+
+    The curation spec every change in this repo conforms to.
+
+    [:octicons-arrow-right-24: Read the specs](specifications.md)
+
+</div>
