@@ -1,3 +1,12 @@
-.wy-nav-content {
-    max-width: 100%; !overwrite
+/* Project-specific tweaks on top of the Material for MkDocs theme. */
+
+/* Give long vocabulary and matching tables a touch more breathing room. */
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+/* Render inline regex/vocab entries (e.g. `[Hh]ostnames?`) with a subtle
+   highlight so accept.txt patterns stand out from surrounding prose. */
+.md-typeset code {
+  font-feature-settings: "liga" 0;
 }

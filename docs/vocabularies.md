@@ -16,12 +16,13 @@ Vale loads each listed group from `styles/config/vocabularies/<name>/accept.txt`
 
 ## `technical`
 
-The default vocabulary for most repos. Covers four loose families:
+The default vocabulary for most repos — a curated, steadily growing list of terms that a plain English dictionary would otherwise flag as misspellings. The examples below are representative, not exhaustive; the authoritative list is [`technical/accept.txt`](https://github.com/nolte/vale-style/blob/main/src/styles/config/vocabularies/technical/accept.txt) in the repo. It clusters into a handful of loose families:
 
-- **Tool and product names** — `Ansible`, `ESPHome`, `MkDocs`, `Taskfile`, `Renovate`, `Trivy`, `Probot`, `gh-plumbing`, `Claude`, `zsh`, `asdf`, `nolte`, `Ulanzi`.
-- **Software-engineering and CI/CD terms** — `CI`, `CLIs`, `PRs`, `MRs`, `Dockerfiles`, `docstrings`, `frontmatter`, `runbooks`, `hotfixes`, `automerge`, `rebase`, `rebasing`, `cron`, `formatters`, `YAMLs`.
-- **Naming, lifecycle, and workflow words** — `namespace`, `namespaced`, `dogfood`, `dogfooding`, `onboarding`, `rollout`, `vendoring`, `toolchain`, `subprojects`, `subfolders`, `triages`, `routable`, `dispatchable`, `invocable`, `auditable`, `browsable`, `overridable`, `operationalize`.
-- **Words plain English dictionaries flag as typos** — `dotfile`, `untrusted`, `env`, `config`, `repo`, `gitignored`, `untracked`, `unversioned`, `lowercased`, `deduplicated`, `stylers`, `READMEs`, `PDFs`, `NFRs`.
+- **Tools, products, and brands** — `Ansible`, `ESPHome`, `MkDocs`, `Renovate`, `Trivy`, `Probot`, `Vite`, `Vue`, `Tauri`, `Bun`, `ESLint`, `mypy`, `Pyright`, `Vitest`, `npm`, `Tailwind`, `Mantine`, `Figma`, `Jira`, `Supabase`, `Vercel`, `Claude`, `Anthropic`, `gh-plumbing`, `nolte`.
+- **Software-engineering, CI/CD, and security terms** — `CI`, `CLIs`, `PRs`, `MRs`, `ADRs`, `Dockerfiles`, `docstrings`, `frontmatter`, `runbooks`, `hotfixes`, `automerge`, `rebase`, `cron`, `lockfiles`, `monorepos`, `worktrees`, `devcontainer`, `CVEs`, `GHSAs`, `SHAs`, `attestation`, `idempotency`, `typecheck`.
+- **Naming, lifecycle, and workflow words** — `namespaced`, `dogfooding`, `onboarding`, `rollout`, `vendoring`, `toolchain`, `subprojects`, `triages`, `dispatchable`, `invocable`, `auditable`, `overridable`, `operationalize`, `scaffold`, `retarget`, `autofix`, `autolink`, `bikeshedding`.
+- **Proper names from the writing and accessibility domains** — surnames and authorities cited in readability, editorial, and a11y specs: `Flesch`, `Kincaid`, `Strunk`, `Zinsser`, `Kissane`, `Matuschak`, `Carliner`, plus colour-vision terms like `protan`, `deutan`, `tritan`.
+- **Shell and runtime shorthands dictionaries reject** — `dotfile`, `untrusted`, `env`, `config`, `repo`, `cwd`, `stderr`, `stdout`, `venv`, `gitignored`, `untracked`, `unversioned`, `greppable`, `skimmable`, `READMEs`, `PDFs`, `NFRs`.
 
 ## `esphome`
 

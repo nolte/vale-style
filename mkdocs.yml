@@ -1,21 +1,82 @@
 site_name: "vale-style"
+site_description: "Shared Vale spelling rules and vocabularies, packaged as a single zip and consumed across nolte projects."
+site_url: "https://nolte.github.io/vale-style/"
+site_author: "nolte"
+
+repo_name: "nolte/vale-style"
+repo_url: "https://github.com/nolte/vale-style"
+edit_uri: "edit/develop/docs/"
+
+docs_dir: docs/
+
 theme:
   name: material
-docs_dir: docs/
-repo_name: 'nolte/vale-style'
-repo_url: 'https://github.com/nolte/vale-style'
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
 nav:
   - Overview: index.md
   - Vocabularies: vocabularies.md
   - Contributing: contributing.md
   - Specifications: specifications.md
+
 plugins:
+  - search
   - include-markdown
+
 markdown_extensions:
-  - pymdownx.inlinehilite:
-  - pymdownx.superfences:
-  - pymdownx.highlight:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
   - toc:
-      permalink: True
+      permalink: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nolte/vale-style
+      name: vale-style on GitHub
+
 extra_css:
   - css/overwrite.css
