@@ -4,7 +4,7 @@ The maintenance rules for this package are codified in the [Vocabulary and Style
 
 ## Adding a term to a vocabulary
 
-1. Pick the narrowest group that fits: project-agnostic terms go in `src/styles/config/vocabularies/technical/accept.txt`; ESPHome-specific hardware, GPIO pins, or YAML keys go in `src/styles/config/vocabularies/esphome/accept.txt`. Introduce a new group only when a clearly bounded domain warrants it — and in the same PR update `docs/vocabularies.md` and the `README.md` list.
+1. Pick the narrowest group that fits: project-agnostic terms go in `src/styles/config/vocabularies/technical/accept.txt`; ESPHome-specific hardware, GPIO pins, or YAML keys go in `src/styles/config/vocabularies/esphome/accept.txt`. Introduce a new group only when a clearly bounded domain warrants it — and in the same PR update `docs/en/vocabularies.md`, `docs/de/vocabularies.md`, and the `README.md` list.
 2. Before adding a term, confirm a current English dictionary still flags it. Words Vale's base dictionary already knows don't belong in `accept.txt`.
 3. Add the term on its own line. Prefer a **regex that collapses variants** (`LEDs?`, `[Hh]ostnames?`, `GPIO(0[0-9]|[1-3][0-9])`) over multiple literal entries.
 4. Keep entries case-sensitive unless the term really should match any casing — the vocabulary doubles as a nudge toward the correct spelling.

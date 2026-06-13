@@ -1,7 +1,7 @@
 # Vale style
 
 {%
-   include-markdown "../README.md"
+   include-markdown "../../README.md"
    start="<!--intro-start-->"
    end="<!--intro-end-->"
 %}
@@ -9,7 +9,7 @@
 ## Archive layout
 
 {%
-   include-markdown "../README.md"
+   include-markdown "../../README.md"
    start="<!--archive-structure-start-->"
    end="<!--archive-structure-end-->"
 %}
@@ -17,7 +17,7 @@
 ## Usage
 
 {%
-   include-markdown "../README.md"
+   include-markdown "../../README.md"
    start="<!--usage-start-->"
    end="<!--usage-end-->"
 %}

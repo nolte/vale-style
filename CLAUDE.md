@@ -9,7 +9,7 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 ## Layout that matters
 
 - `src/.vale.ini` — the `.vale.ini` that ships *inside* the zip. `StylesPath = styles` and `Vocab = technical` are resolved relative to the consumer's unpacked package, not this repo.
-- `/.vale.ini` (repo root) — dogfoods the shipped assets: `StylesPath = src/styles`, `Vocab = technical, esphome`. `task test` (`vale .`) lints this repo's own Markdown through the same vocabularies consumers get from the zip. Scope blocks exempt `CLAUDE.md`, `spec/README.md`, and `spec/**/de.md` from `Vale.Spelling`.
+- `/.vale.ini` (repo root) — dogfoods the shipped assets: `StylesPath = src/styles`, `Vocab = technical, esphome`. `task test` (`vale .`) lints this repo's own Markdown through the same vocabularies consumers get from the zip. Scope blocks exempt `CLAUDE.md`, `spec/README.md`, `spec/**/de.md`, and `docs/de/**` from `Vale.Spelling` (the German docs aren't spell-checked against the English dictionary).
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Pp]robot` or `LEDs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
 
@@ -44,7 +44,7 @@ Engineering specs — scope rules for vocabularies, curation process, acceptance
 
 ## Docs site
 
-MkDocs Material, sourced from `docs/`. `docs/index.md` pulls fragments from `README.md` via `include-markdown` between `<!--intro-start-->`, `<!--archive-structure-start-->`, `<!--usage-start-->` marker pairs — edits to those README sections propagate to the site, so keep the markers intact.
+MkDocs Material, bilingual via `mkdocs-static-i18n` (`docs_structure: folder`). English is the default; pages live under `docs/en/` and the German translations under `docs/de/`, with `docs/css/` shared language-neutrally. Both `docs/en/index.md` and `docs/de/index.md` pull fragments from `README.md` via `include-markdown` (path `../../README.md`) between the `<!--intro-start-->`, `<!--archive-structure-start-->`, `<!--usage-start-->` marker pairs — those fragments stay English in both languages (they carry code), so keep the markers intact. Nav labels are translated in `mkdocs.yml` under the `i18n` plugin's `nav_translations`. When you add or rename a page, mirror it in both language trees.
 
 ```sh
 pip install -r requirements-dev.txt

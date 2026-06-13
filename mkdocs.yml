@@ -11,10 +11,10 @@ docs_dir: docs/
 
 theme:
   name: material
+  language: en
   icon:
     repo: fontawesome/brands/github
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.top
     - navigation.sections
@@ -53,6 +53,21 @@ nav:
 plugins:
   - search
   - include-markdown
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            Overview: Überblick
+            Vocabularies: Vokabulare
+            Contributing: Mitwirken
+            Specifications: Spezifikationen
 
 markdown_extensions:
   - admonition
