@@ -73,7 +73,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Graph-visualisation toolkit driven by the DOT language.
 
 `Inkbot`
-:   Third-party design studio/brand referenced in the project's asset specs.
+:   Third-party design studio referenced in the project's specs.
 
 `Jira`
 :   Atlassian's issue- and project-tracking tool.
@@ -130,7 +130,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Syntax highlighter that uses TextMate grammars and editor themes.
 
 `Skywork`
-:   Third-party AI model/service referenced in the project.
+:   Third-party AI service referenced in the project's specs.
 
 `Supabase`
 :   Open-source backend platform built on PostgreSQL.
@@ -172,7 +172,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Progressive JavaScript framework for building user interfaces.
 
 `Webheads`
-:   Third-party brand/community referenced in the project.
+:   Third-party brand referenced in the project's specs.
 
 `Zod`
 :   TypeScript-first schema declaration and validation library.
@@ -255,7 +255,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Command-Line Interface.
 
 `closeable`
-:   Able to be closed, e.g. a releasable resource.
+:   Able to be closed — said of a resource that must be released.
 
 `conformant`
 :   Adhering to a specification or standard.

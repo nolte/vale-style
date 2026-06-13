@@ -49,7 +49,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Clientseitiger HTML-Sanitizer, der XSS-anfälliges Markup entfernt.
 
 `Eleventy`
-:   Static-Site-Generator, auch „11ty" geschrieben.
+:   Static-Site-Generator, auch „11ty“ geschrieben.
 
 `ESLint`
 :   Erweiterbarer Linter für JavaScript und TypeScript.
@@ -73,7 +73,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Toolkit zur Graph-Visualisierung, gesteuert über die Sprache DOT.
 
 `Inkbot`
-:   Drittanbieter-Designstudio bzw. -marke, auf die in den Asset-Specs verwiesen wird.
+:   Drittanbieter-Designstudio, auf das in den Specs des Projekts verwiesen wird.
 
 `Jira`
 :   Atlassians Werkzeug zur Vorgangs- und Projektverfolgung.
@@ -130,7 +130,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Syntax-Highlighter, der TextMate-Grammatiken und Editor-Themes nutzt.
 
 `Skywork`
-:   Drittanbieter-KI-Modell bzw. -Dienst, auf den im Projekt verwiesen wird.
+:   Drittanbieter-KI-Dienst, auf den in den Specs des Projekts verwiesen wird.
 
 `Supabase`
 :   Quelloffene Backend-Plattform auf Basis von PostgreSQL.
@@ -172,7 +172,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Progressives JavaScript-Framework zum Bau von Benutzeroberflächen.
 
 `Webheads`
-:   Drittanbieter-Marke bzw. -Community, auf die im Projekt verwiesen wird.
+:   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
 
 `Zod`
 :   TypeScript-first-Bibliothek zur Schema-Deklaration und -Validierung.
@@ -255,7 +255,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Command-Line Interface (Kommandozeilen-Schnittstelle).
 
 `closeable`
-:   Schließbar, etwa eine freigebbare Ressource.
+:   Schließbar — von einer Ressource, die freigegeben werden muss.
 
 `conformant`
 :   Einer Spezifikation oder einem Standard entsprechend.
@@ -348,7 +348,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Auf idempotente Weise.
 
 `implementor`
-:   Wer eine Spezifikation umsetzt, auch „implementer" geschrieben.
+:   Wer eine Spezifikation umsetzt, auch „implementer“ geschrieben.
 
 `inlining`
 :   Eine Definition direkt an ihrer Verwendungsstelle einsetzen.
@@ -512,7 +512,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 ### Begriffe zu Benennung, Lebenszyklus und Workflow
 
 `achievability`
-:   Ob ein Ziel realistisch erreichbar ist — das „A" in SMART.
+:   Ob ein Ziel realistisch erreichbar ist — das „A“ in SMART.
 
 `autoallow`
 :   Etwas automatisch erlauben, ohne manuelle Freigabe.
@@ -542,7 +542,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Umgehbar.
 
 `definitionally`
-:   Per Definition.
+:   Der Definition nach.
 
 `disambiguation`
 :   Das Auflösen, welche von mehreren Bedeutungen gemeint ist.
@@ -560,7 +560,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Das Markieren eines Elements als Favorit.
 
 `invocable`
-:   Aufrufbar, auch „invokable".
+:   Aufrufbar, auch „invokable“.
 
 `kebab`
 :   Wie in kebab-case — kleingeschriebene, durch Bindestriche verbundene Wörter.
@@ -720,13 +720,13 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 :   Nachname, der als Quelle in den Specs zu Schreiben/Lesbarkeit zitiert wird.
 
 `Strunk`
-:   William Strunk Jr., Mitautor von „The Elements of Style".
+:   William Strunk Jr., Mitautor von „The Elements of Style“.
 
 `Vanecek`
 :   Mitbegründer der deutschsprachigen Lesbarkeitsforschung, gemeinsam mit Bamberger.
 
 `Zinsser`
-:   William Zinsser, Autor von „On Writing Well".
+:   William Zinsser, Autor von „On Writing Well“.
 
 `deutan`
 :   Farbsehschwäche, die die Grünwahrnehmung betrifft (Deuteranopie-Familie).
