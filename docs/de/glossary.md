@@ -339,7 +339,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Command-Line Interface (Kommandozeilen-Schnittstelle).
 
 `clickability`
-:   Wie deutlich ein Element zum Klicken einlädt und ihn erfasst.
+:   Wie leicht erkennbar und anklickbar ein Element ist.
 
 `closeable`
 :   Schließbar — von einer Ressource, die freigegeben werden muss.
@@ -372,7 +372,7 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 :   Schnelle, wiederholte Ereignisse erst behandeln, wenn sie sich beruhigt haben.
 
 `decompounding`
-:   Das Zerlegen eines zusammengesetzten Wortes in seine Bestandteile, in der deutschen Textverarbeitung üblich; ein Decompounder leistet dies.
+:   Das Zerlegen eines zusammengesetzten Wortes in seine Bestandteile, in der deutschen Textverarbeitung üblich; die zuständige Komponente ist ein Decompounder.
 
 `dedup`
 :   Kurzform von deduplicate.

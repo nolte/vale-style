@@ -339,7 +339,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Command-Line Interface.
 
 `clickability`
-:   How readily an element invites and registers a click.
+:   How easily a user can tell an element is clickable and hit it.
 
 `closeable`
 :   Able to be closed — said of a resource that must be released.
@@ -372,7 +372,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   To delay handling of rapid repeated events until they settle.
 
 `decompounding`
-:   Splitting a compound word into its parts, common in German text processing; a decompounder does this.
+:   Splitting a compound word into its parts, common in German text processing; the component that does it is a decompounder.
 
 `dedup`
 :   Short for deduplicate.
@@ -675,7 +675,7 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 :   Cleanup run after a test or process.
 
 `telemedia`
-:   German online-services governed by tele-media law on privacy and cookies.
+:   Online services regulated under German tele-media law on privacy and cookies.
 
 `thresholding`
 :   Applying a cut-off value to classify or filter.
