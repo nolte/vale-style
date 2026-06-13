@@ -29,7 +29,7 @@ Das Standard-Vokabular für die meisten Repos — eine kuratierte, stetig wachse
 ESPHome-spezifische Begriffe. Optional: zusammen mit `technical` aktivieren, wenn deine Doku die ESPHome-Gerätekonfiguration behandelt.
 
 - **Hardware-Bezeichner** — `ESP8285`, `HLW8012`, `SP111`, `NOUS`, `A1T`, `Gosund`.
-- **GPIO-Pins** — die Regex `GPIO(0[0-9]|[1-3][0-9])` akzeptiert jeden nullgepolsterten zweistelligen Pin-Namen von `GPIO00` bis `GPIO39`, sodass sowohl ESP8266- als auch ESP32-Pin-Referenzen sauber durch den Lint laufen. Das bloße `GPIO` wird separat akzeptiert.
+- **GPIO-Pins** — die Regex `GPIO(0[0-9]|[1-3][0-9])` akzeptiert jeden zweistelligen Pin-Namen mit führender Null von `GPIO00` bis `GPIO39`, sodass sowohl ESP8266- als auch ESP32-Pin-Referenzen sauber durch den Lint laufen. Das bloße `GPIO` wird separat akzeptiert.
 - **YAML-Konfigurationsschlüssel** — `baud_rate`, `status_led`, `restore_mode`, `restore_from_flash`, `early_pin_init`, `turn_on_action`, `turn_off_action`.
 - **Domänenbegriffe** — `automations`, `Datetime`, `dBm`, `hostname`, `hostnames`, `LED`, `LEDs`.
 
@@ -47,4 +47,4 @@ Jede Zeile in `accept.txt` ist eine **Regex**, kein wörtlicher String. Das ist 
 
 Halte Einträge **standardmäßig case-sensitiv**: schreibe `[Aa]llowlist` statt `(?i)allowlist`, damit das Vokabular ungewollte Schreibweisen in anderer Groß-/Kleinschreibung weiterhin markiert. Verwende für Produkt- oder Markennamen gar keine Bracket-Klasse — nutze die kanonische Schreibweise des jeweiligen Herstellers (`MkDocs`, `Probot`, `Claude`, `npm`, `mypy`, `Vitest`, `Pyright`), damit abweichende Schreibweisen im Text markiert bleiben.
 
-Die vollständigen Pflegeregeln, denen dieses Paket folgt, stehen in der [Spec „Vocabulary and Style Curation"](https://github.com/nolte/vale-style/blob/main/spec/vocabulary-and-style-curation/en.md).
+Die vollständigen Pflegeregeln, denen dieses Paket folgt, stehen in der [Spec „Vocabulary and Style Curation“](https://github.com/nolte/vale-style/blob/main/spec/vocabulary-and-style-curation/en.md).

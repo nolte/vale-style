@@ -38,7 +38,7 @@
 
     ---
 
-    Begriffe ergänzen, lokal gegen ein echtes Consumer-Projekt testen, ein Release schneiden.
+    Begriffe ergänzen, lokal gegen ein echtes Consumer-Projekt testen, ein Release veröffentlichen.
 
     [:octicons-arrow-right-24: Beitragsleitfaden](contributing.md)
 
