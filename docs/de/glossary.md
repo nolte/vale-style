@@ -6,6 +6,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 ### Werkzeuge, Produkte und Marken
 
+`aiohttp`
+:   Asynchrone HTTP-Client- und Server-Bibliothek für Pythons asyncio.
+
 `Ansible`
 :   Agentenloses Werkzeug für IT-Automatisierung und Konfigurationsmanagement.
 
@@ -96,6 +99,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Inkbot`
 :   Drittanbieter-Designstudio, auf das in den Specs des Projekts verwiesen wird.
 
+`Jinja2`
+:   Python-Templating-Engine; der Paketname lautet Jinja2.
+
 `Jira`
 :   Atlassians Werkzeug zur Vorgangs- und Projektverfolgung.
 
@@ -176,6 +182,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Sinon`
 :   Eine JavaScript-Bibliothek für Test-Spies, -Stubs und -Mocks.
+
+`Skaffold`
+:   Kommandozeilen-Werkzeug, das Build, Push und Deployment für die Kubernetes-Entwicklung automatisiert.
 
 `Skywork`
 :   Drittanbieter-KI-Dienst, auf den in den Specs des Projekts verwiesen wird.
@@ -313,6 +322,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `backoff`
 :   Das schrittweise Erhöhen der Wartezeit zwischen Wiederholungen.
+
+`backtick`
+:   Das Gravis-Zeichen, das Inline-Code in Markdown begrenzt.
 
 `bluetooth`
 :   Standard für drahtlose Verbindung über kurze Distanz.
@@ -461,6 +473,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `hotfix`
 :   Eine dringende Korrektur, die direkt auf eine veröffentlichte Version angewandt wird.
 
+`HTMLElement`
+:   Die Basis-DOM-Schnittstelle, die jeder HTML-Elementtyp erweitert.
+
 `idempotency`
 :   Die Eigenschaft, dass das Wiederholen einer Operation dasselbe Ergebnis liefert wie ihr einmaliges Ausführen.
 
@@ -593,6 +608,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `renderer`
 :   Eine Komponente, die ein Modell oder Markup in visuelle Ausgabe umwandelt.
 
+`REST`
+:   Representational State Transfer — ein Architekturstil für HTTP-APIs.
+
 `reusable`
 :   In anderem Kontext wiederverwendbar.
 
@@ -679,6 +697,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `thresholding`
 :   Das Anwenden eines Schwellenwerts zum Klassifizieren oder Filtern.
+
+`todo`
+:   Eine Code-Annotation, die noch zu erledigende Arbeit markiert.
 
 `tokenizer`
 :   Eine Komponente, die Text in Tokens zerlegt; der Vorgang ist die Tokenisierung.
@@ -1069,9 +1090,73 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `virtualenv`
 :   Ein Python-Werkzeug für virtuelle Umgebungen bzw. eine solche Umgebung.
 
+### Begriffe zu Home-Assistant-Integration und Pflanzenpflege
+
+Diese Begriffe stammen aus der Home-Assistant-Integration [`kamerplanter-ha`](https://github.com/nolte/kamerplanter-ha): Vokabular der Home-Assistant-Plattform und des Config-Flows sowie die dort dokumentierten Begriffe zur Pflanzenpflege.
+
+`automation`
+:   Eine Home-Assistant-Regel, die Aktionen bei Ereignissen, Zuständen oder nach Zeitplan auslöst; Plural automations.
+
+`coordinator`
+:   Ein Home-Assistant-`DataUpdateCoordinator`, der das Polling bündelt und die abgerufenen Daten an mehrere Entitäten verteilt.
+
+`drench`
+:   Eine Gießmethode, die den Wurzelbereich durchtränkt, oft zur Ausbringung einer Behandlung.
+
+`EC`
+:   Elektrische Leitfähigkeit — ein Maß für die Nährstoffkonzentration im Wasser oder Substrat einer Pflanze.
+
+`EntityDescription`
+:   Eine Home-Assistant-Dataclass, die die Metadaten einer Entität deklariert, sodass eine Entitätsklasse viele Datenpunkte bedienen kann.
+
+`fertigation`
+:   Ausbringung von Dünger, gelöst im Bewässerungswasser.
+
+`foliar`
+:   Auf die Blätter einer Pflanze aufgebracht, etwa als Blattdüngung oder -spray.
+
+`HACS`
+:   Home Assistant Community Store — die Registry zum Installieren eigener Integrationen und Karten.
+
+`hassfest`
+:   Home Assistants Werkzeug zur Validierung von Manifest und Metadaten, das in der CI läuft.
+
+`Homeassistant`
+:   Kompakte Schreibweise der Home-Assistant-Plattform, verwendet in Bezeichnern und Paketnamen.
+
+`houseplant`
+:   Eine Zimmerpflanze; Plural houseplants.
+
+`IPM`
+:   Integriertes Schädlingsmanagement (Integrated Pest Management) — Kombination biologischer, kultureller und chemischer Maßnahmen.
+
+`Kamerplanter`
+:   Das Backend für Zimmerpflanzenpflege, mit dem sich diese Integration verbindet; auch die Possessivform Kamerplanter's.
+
+`kp`
+:   Kurzbezeichner für Kamerplanter, genutzt in Schlüsseln und Abkürzungen.
+
+`Lovelace`
+:   Home Assistants UI-Framework für Dashboards und Karten.
+
+`mS`
+:   Millisiemens — die Einheit, in der die elektrische Leitfähigkeit (EC) angegeben wird.
+
+`pH`
+:   Der Säure- oder Basengrad des Wassers oder Substrats einer Pflanze.
+
+`reauthenticate`
+:   Die Anmeldedaten einer Integration erneut bereitstellen, nachdem sie abgelaufen oder widerrufen wurden; auch die Kurzformen Reauth und Reauthentication sowie der Schritt im Config-Flow.
+
+`runtime_data`
+:   Der typisierte Home-Assistant-Slot `ConfigEntry.runtime_data`, der die Live-Objekte einer Integration hält statt `hass.data`.
+
+`tenant`
+:   Ein isolierter Konto-Bereich in einem mandantenfähigen Backend; Plural tenants.
+
 ### Beugungs- und Possessivformen
 
-Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `Gemma's`, `maintainer's`, `navigations`, `README's` und `rebased`.
+Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `Gemma's`, `HA's`, `maintainer's`, `navigations`, `README's` und `rebased`.
 
 ## Vokabular `esphome`
 
