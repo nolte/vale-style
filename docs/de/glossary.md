@@ -491,6 +491,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `inspectable`
 :   Zur Laufzeit oder per Werkzeug untersuchbar.
 
+`IP`
+:   Internet Protocol — das Adressierungsschema der Netzwerkschicht; eine IP-Adresse identifiziert einen Host.
+
 `Komposita`
 :   Zusammengesetzte Wörter, etwa in der Lesbarkeitsanalyse.
 
@@ -508,6 +511,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `LIX`
 :   Ein Lesbarkeitsindex auf Basis von Wort- und Satzlänge.
+
+`LLM`
+:   Large Language Model — ein neuronales Modell, das auf Text trainiert wird, um Sprache zu erzeugen und zu verstehen.
 
 `lockfile`
 :   Eine Datei, die exakt aufgelöste Abhängigkeitsversionen festschreibt.
@@ -565,6 +571,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `OQ`
 :   Open Question — ein in einer Spec festgehaltener offener Punkt.
+
+`param`
+:   Parameter — eine benannte Eingabe für eine Funktion, einen Befehl oder ein Template; Plural params.
 
 `parseable`
 :   Parsebar.
@@ -1029,6 +1038,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `deps`
 :   Kurzform von dependencies (Abhängigkeiten).
+
+`dev`
+:   Kurzform für Entwicklung oder Entwickler, etwa in einer dev-Umgebung oder einer dev-Abhängigkeit.
 
 `DMs`
 :   Direktnachrichten.

@@ -10,3 +10,13 @@ repos:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
         args: ['--markdown-linebreak-ext=md']
+-   repo: local
+    hooks:
+    -   id: glossary-coverage
+        name: glossary covers every accept.txt term
+        entry: python scripts/check_glossary_coverage.py
+        language: python
+        additional_dependencies: ['pyyaml']
+        # Re-run whenever a vocabulary, a glossary, or the checker itself changes.
+        files: '^(src/styles/config/vocabularies/.*/accept\.txt|docs/(en|de)/glossary\.md|scripts/(check_glossary_coverage\.py|glossary_aliases\.yml))$'
+        pass_filenames: false

@@ -9,6 +9,7 @@ This repository produces a single artefact, `nolte-styles.zip`, that downstream 
 - Entries accumulate piecemeal, duplicate across groups, or mask legitimate typos that Vale should flag.
 - The on-disk vocabulary groups drift away from how `README.md` and `docs/vocabularies.md` describe them — as happened when `claude-shared` was referenced in docs after it had been folded back into `technical`.
 - The `src/styles/nolte-styles/` directory is wired into `BasedOnStyles` but holds only a `.keep` file, so it is unclear under which conditions the first real rule can land.
+- A term can be accepted by a vocabulary yet never defined for readers: the glossary (`docs/en/glossary.md` and `docs/de/glossary.md`) silently drifts behind `accept.txt`, as happened when entries added in one PR were only partially covered in the next.
 
 This spec defines the maintenance process so that the shipped package produces a consistent lint signal across all consumers, and so that this repo's own documentation always matches the artefact it publishes.
 
@@ -19,6 +20,7 @@ This spec defines the maintenance process so that the shipped package produces a
 - Keep the on-disk state, `README.md`, and `docs/vocabularies.md` structurally in sync — a group exists in all three or in none.
 - Describe how custom rule YAMLs may land under `src/styles/nolte-styles/` without further schema churn.
 - Dogfood the package inside this repo so vocabulary regressions surface locally before a release.
+- Guarantee that every accepted term is defined for readers: each `accept.txt` entry has a matching glossary entry in both languages, enforced automatically so a term can never ship undefined.
 
 ## Non-Goals
 
@@ -38,12 +40,15 @@ This spec defines the maintenance process so that the shipped package produces a
   - Any commit that adds or removes a vocabulary group MUST update `docs/vocabularies.md` and the "Available vocabularies" section in `README.md` in the same commit.
   - `src/.vale.ini` (shipped in the archive) and the repo-root `.vale.ini` (used for dogfooding) MUST reference only groups that exist on disk.
   - `accept.txt` files MUST contain only regex entries — no blank lines, no comment lines — because Vale interprets every line as a pattern.
+  - Every term any `accept.txt` accepts MUST have a matching entry in both `docs/en/glossary.md` and `docs/de/glossary.md`. Because each entry is a regex, a glossary entry "matches" when its readable lemma normalizes to one of the literal forms the regex accepts (lowercase, trailing plural or possessive `s` collapsed). A term whose only documentation is folded into a sibling entry's definition (e.g. `severities` under `severity`) MUST be recorded in `scripts/glossary_aliases.yml` so the mapping is explicit; a pattern entry that is not a discrete lemma (e.g. a numeric pin range) MUST be exempted only via a justified entry in that file's `ignore` list.
+  - The coverage check `scripts/check_glossary_coverage.py` (run via `task glossary:check`) MUST pass before a change merges. It runs as a `local` pre-commit hook and therefore also in the CI pre-commit job, so an `accept.txt` term added without a glossary entry fails the PR rather than shipping silently.
 - **SHOULD**
   - Related forms SHOULD be collapsed into one regex entry (`LEDs?`, `[Hh]ostnames?`, `CLIs?`) instead of listed separately.
   - Before a term is added, the author SHOULD confirm that a current English dictionary still flags it — terms already known to Vale's base dictionary do not belong in an `accept.txt`.
   - A term SHOULD be placed in the narrowest group that fits: `technical` is the default for cross-project terminology, `esphome` for ESPHome-specific hardware and configuration terms, and a new group SHOULD be created only when a clearly bounded domain warrants it.
   - The repo-root `.vale.ini` SHOULD enable the same vocabularies it ships, so local `vale .` runs exercise the package's own assets.
   - Removing a term from a vocabulary SHOULD be preceded by a quick check of known consumer repos to avoid surprise lint failures on their next `vale sync`.
+  - When adding a vocabulary term, the author SHOULD run `task glossary:stubs` to scaffold the missing glossary entries, then replace each `TODO` placeholder with a real definition (or a brief placement note for a brand) in both language files before opening the PR.
 - **MAY**
   - Entries MAY be sorted alphabetically within a group when it aids review, but neither Vale nor the build depends on ordering.
   - Custom Vale rule YAMLs MAY be added under `src/styles/nolte-styles/`; the shipped `src/.vale.ini` already lists `nolte-styles` in `BasedOnStyles`, so new rules activate automatically in the next release.
@@ -59,6 +64,8 @@ This spec defines the maintenance process so that the shipped package produces a
 - [ ] Running `vale sync && vale .` at the repo root passes using only the vocabularies this package ships.
 - [ ] The archive built via the `Build the archive locally` snippet in `README.md` unpacks to the structure documented in the same file, including `.vale.ini`.
 - [ ] Adding a new rule file under `src/styles/nolte-styles/` does not require editing `src/.vale.ini`.
+- [ ] `task glossary:check` passes: every `accept.txt` term across all groups is covered in both `docs/en/glossary.md` and `docs/de/glossary.md`, with any non-lemma pattern or sibling-folded variant recorded in `scripts/glossary_aliases.yml`.
+- [ ] The glossary-coverage check runs as a pre-commit hook (and thus in the CI pre-commit job), failing the build on any uncovered term.
 
 ## Open Questions
 
@@ -66,3 +73,4 @@ This spec defines the maintenance process so that the shipped package produces a
 - When the first real `nolte-styles` rule is added, should rule authoring move to its own spec, or extend this one?
 - Is a removal policy needed — for instance, requiring a grep across known consumer repos before a term is dropped — or is the release changelog signal enough?
 - How is a brand-new vocabulary group vetted? Is a single consumer inside this repo's docs sufficient proof of need, or should at least one external consumer be identified first?
+- Should sibling-folded variants (a term documented inside another entry's definition, mapped in `scripts/glossary_aliases.yml`) eventually earn their own glossary lines, or is the alias mapping their permanent home?

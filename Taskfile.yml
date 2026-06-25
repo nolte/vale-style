@@ -11,6 +11,16 @@ tasks:
     cmds:
       - vale .
 
+  glossary:check:
+    desc: Fail if any accept.txt term lacks a glossary entry (EN and DE)
+    cmds:
+      - python3 scripts/check_glossary_coverage.py
+
+  glossary:stubs:
+    desc: Scaffold TODO glossary stubs for any uncovered accept.txt terms
+    cmds:
+      - python3 scripts/check_glossary_coverage.py --write-stubs
+
   docs:
     desc: Build the MkDocs site in strict mode
     cmds:

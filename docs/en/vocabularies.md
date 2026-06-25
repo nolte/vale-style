@@ -47,4 +47,17 @@ Each line in `accept.txt` is a **regex**, not a literal string. This is a Vale c
 
 Keep entries **case-sensitive by default**: write `[Aa]llowlist` rather than `(?i)allowlist`, so the vocabulary still flags unintended cross-case variants. For product or brand names, do not use a bracket-class entry at all — use the canonical casing the upstream publishes (`MkDocs`, `Probot`, `Claude`, `npm`, `mypy`, `Vitest`, `Pyright`) so off-brand casings in prose stay flagged.
 
+## Keeping the glossary in sync
+
+Every term a vocabulary accepts is defined on the [Glossary](glossary.md) page, in both English and German. A coverage gate enforces this: `scripts/check_glossary_coverage.py` (run via `task glossary:check`) expands each `accept.txt` regex to the forms it accepts and fails if any is missing from `docs/en/glossary.md` or `docs/de/glossary.md`. The check runs as a pre-commit hook, so a pull request that adds a term without defining it is caught before merge.
+
+To add a term:
+
+1. Add the regex entry to the right `accept.txt` group.
+2. Run `task glossary:stubs` to scaffold a `TODO` placeholder for the new term in both glossary files.
+3. Replace each placeholder with a real definition — or a short placement note for a brand — and move it into the matching subsection.
+4. Run `task glossary:check` until it passes.
+
+A few accepted forms are documented inside a sibling entry's definition (for example `severities` under `severity`) or are patterns rather than single lemmas (the `GPIO(0[0-9]|[1-3][0-9])` pin range). Those are recorded in `scripts/glossary_aliases.yml` instead of getting their own glossary line.
+
 See the [Vocabulary and Style Curation spec](https://github.com/nolte/vale-style/blob/main/spec/vocabulary-and-style-curation/en.md) for the full maintenance rules this package follows.
