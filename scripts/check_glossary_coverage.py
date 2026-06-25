@@ -155,7 +155,7 @@ def expand_regex(pattern: str) -> set[str]:
 def normalize_key(token: str) -> str:
     """Lowercase and strip a trailing possessive/plural ``s`` for comparison."""
     token = token.strip().lower()
-    if token.endswith("'s"):
+    if token.endswith("'s") and len(token) > 2:
         return token[:-2]
     if token.endswith("s") and len(token) > 1:
         return token[:-1]
@@ -163,13 +163,33 @@ def normalize_key(token: str) -> str:
 
 
 def display_lemma(pattern: str) -> str:
-    """Best-effort readable lemma for a stub, derived mechanically.
+    """Best-effort readable lemma for a stub.
 
-    Lowers a leading ``[Aa]`` case class to its first letter, strips trailing
-    optional inflection groups, and appends a lemma-completing ``e`` when the
-    last optional group leads with ``e`` (``[Dd]eduplicat(e|...)?`` -> dedup...e).
-    Imperfect by design — the stub is a TODO the author refines.
+    Derived from the regex's own expansion: the shortest literal the pattern
+    matches, preferring a lowercase leading letter so ``[Aa]gents?`` -> "agent"
+    while ``Anthropic('s)?`` -> "Anthropic". Deriving from the expansion (rather
+    than hand-stripping the regex) guarantees the stub lemma is a real literal —
+    never leftover regex syntax like ``Jinja2?`` or ``virtualis(e|ed)`` — so a
+    written stub is covered on the next run instead of being re-emitted. Falls
+    back to a mechanical strip only when the pattern can't be expanded. Imperfect
+    by design — the stub is a TODO the author refines.
     """
+    try:
+        literals = {lit for lit in expand_regex(pattern) if lit}
+    except (ExpansionTooLarge, ValueError):
+        literals = set()
+    if literals:
+        shortest = min(len(lit) for lit in literals)
+        best = sorted(lit for lit in literals if len(lit) == shortest)
+        for lemma in best:
+            if lemma[:1].islower():
+                return lemma
+        return best[0]
+    return _mechanical_lemma(pattern)
+
+
+def _mechanical_lemma(pattern: str) -> str:
+    """Fallback lemma derivation for patterns ``expand_regex`` can't expand."""
     s = pattern
     # Leading case class [Aa] -> lowercase first letter.
     m = re.match(r"^\[([A-Za-z])[A-Za-z]\]", s)
