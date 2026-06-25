@@ -6,6 +6,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 ### Tools, products, and brands
 
+`aiohttp`
+:   Asynchronous HTTP client and server library for Python's asyncio.
+
 `Ansible`
 :   Automation and configuration-management tool that needs no agent on managed hosts.
 
@@ -96,6 +99,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Inkbot`
 :   Third-party design studio referenced in the project's specs.
 
+`Jinja2`
+:   Python templating engine; the package name is Jinja2.
+
 `Jira`
 :   Atlassian's issue- and project-tracking tool.
 
@@ -176,6 +182,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Sinon`
 :   A JavaScript library for test spies, stubs, and mocks.
+
+`Skaffold`
+:   Command-line tool that automates build, push, and deploy for Kubernetes development.
 
 `Skywork`
 :   Third-party AI service referenced in the project's specs.
@@ -313,6 +322,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `backoff`
 :   Progressively increasing the delay between retries.
+
+`backtick`
+:   The grave-accent character that delimits inline code in Markdown.
 
 `bluetooth`
 :   Short-range wireless connectivity standard.
@@ -461,6 +473,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `hotfix`
 :   An urgent fix applied directly to a released version.
 
+`HTMLElement`
+:   The base DOM interface that every HTML element type extends.
+
 `idempotency`
 :   The property that repeating an operation yields the same result as doing it once.
 
@@ -593,6 +608,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `renderer`
 :   A component that turns a model or markup into visual output.
 
+`REST`
+:   Representational State Transfer — an architectural style for HTTP APIs.
+
 `reusable`
 :   Able to be used again in another context.
 
@@ -679,6 +697,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `thresholding`
 :   Applying a cut-off value to classify or filter.
+
+`todo`
+:   A code annotation marking work still to be done.
 
 `tokenizer`
 :   A component that splits text into tokens; the act is tokenization.
@@ -1069,9 +1090,73 @@ These surnames are accepted because they appear as cited authors or sources in t
 `virtualenv`
 :   A Python virtual-environment tool or environment.
 
+### Home Assistant integration and plant-care domain terms
+
+These terms were contributed from the [`kamerplanter-ha`](https://github.com/nolte/kamerplanter-ha) Home Assistant integration: Home Assistant platform and config-flow vocabulary, plus the plant-care domain words it documents.
+
+`automation`
+:   A Home Assistant rule that triggers actions on events, states, or a schedule; plural automations.
+
+`coordinator`
+:   A Home Assistant `DataUpdateCoordinator` that centralises polling and shares fetched data across entities.
+
+`drench`
+:   A watering method that saturates the root zone, often to apply a treatment.
+
+`EC`
+:   Electrical conductivity — a measure of nutrient concentration in a plant's water or substrate.
+
+`EntityDescription`
+:   A Home Assistant dataclass declaring an entity's metadata, so one entity class can serve many data points.
+
+`fertigation`
+:   Delivering fertiliser dissolved in irrigation water.
+
+`foliar`
+:   Applied to a plant's leaves, as in a foliar feed or spray.
+
+`HACS`
+:   Home Assistant Community Store — the registry for installing custom integrations and cards.
+
+`hassfest`
+:   Home Assistant's manifest- and metadata-validation tool, run in CI.
+
+`Homeassistant`
+:   Compact spelling of the Home Assistant platform used in identifiers and package names.
+
+`houseplant`
+:   An indoor ornamental plant; plural houseplants.
+
+`IPM`
+:   Integrated Pest Management — combining biological, cultural, and chemical controls.
+
+`Kamerplanter`
+:   The houseplant-care backend this integration connects to; also the possessive Kamerplanter's.
+
+`kp`
+:   Short identifier for Kamerplanter, used in keys and abbreviations.
+
+`Lovelace`
+:   Home Assistant's dashboard and card UI framework.
+
+`mS`
+:   Millisiemens — the unit electrical conductivity (EC) is reported in.
+
+`pH`
+:   The acidity or alkalinity of a plant's water or substrate.
+
+`reauthenticate`
+:   To re-establish an integration's credentials after they expire or are revoked; also the short forms Reauth and Reauthentication and the config-flow step.
+
+`runtime_data`
+:   The typed Home Assistant `ConfigEntry.runtime_data` slot holding an integration's live objects instead of `hass.data`.
+
+`tenant`
+:   An isolated account scope in a multi-tenant backend; plural tenants.
+
 ### Inflected and possessive forms
 
-A few entries exist only so the spell-checker accepts an inflected or possessive form and carry no meaning beyond their base word: `commit's`, `criteria's`, `else's`, `Gemma's`, `maintainer's`, `navigations`, `README's`, and `rebased`.
+A few entries exist only so the spell-checker accepts an inflected or possessive form and carry no meaning beyond their base word: `commit's`, `criteria's`, `else's`, `Gemma's`, `HA's`, `maintainer's`, `navigations`, `README's`, and `rebased`.
 
 ## `esphome` vocabulary
 
