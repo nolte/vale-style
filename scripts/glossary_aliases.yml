@@ -20,6 +20,8 @@ aliases:
   "rebasing": rebase               # "...also rebases, rebasing."
   "severities": severity           # "...plural severities."
   "tokenization": tokenizer        # "...the act is tokenization."
+  "Reauth": reauthenticate         # "...also the short forms Reauth and Reauthentication..."
+  "Reauthentication": reauthenticate
 
 # Entries that are patterns, not discrete lemmas: the glossary documents them
 # in prose (e.g. a range note) rather than as their own definition-list term.
