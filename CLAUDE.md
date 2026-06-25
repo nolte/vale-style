@@ -12,13 +12,16 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 - `/.vale.ini` (repo root) — dogfoods the shipped assets: `StylesPath = src/styles`, `Vocab = technical, esphome`. `task test` (`vale .`) lints this repo's own Markdown through the same vocabularies consumers get from the zip. Scope blocks exempt `CLAUDE.md`, `spec/README.md`, `spec/**/de.md`, and `docs/de/**` from `Vale.Spelling` (the German docs aren't spell-checked against the English dictionary).
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Pp]robot` or `LEDs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
+- `docs/{en,de}/glossary.md` — every term any `accept.txt` accepts is defined here, in both languages. `scripts/check_glossary_coverage.py` (`task glossary:check`, also a pre-commit hook) expands each regex entry to its accepted forms and fails on any term missing from either glossary, so a vocabulary term can't ship undefined. Hard cases — variants folded into a sibling's definition, or non-lemma patterns like the GPIO pin range — are recorded in `scripts/glossary_aliases.yml`. To add a term: edit `accept.txt`, run `task glossary:stubs`, fill the `TODO` in both files. See the [curation spec](spec/vocabulary-and-style-curation/en.md).
 
 ## Task entry points
 
 `Taskfile.yml` wraps the canonical local commands:
 
-- `task lint` — pre-commit across the tree
+- `task lint` — pre-commit across the tree (includes the glossary-coverage gate)
 - `task test` — `vale .` against this repo's own Markdown
+- `task glossary:check` — fail if any `accept.txt` term lacks a glossary entry (EN and DE)
+- `task glossary:stubs` — scaffold `TODO` glossary stubs for uncovered terms
 - `task docs` — `mkdocs build --strict`
 - `task docs:serve` — live-reload MkDocs preview
 - `task build` — stages `src/` into `./build/nolte-styles/` and zips it

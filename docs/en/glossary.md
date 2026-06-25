@@ -491,6 +491,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `inspectable`
 :   Able to be examined at runtime or via tooling.
 
+`IP`
+:   Internet Protocol — the network-layer addressing scheme; an IP address identifies a host.
+
 `Komposita`
 :   German for compound words, e.g. in readability analysis.
 
@@ -508,6 +511,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `LIX`
 :   A readability index based on word and sentence length.
+
+`LLM`
+:   Large Language Model — a neural model trained on text to generate and understand language.
 
 `lockfile`
 :   A file pinning exact resolved dependency versions.
@@ -565,6 +571,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `OQ`
 :   Open Question — an unresolved point recorded in a spec.
+
+`param`
+:   Parameter — a named input to a function, command, or template; plural params.
 
 `parseable`
 :   Able to be parsed.
@@ -1029,6 +1038,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `deps`
 :   Short for dependencies.
+
+`dev`
+:   Short for development or a developer, as in a dev environment or a dev dependency.
 
 `DMs`
 :   Direct messages.

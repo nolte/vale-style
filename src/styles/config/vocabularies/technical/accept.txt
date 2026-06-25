@@ -368,7 +368,6 @@ typecheck(s|ed|ing)?
 typedoc
 Ulanzi
 unautomated
-und
 [Uu]nderperforming
 Unlicense
 unparseable
