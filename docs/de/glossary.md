@@ -24,6 +24,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Atlassian`
 :   Softwarehersteller hinter Jira, Confluence und Bitbucket.
 
+`bootc`
+:   Werkzeug, das ein Betriebssystem aus einem bootfähigen OCI-Container-Image bootet und aktualisiert.
+
+`Buildroot`
+:   Build-System, das ein minimales Embedded-Linux-Root-Dateisystem aus Quellen kompiliert.
+
 `Bun`
 :   Schnelle All-in-one-JavaScript-Runtime, Bundler und Paketmanager.
 
@@ -93,6 +99,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Graphviz`
 :   Toolkit zur Graph-Visualisierung, gesteuert über die Sprache DOT.
 
+`greenboot`
+:   Health-Check-Framework für OSTree- und bootc-Systeme, das ein gescheitertes Update zurückrollt.
+
 `Imagen`
 :   Googles Text-zu-Bild-Modell.
 
@@ -111,6 +120,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `kamerplanter`
 :   Ein nolte-Projekt (ein Zimmerpflanzen-Pflegehelfer).
 
+`libvirt`
+:   Bibliothek und Daemon zur Verwaltung von Virtualisierung, Grundlage von Werkzeugen wie `virsh` und `virt-manager`.
+
 `Mailchimp`
 :   Plattform für E-Mail-Marketing und Newsletter.
 
@@ -122,6 +134,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `MkDocs`
 :   Static-Site-Generator für Projektdokumentation, hier mit dem Material-Theme genutzt.
+
+`mkosi`
+:   Werkzeug des systemd-Projekts zum Bau maßgeschneiderter, reproduzierbarer Betriebssystem-Images.
+
+`mmdebstrap`
+:   Schnellere, reproduzierbare Alternative zu `debootstrap` zum Anlegen von Debian-Root-Dateisystemen.
 
 `Mockito`
 :   Ein Mocking-Framework für Java-Unit-Tests.
@@ -141,6 +159,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `nginx`
 :   Performanter Webserver und Reverse Proxy.
 
+`nixpkgs`
+:   Paketsammlung und Modul-Repository des Paketmanagers Nix und von NixOS.
+
 `nolte`
 :   Der GitHub-Account, der dieses Paket veröffentlicht.
 
@@ -152,6 +173,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Numonic`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
+
+`OSTree`
+:   Versionskontroll-ähnliches System, das Betriebssystem-Bäume atomar ausrollt und zurückrollt.
 
 `pitest`
 :   Ein Mutation-Testing-Framework für Java (PIT).
@@ -198,8 +222,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Supabase`
 :   Quelloffene Backend-Plattform auf Basis von PostgreSQL.
 
+`SWUpdate`
+:   Update-Framework für Embedded Linux, das A/B- oder In-place-Images installiert.
+
 `Syft`
 :   Ein Werkzeug, das eine Software-Stückliste (SBOM) aus Images und Dateisystemen erzeugt.
+
+`systemd`
+:   Init-System und Service-Manager der meisten aktuellen Linux-Distributionen.
 
 `Tailwind`
 :   Utility-first-CSS-Framework.
@@ -248,6 +278,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Webheads`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
+
+`Yocto`
+:   Yocto Project, das Build-Framework der Linux Foundation für eigene Embedded-Linux-Distributionen.
 
 `Zlib`
 :   Eine verlustfreie Datenkompressionsbibliothek; auch der Name ihrer permissiven Lizenz.
