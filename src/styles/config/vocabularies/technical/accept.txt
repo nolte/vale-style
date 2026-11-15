@@ -12,6 +12,7 @@ aiohttp
 [Aa]llowlist(ed|ing|s)?
 alphanumerics
 [Aa]nalysability
+Anchore
 anonymisation
 Ansible
 Anthropic('s)?
@@ -95,6 +96,7 @@ CVEs?
 cwd
 [Cc]yclomatic
 [Dd]ashboarding
+Datadog
 [Dd]atastores?
 dayjs
 debounce
@@ -105,6 +107,7 @@ dedup
 definitionally
 [Dd]elimitations
 [Dd]enylist
+Denzin
 Dependabot
 deps
 Deque
@@ -137,6 +140,7 @@ drench
 DTOs
 Duden
 EC
+Echobind
 Eleventy
 else's
 EntityDescription
@@ -145,6 +149,7 @@ env
 ePrivacy
 ESLint
 ESPHome
+Fairwinds
 favicons?
 favouriting
 fertigation
@@ -186,6 +191,7 @@ HACS
 hadolint('s)?
 hardcoded
 hassfest
+Hidekazu
 HMAC
 hoc
 Homeassistant
@@ -199,6 +205,7 @@ Imagen
 [Ii]mplementors?
 Inkbot
 [Ii]nlining
+Inozemtseva
 [Ii]nspectable
 [Ii]nteractability
 invocable
@@ -217,6 +224,7 @@ Kincaid
 Kissane
 Klipfolio
 Komposita
+Konishi
 kp
 KPIs?
 kubelet
@@ -244,13 +252,17 @@ Mailchimp
 maintainer's
 [Mm]andatoriness
 Mantine
+Marmelab
 Matuschak
 memoise
 [Mm]emoiz(e|es|ed|ing|ation)
 [Mm]ergeable
+Mergify
 Meszaros
 [Mm]iddleware
 Midjourney
+Midlibrary
+Mikulcik
 misclassification
 [Mm]isconfiguration
 mitigations
@@ -383,6 +395,7 @@ SDKs
 SDXL
 segmenter
 segmenters
+Semgrep
 SemVer
 severities
 SHAs
@@ -400,6 +413,8 @@ slugification
 slugify
 [Ss]nackbars?
 [Ss]napshot(s|ted|ting)?
+Snyk
+Sonrai
 Spatien
 Spoletini
 Spotify
@@ -436,6 +451,7 @@ Tauri
 teardown
 telemedia
 [Tt]enants?
+Tenki
 Testcontainers
 textstat
 Thoughtworks
