@@ -22,6 +22,7 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 - `task test` — `vale .` against this repo's own Markdown
 - `task glossary:check` — fail if any `accept.txt` term lacks a glossary entry (EN and DE)
 - `task glossary:stubs` — scaffold `TODO` glossary stubs for uncovered terms
+- `task glossary:test` — the checker's regression tests (stdlib `unittest` under `scripts/tests/`, also a pre-commit hook)
 - `task docs` — `mkdocs build --strict`
 - `task docs:serve` — live-reload MkDocs preview
 - `task build` — stages `src/` into `./build/nolte-styles/` and zips it
