@@ -1248,13 +1248,13 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 :   Victor Basili, Mitbegründer des Goal/Question/Metric-Paradigmas.
 
 `Berghout`
-:   Egon Berghout, Mitautor von *The Goal/Question/Metric Method*.
+:   Mitautor, mit van Solingen, von *The Goal/Question/Metric Method*.
 
 `Boehm`
 :   Barry Boehm, Software-Engineering-Forscher, der das IKIWISI-Syndrom benannt hat.
 
 `Caldiera`
-:   Gianluigi Caldiera, Mitautor des Goal/Question/Metric-Paradigmas.
+:   Mitautor des Goal/Question/Metric-Paradigmas.
 
 `Carliner`
 :   Saul Carliner, Autor im Bereich technische Kommunikation.
@@ -1290,7 +1290,7 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 :   Rudolf Flesch, Urheber des Flesch-Reading-Ease-Werts.
 
 `Gnesi`
-:   Stefania Gnesi, Forscherin im Requirements Engineering zu Mehrdeutigkeit.
+:   Forscherin im Requirements Engineering zu Mehrdeutigkeit, mit Ferrari und Spoletini.
 
 `Gojko`
 :   Vorname von Gojko Adzic.
@@ -1350,7 +1350,7 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 :   Brett Schuchert, Autor im Bereich Software-Handwerk.
 
 `Spoletini`
-:   Paola Spoletini, Forscherin im Requirements Engineering zu Mehrdeutigkeit in Interviews.
+:   Forscherin im Requirements Engineering zu Mehrdeutigkeit in Interviews, mit Ferrari und Gnesi.
 
 `Stockton`
 :   Nachname, der als Quelle in den Specs zu Schreiben/Lesbarkeit zitiert wird.
