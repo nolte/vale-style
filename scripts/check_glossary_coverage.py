@@ -11,7 +11,9 @@ without being defined.
 single lemma per entry, this checker *expands* each regex to the bounded set of
 literal strings it can match, normalizes each candidate to a comparison key
 (lowercase, trailing ``'s``/``s`` stripped), and treats the entry as covered if
-any candidate key appears as a backtick-wrapped lemma in the glossary. Glossary
+any candidate key appears as a backtick-wrapped lemma in the glossary, on a
+definition-list term line or in the inflected-forms block (see glossary_keys);
+a mere mention elsewhere in prose doesn't count. Glossary
 lemmas are normalized the same way, so ``Anthropic('s)?`` matches ``Anthropic``
 and ``PNGs?('s)?`` matches ``PNGs``.
 
