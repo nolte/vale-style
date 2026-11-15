@@ -15,6 +15,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Anthropic`
 :   AI-safety company that builds the Claude models.
 
+`arXiv`
+:   Open-access archive that publishes scientific papers before peer review, run by Cornell University.
+
 `asdf`
 :   Version manager that handles multiple language runtimes through one CLI.
 
@@ -24,8 +27,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Atlassian`
 :   Software vendor behind Jira, Confluence, and Bitbucket.
 
+`Bazel`
+:   Google's open-source build and test tool for large multi-language repositories.
+
 `bootc`
 :   Tool that boots and updates an operating system from an OCI container image.
+
+`Bugsink`
+:   Self-hosted error tracker compatible with the Sentry SDKs.
 
 `Buildroot`
 :   Build system that compiles a minimal embedded Linux root filesystem from source.
@@ -41,6 +50,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Cloudflare`
 :   Edge-network, CDN, and security provider.
+
+`Codecov`
+:   Hosted service that collects and reports test-coverage data from CI.
 
 `Contentful`
 :   API-first headless content-management system.
@@ -81,6 +93,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `FLUX`
 :   A family of text-to-image generation models by Black Forest Labs.
 
+`Fulcio`
+:   Sigstore's certificate authority that issues short-lived signing certificates bound to an OIDC identity.
+
+`Geckoboard`
+:   Hosted KPI-dashboard product.
+
 `Gemini`
 :   Google's family of multimodal large language models.
 
@@ -93,6 +111,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `godoc`
 :   Go's documentation generator.
 
+`Grafana`
+:   Open-source dashboarding and observability platform from Grafana Labs.
+
 `Grammarly`
 :   Commercial writing assistant and grammar checker.
 
@@ -101,6 +122,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `greenboot`
 :   Health-check framework for OSTree and bootc systems that rolls back a failed update.
+
+`hadolint`
+:   Linter for Dockerfiles that also checks inline shell with ShellCheck.
+
+`Igalia`
+:   Open-source consultancy that contributes to browser engines, graphics, and embedded Linux.
 
 `Imagen`
 :   Google's text-to-image generation model.
@@ -119,6 +146,18 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `kamerplanter`
 :   A nolte project (a houseplant-care assistant).
+
+`Klipfolio`
+:   Hosted dashboard and metrics product.
+
+`kubelet`
+:   The Kubernetes node agent that runs and supervises a node's pods.
+
+`Kustomize`
+:   Template-free tool that customizes Kubernetes YAML through overlays.
+
+`Kyverno`
+:   Kubernetes-native policy engine that validates, mutates, and verifies resources.
 
 `libvirt`
 :   Virtualization management library and daemon behind tools such as `virsh` and `virt-manager`.
@@ -177,6 +216,15 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `OSTree`
 :   Version-control-like system for atomically deploying and rolling back operating-system trees.
 
+`OTel`
+:   Common short form of OpenTelemetry.
+
+`Pengutronix`
+:   Embedded Linux consultancy behind the RAUC update framework.
+
+`PicoContainer`
+:   Lightweight dependency-injection container for Java.
+
 `pitest`
 :   A mutation-testing framework for Java (PIT).
 
@@ -185,6 +233,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Probot`
 :   Framework for building GitHub Apps; backs the shared settings and labelling bots.
+
+`Protobuf`
+:   Short form of Protocol Buffers, Google's binary data-interchange format; OTLP uses it as its wire format.
 
 `Pyright`
 :   Microsoft's static type checker for Python.
@@ -195,6 +246,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Recharts`
 :   React charting library built on D3.
 
+`Redoc`
+:   Open-source renderer that turns an OpenAPI document into reference documentation.
+
+`Rekor`
+:   Sigstore's append-only transparency log for signatures and attestations.
+
 `Renovate`
 :   Automated dependency-update tool, configured here via a shared preset.
 
@@ -203,6 +260,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Shiki`
 :   Syntax highlighter that uses TextMate grammars and editor themes.
+
+`Sigstore`
+:   Open-source project for signing and verifying software artifacts with short-lived certificates.
 
 `Sinon`
 :   A JavaScript library for test spies, stubs, and mocks.
@@ -276,11 +336,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Wayback`
 :   As in the Wayback Machine, the Internet Archive's web-snapshot service.
 
+`Weaveworks`
+:   Former cloud-native company that coined GitOps and the RED monitoring method.
+
+`WebDriver`
+:   W3C standard interface for remote-controlling a browser, implemented by Selenium.
+
 `Webheads`
 :   Third-party brand referenced in the project's specs.
 
 `Yocto`
 :   Yocto Project, the Linux Foundation build framework for custom embedded Linux distributions.
+
+`Zalando`
+:   European online retailer whose RESTful API Guidelines are a widely cited reference.
 
 `Zlib`
 :   A lossless data-compression library; also the name of its permissive licence.
@@ -295,6 +364,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `AC`
 :   Acceptance criterion — a condition a change must meet to count as done (plural ACs).
+
+`actionability`
+:   Whether an element can receive a user action right now: visible, stable, enabled, and not covered.
 
 `addon`
 :   A component that extends a host application.
@@ -311,17 +383,26 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `agent`
 :   An autonomous program that performs tasks on a user's behalf.
 
+`aggregatable`
+:   Able to be combined across instances or series, as a metric is.
+
 `allowlist`
 :   An explicit set of permitted entities; the inclusive counterpart to a denylist.
 
 `alphanumerics`
 :   Characters that are letters or digits.
 
+`analysability`
+:   ISO/IEC 25010 maintainability sub-characteristic: how easily a defect's cause can be found.
+
 `anonymisation`
 :   Irreversibly stripping personal data so individuals can no longer be identified.
 
 `API`
 :   Application Programming Interface — a defined contract between software components.
+
+`appender`
+:   Logging-framework component that writes log events to a destination.
 
 `async`
 :   Asynchronous — not blocking the caller while an operation completes.
@@ -331,6 +412,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `attestation`
 :   A signed claim about an artifact's origin or integrity, such as build provenance.
+
+`attestor`
+:   Party or component that produces a signed attestation about an artifact.
 
 `auditability`
 :   The degree to which a system's actions can be reviewed after the fact.
@@ -346,6 +430,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `automerge`
 :   Merging a pull request automatically once all required checks pass.
+
+`autoscaler`
+:   Controller that adjusts replica or node counts to load.
+
+`autoscaling`
+:   Adjusting capacity automatically to load.
 
 `backend`
 :   The server-side portion of an application.
@@ -365,8 +455,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `boolean`
 :   A value that is either true or false.
 
+`breakpoint`
+:   Viewport width at which a responsive layout changes; also a debugger stop point.
+
 `bundler`
 :   A tool that combines source modules into deployable bundles.
+
+`cacheable`
+:   Allowed to be stored and reused by a cache.
 
 `callout`
 :   A visually set-off note or admonition in documentation.
@@ -392,6 +488,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `colocated`
 :   Placed in the same location, e.g. a test file beside the code it tests.
 
+`combinational`
+:   Depending on a combination of input conditions, as in decision-table testing.
+
+`composable`
+:   Reusable function that encapsulates stateful logic, as in Vue; also: able to be composed.
+
 `conformant`
 :   Adhering to a specification or standard.
 
@@ -410,6 +512,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `CVE`
 :   Common Vulnerabilities and Exposures — a public identifier for a security flaw.
 
+`cyclomatic`
+:   As in cyclomatic complexity: the number of independent paths through code.
+
+`dashboarding`
+:   Building and maintaining dashboards.
+
 `datastore`
 :   A system that persists data (database, key-value store, object store).
 
@@ -424,6 +532,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `deduplicate`
 :   To remove duplicate entries.
+
+`delimitation`
+:   Statement of where one artifact's scope ends and the next artifact's scope begins.
 
 `denylist`
 :   An explicit set of blocked entities; the counterpart to an allowlist.
@@ -442,6 +553,15 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `diffable`
 :   Able to be compared line-by-line as a diff.
+
+`discriminability`
+:   The property of being discriminable.
+
+`discriminable`
+:   Able to be told apart from similar items.
+
+`distroless`
+:   Container image that holds only the application and its runtime, without a distribution's package manager or shell.
 
 `Dockerfile`
 :   A text recipe describing how to build a container image.
@@ -491,6 +611,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Goodhart`
 :   As in Goodhart's law: once a measure becomes a target, it stops being a good measure.
 
+`GQM`
+:   Goal/Question/Metric, a method for deriving metrics from goals.
+
 `Guillemets`
 :   Angle-shaped quotation marks (« »).
 
@@ -524,11 +647,20 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `inspectable`
 :   Able to be examined at runtime or via tooling.
 
+`interactability`
+:   Whether an element can be interacted with at its position.
+
 `IP`
 :   Internet Protocol — the network-layer addressing scheme; an IP address identifies a host.
 
+`keyless`
+:   Signing without a long-lived private key, using a short-lived certificate tied to an identity.
+
 `Komposita`
 :   German for compound words, e.g. in readability analysis.
+
+`KPI`
+:   Key performance indicator.
 
 `latents`
 :   The compressed latent-space representations a generative model works in.
@@ -538,6 +670,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `lektorat`
 :   German for a copy-edit or editorial review pass over prose.
+
+`linearization`
+:   Ordering a hierarchy into a single sequence, as in C3 method-resolution order.
+
+`listbox`
+:   ARIA widget role for a list from which the user selects options.
 
 `liveness`
 :   Whether a running process is healthy enough to keep serving, as in a liveness probe.
@@ -563,17 +701,29 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `memoise`
 :   To cache a function's result for repeated identical inputs.
 
+`memoize`
+:   Cache a function's result for given inputs; US spelling of memoise.
+
 `mergeable`
 :   Able to be merged without conflict.
 
+`middleware`
+:   Software layer between a request and its handler that adds cross-cutting behaviour.
+
 `misclassification`
 :   Assigning something to the wrong category.
+
+`misconfiguration`
+:   An incorrect configuration setting.
 
 `mitigation`
 :   A measure that reduces a risk's likelihood or impact.
 
 `mockist`
 :   A testing style that favours mocks to isolate the unit under test, as opposed to classicist.
+
+`modifiability`
+:   ISO/IEC 25010 maintainability sub-characteristic: how easily code can be changed without defects.
 
 `monorepo`
 :   A single repository holding many projects.
@@ -586,6 +736,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `MUSTs` / `SHOULDs`
 :   Pluralised RFC 2119 requirement keywords.
+
+`namespacing`
+:   Grouping names under a namespace to avoid collisions.
 
 `nano`
 :   The smallest variant of a model family, e.g. Gemini Nano.
@@ -602,8 +755,17 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `OAuth`
 :   Open standard for delegated authorization.
 
+`OKR`
+:   Objectives and key results, a goal-setting framework.
+
 `OQ`
 :   Open Question — an unresolved point recorded in a spec.
+
+`overfitting`
+:   Fitting a model or test so closely to its sample that it fails to generalise.
+
+`parallelisation`
+:   Running work concurrently; British spelling.
 
 `param`
 :   Parameter — a named input to a function, command, or template; plural params.
@@ -611,8 +773,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `parseable`
 :   Able to be parsed.
 
+`passthrough`
+:   Forwarding data or calls unchanged.
+
 `permalink`
 :   A permanent URL that keeps pointing at the same resource.
+
+`plaintext`
+:   Data that isn't encrypted.
 
 `postcondition`
 :   A condition guaranteed to hold after an operation.
@@ -622,6 +790,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `PR`
 :   Pull Request — a proposed change submitted for review and merge.
+
+`prober`
+:   Component that sends synthetic requests to check a service from outside.
 
 `pseudonymisation`
 :   Replacing identifying fields with pseudonyms so re-identification needs extra data.
@@ -644,8 +815,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `rebase`
 :   To replay commits onto a new base; also rebases, rebasing.
 
+`referenceable`
+:   Able to be referenced by a stable identifier.
+
 `reflog`
 :   A log of where Git references have pointed (`git reflog`).
+
+`regenerable`
+:   Able to be rebuilt from its sources, so it can be discarded safely.
 
 `renderer`
 :   A component that turns a model or markup into visual output.
@@ -653,8 +830,17 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `REST`
 :   Representational State Transfer — an architectural style for HTTP APIs.
 
+`reusability`
+:   ISO/IEC 25010 maintainability sub-characteristic: how well an asset can be used in more than one system.
+
 `reusable`
 :   Able to be used again in another context.
+
+`Rimay`
+:   Controlled natural language for writing unambiguous functional requirements.
+
+`roadmapping`
+:   Planning and maintaining a roadmap.
 
 `ruleset`
 :   A named, grouped collection of rules.
@@ -680,6 +866,15 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `scriptable`
 :   Drivable through a script rather than only interactively.
 
+`scrollable`
+:   Able to be scrolled.
+
+`scroller`
+:   Element that scrolls its own content.
+
+`SDK`
+:   Software development kit.
+
 `SDKs`
 :   Software Development Kits — libraries and tools for building on a platform.
 
@@ -697,6 +892,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `SLA`
 :   Service-Level Agreement.
+
+`SLI`
+:   Service level indicator: a measured signal of service quality.
+
+`SLO`
+:   Service level objective: a target value for an SLI.
 
 `snackbar`
 :   A brief, non-blocking notification shown at a screen edge.
@@ -716,11 +917,17 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `subcommand`
 :   A nested command under a top-level CLI command, e.g. `git commit`.
 
+`subpath`
+:   Path below a given root path.
+
 `Subresource`
 :   A resource a page loads in addition to itself, as in Subresource Integrity.
 
 `stylers`
 :   Components or tools that apply visual styling.
+
+`subtree`
+:   Part of a tree below a given node, such as a directory.
 
 `superset`
 :   A set that fully contains another, e.g. TypeScript over JavaScript.
@@ -740,8 +947,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `thresholding`
 :   Applying a cut-off value to classify or filter.
 
+`tiering`
+:   Arranging items into tiers.
+
 `todo`
 :   A code annotation marking work still to be done.
+
+`TODO`
+:   Marker for unfinished work in code or prose.
 
 `tokenizer`
 :   A component that splits text into tokens; the act is tokenization.
@@ -749,14 +962,35 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `tooltip`
 :   A small hint shown on hover or focus.
 
+`traceparent`
+:   W3C Trace Context HTTP header carrying the trace and parent span IDs.
+
+`tracestate`
+:   W3C Trace Context HTTP header carrying vendor-specific trace data.
+
+`transpiled`
+:   Compiled from one source language to another at a similar level.
+
+`trustworthily`
+:   In a way that deserves trust.
+
 `typecheck`
 :   To verify a program against its type rules.
+
+`undetectably`
+:   In a way that can't be detected.
 
 `Unlicense`
 :   A public-domain-equivalent software licence.
 
+`unmount`
+:   Remove a mounted filesystem or a rendered component.
+
 `unparseable`
 :   Not able to be parsed.
+
+`unscoped`
+:   Without a declared scope.
 
 `untyped`
 :   Without static type information.
@@ -971,8 +1205,23 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 These surnames are accepted because they appear as cited authors or sources in the project's specs on readability, editorial style, testing, software craft, and data protection; the three colour-vision terms come from the accessibility domain.
 
+`Adzic`
+:   Gojko Adzic, author of *Specification by Example*.
+
 `Bamberger`
 :   Co-originator, with Vanecek, of German-language readability research.
+
+`Basili`
+:   Victor Basili, co-originator of the Goal/Question/Metric paradigm.
+
+`Berghout`
+:   Co-author, with van Solingen, of *The Goal/Question/Metric Method*.
+
+`Boehm`
+:   Barry Boehm, software-engineering researcher who named the IKIWISI syndrome.
+
+`Caldiera`
+:   Co-author of the Goal/Question/Metric paradigm.
 
 `Carliner`
 :   Saul Carliner, a technical-communication author.
@@ -986,8 +1235,14 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Desrosiers`
 :   Surname cited as a source in the readability/writing specs.
 
+`Dinwiddie`
+:   George Dinwiddie, agile coach who popularised the Three Amigos practice.
+
 `Dodds`
 :   Kent C. Dodds, a testing and React author (the testing trophy).
+
+`Doran`
+:   George T. Doran, who introduced the SMART criteria in 1981.
 
 `Duden`
 :   The authoritative German-language spelling dictionary.
@@ -997,6 +1252,12 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `Flesch`
 :   Rudolf Flesch, originator of the Flesch Reading Ease score.
+
+`Gnesi`
+:   Requirements-engineering researcher on ambiguity, with Ferrari and Spoletini.
+
+`Gojko`
+:   Given name of Gojko Adzic.
 
 `Habib`
 :   Surname cited as a source in the project's specs.
@@ -1022,8 +1283,14 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Ottinger`
 :   Tim Ottinger, a software-craft author.
 
+`Polanyi`
+:   Michael Polanyi, philosopher who coined the term tacit knowledge.
+
 `Pradel`
 :   Surname cited as a source in the project's testing specs.
+
+`Rombach`
+:   H. Dieter Rombach, co-author of the Goal/Question/Metric paradigm.
 
 `Sadowski`
 :   Surname cited as a source in the project's software-engineering specs.
@@ -1033,6 +1300,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `Schuchert`
 :   Brett Schuchert, a software-craft author.
+
+`Spoletini`
+:   Requirements-engineering researcher on ambiguity in interviews, with Ferrari and Gnesi.
 
 `Stockton`
 :   Surname cited as a source in the writing/readability specs.
@@ -1045,6 +1315,12 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `Vocke`
 :   Ham Vocke, author of a widely cited article on the test pyramid.
+
+`Wilkie`
+:   Tom Wilkie, who defined the RED monitoring method.
+
+`Wynne`
+:   Matt Wynne, co-author of *The Cucumber Book*.
 
 `Zinsser`
 :   William Zinsser, author of "On Writing Well".
