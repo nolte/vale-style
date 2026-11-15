@@ -293,7 +293,7 @@ revisitable
 roadmaps
 rollout
 [Rr]outable
-ruleset
+[Rr]ulesets?
 runbooks?
 runtime_data
 runtimes
