@@ -39,7 +39,9 @@ basename
 [Bb]ikeshedding
 [Bb]luetooth
 [Bb]oolean
+bootc
 browsable
+Buildroot
 Bun
 bundlers?
 [Bb]ypassable
@@ -141,6 +143,7 @@ godoc
 Goodhart('s)?
 Grammarly
 Graphviz
+greenboot
 greppable
 Guillemets
 HA's
@@ -177,6 +180,7 @@ Kissane
 Komposita
 kp
 Lannon
+libvirt
 [Ll]atents
 Lc
 ledes?
@@ -193,10 +197,12 @@ lossy
 lowercased
 Mailchimp
 maintainer's
+mkosi
 [Mm]andatoriness
 Mantine
 Matuschak
 memoise
+mmdebstrap
 [Mm]ergeable
 Meszaros
 Midjourney
@@ -214,6 +220,7 @@ multimodal
 MUSTs
 mutmut
 mypy
+nixpkgs
 [Nn]amespace[ds]?
 [Nn]ano
 navigations
@@ -232,6 +239,7 @@ onboarding
 operationalisation
 [Oo]perationali[sz]e[ds]?
 OQs?
+OSTree
 Ottinger
 [Oo]verridable
 param(s)?
@@ -340,8 +348,10 @@ Supabase
 superset
 [Ss]uppressions?
 swappable
+SWUpdate
 Syft
 symbolication
+systemd
 Tailwind
 Taskfiles?
 Tauri
@@ -399,6 +409,7 @@ wordmark
 [Ww]orktree(s|'s)?
 XPath
 YAMLs?
+Yocto
 Zinsser
 Zlib
 Zod

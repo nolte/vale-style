@@ -24,6 +24,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Atlassian`
 :   Software vendor behind Jira, Confluence, and Bitbucket.
 
+`bootc`
+:   Tool that boots and updates an operating system from an OCI container image.
+
+`Buildroot`
+:   Build system that compiles a minimal embedded Linux root filesystem from source.
+
 `Bun`
 :   Fast all-in-one JavaScript runtime, bundler, and package manager.
 
@@ -93,6 +99,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Graphviz`
 :   Graph-visualisation toolkit driven by the DOT language.
 
+`greenboot`
+:   Health-check framework for OSTree and bootc systems that rolls back a failed update.
+
 `Imagen`
 :   Google's text-to-image generation model.
 
@@ -111,6 +120,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `kamerplanter`
 :   A nolte project (a houseplant-care assistant).
 
+`libvirt`
+:   Virtualization management library and daemon behind tools such as `virsh` and `virt-manager`.
+
 `Mailchimp`
 :   Email-marketing and newsletter platform.
 
@@ -122,6 +134,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `MkDocs`
 :   Static-site generator for project documentation, used here with the Material theme.
+
+`mkosi`
+:   systemd project's tool for building bespoke, reproducible operating-system images.
+
+`mmdebstrap`
+:   Faster, reproducible alternative to `debootstrap` for creating Debian root filesystems.
 
 `Mockito`
 :   A mocking framework for Java unit tests.
@@ -141,6 +159,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `nginx`
 :   High-performance web server and reverse proxy.
 
+`nixpkgs`
+:   Package collection and module repository of the Nix package manager and NixOS.
+
 `nolte`
 :   The GitHub account that publishes this package.
 
@@ -152,6 +173,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Numonic`
 :   Third-party brand referenced in the project's specs.
+
+`OSTree`
+:   Version-control-like system for atomically deploying and rolling back operating-system trees.
 
 `pitest`
 :   A mutation-testing framework for Java (PIT).
@@ -198,8 +222,14 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Supabase`
 :   Open-source backend platform built on PostgreSQL.
 
+`SWUpdate`
+:   Update framework for embedded Linux that installs A/B or in-place images.
+
 `Syft`
 :   A tool that generates a software bill of materials (SBOM) from images and filesystems.
+
+`systemd`
+:   Init system and service manager of most current Linux distributions.
 
 `Tailwind`
 :   Utility-first CSS framework.
@@ -248,6 +278,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Webheads`
 :   Third-party brand referenced in the project's specs.
+
+`Yocto`
+:   Yocto Project, the Linux Foundation build framework for custom embedded Linux distributions.
 
 `Zlib`
 :   A lossless data-compression library; also the name of its permissive licence.
