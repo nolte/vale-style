@@ -39,7 +39,9 @@ tasks:
   build:
     desc: Build the nolte-styles.zip release artefact
     cmds:
-      - rm -rf ./build/nolte-styles
+      # Start clean: `zip -r` updates an existing archive in place, so a stale
+      # nolte-styles.zip would keep entries that were removed from src/.
+      - rm -rf ./build/nolte-styles ./build/nolte-styles.zip
       - mkdir -p ./build/nolte-styles
       - cp -R src/* ./build/nolte-styles/
       - cp src/.vale.ini ./build/nolte-styles/.vale.ini

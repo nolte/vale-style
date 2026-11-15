@@ -31,17 +31,18 @@ Prefer the Taskfile targets over the raw commands; CI and local runs stay in syn
 
 ## Build the archive locally
 
-`task build` is the shorthand. Raw form for reference (matches `.github/workflows/release-cd-archive.yml`):
+`task build` is the shorthand, and the release workflow (`.github/workflows/release-cd-archive.yml`) runs it too. Raw form for reference (mirrors the `build` task in `Taskfile.yml`):
 
 ```sh
+rm -rf ./build/nolte-styles ./build/nolte-styles.zip
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
-cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp src/.vale.ini ./build/nolte-styles/.vale.ini
 cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
-Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards.
+The leading `rm -rf` matters: `zip -r` updates an existing archive in place, so a stale `nolte-styles.zip` would keep entries removed from `src/`. Note the explicit second `cp` for `.vale.ini` — `cp -R src/*` misses dotfiles. The subshell is deliberate so the working directory stays at the repo root afterwards.
 
 ## Specs live under `spec/`
 
@@ -58,11 +59,11 @@ mkdocs serve
 
 ## CI and release flow
 
-All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (all pinned to `v1.1.12`):
+All heavy lifting is delegated to reusable workflows in `nolte/gh-plumbing` (all pinned to `v1.1.19`):
 
 - `build-static-tests.yaml` — pre-commit, Trivy, chain-bench on every push.
 - `spelling.yaml` — runs Vale against the PR using this package's own vocab.
-- `release-drafter.yml` + `release-cd-archive.yml` — drafting a GitHub Release triggers the zip build and attaches `nolte-styles.zip` to the release. Version bumps happen by publishing a release, not by editing a file.
+- `release-drafter.yml` + `release-cd-archive.yml` — release-drafter maintains the draft; publishing it triggers `release-cd-archive.yml`, which builds via `task build` and attaches `nolte-styles.zip` with `gh release upload`, never rewriting the release notes and refusing to replace an existing asset. Version bumps happen by publishing a release, not by editing a file.
 - `release-cd-deliver-docs.yml` — publishes the MkDocs site.
 - `release-cd-refresh-master.yml` / `automerge.yaml` — branch hygiene; `develop` is the default working branch, `main` is the release target.
 
