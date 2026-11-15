@@ -39,20 +39,23 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 VOCAB_ROOT = REPO_ROOT / "src" / "styles" / "config" / "vocabularies"
 ALIASES_PATH = Path(__file__).resolve().parent / "glossary_aliases.yml"
 
-# Language code -> glossary file, the TODO placeholder written into stubs, and
-# the localized subsection heading new stubs land under. Group headings differ
-# per language ("## `technical` vocabulary" vs "## Vokabular `technical`"), so
-# the section is located by regex (see _group_section) rather than a literal.
+# Language code -> glossary file, the TODO placeholder written into stubs, the
+# localized subsection heading new stubs land under, and the localized heading a
+# brand-new group section is created with. Existing group headings are located
+# by regex (see _group_section) rather than a literal, so either language's form
+# is found; `group_heading` only decides how a missing section is written.
 GLOSSARIES = {
     "en": {
         "path": REPO_ROOT / "docs" / "en" / "glossary.md",
         "placeholder": "TODO: define",
         "subheading": "### Uncovered terms (TODO: categorise + define)",
+        "group_heading": "## `{group}` vocabulary",
     },
     "de": {
         "path": REPO_ROOT / "docs" / "de" / "glossary.md",
         "placeholder": "TODO: definieren",
         "subheading": "### Nicht abgedeckte Begriffe (TODO: einsortieren + definieren)",
+        "group_heading": "## Vokabular `{group}`",
     },
 }
 
@@ -403,7 +406,8 @@ def _append_stubs(text: str, gaps: list[dict], cfg: dict) -> str:
         match = _group_section(text, group)
         if match is None:
             # Group section absent entirely; append a fresh one at the end.
-            text = text.rstrip() + f"\n\n## `{group}` vocabulary\n\n{subsection}\n"
+            heading = cfg["group_heading"].format(group=group)
+            text = text.rstrip() + f"\n\n{heading}\n\n{subsection}\n"
             continue
         # Insert before the next `## ` section, or at end of file.
         nxt = text.find("\n## ", match.end())

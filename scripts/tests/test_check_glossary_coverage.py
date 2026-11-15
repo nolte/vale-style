@@ -174,6 +174,25 @@ class StubWritingTest(unittest.TestCase):
             code, _ = run_quiet(cgc.check)
         self.assertEqual(code, 0)
 
+    def test_new_group_gets_a_localized_heading_and_self_heals(self):
+        with TempRepo({"technical": "foo\n", "esphome": "bar\n"},
+                      EN_HEAD + "`foo`\n:   Foo.\n",
+                      DE_HEAD + "`foo`\n:   Foo.\n"):
+            run_quiet(cgc.write_stubs)
+            en = cgc.GLOSSARIES["en"]["path"].read_text(encoding="utf-8")
+            de = cgc.GLOSSARIES["de"]["path"].read_text(encoding="utf-8")
+            self.assertIn("\n## `esphome` vocabulary\n", en)
+            self.assertIn("\n## Vokabular `esphome`\n", de)
+            self.assertNotIn("vocabulary", de)
+            # A second gap in the same new group lands under the existing
+            # section instead of creating a duplicate heading.
+            accept = cgc.VOCAB_ROOT / "esphome" / "accept.txt"
+            accept.write_text("bar\nbaz\n", encoding="utf-8")
+            run_quiet(cgc.write_stubs)
+            de = cgc.GLOSSARIES["de"]["path"].read_text(encoding="utf-8")
+        self.assertEqual(de.count("## Vokabular `esphome`"), 1)
+        self.assertIn("`baz`\n:   TODO: definieren", de)
+
 
 if __name__ == "__main__":
     unittest.main()
