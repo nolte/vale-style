@@ -36,6 +36,7 @@ Prefer the Taskfile targets over the raw commands; CI and local runs stay in syn
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
 cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 

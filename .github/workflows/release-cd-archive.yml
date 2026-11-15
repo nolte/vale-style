@@ -18,6 +18,7 @@ jobs:
         mkdir -p ./build/nolte-styles
         cp -R src/* ./build/nolte-styles/
         cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+        cp LICENSE ./build/nolte-styles/LICENSE
 
     - uses: vimtor/action-zip@v1.2
       with:

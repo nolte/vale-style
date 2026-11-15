@@ -26,6 +26,7 @@ Baue das Paket-Zip genauso wie CI und richte dann ein Testprojekt auf das lokale
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
 cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
