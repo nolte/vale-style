@@ -310,8 +310,10 @@ def glossary_keys(text: str, covering_prose_heading: str) -> set[str]:
 
     A backtick token counts as a defined lemma in exactly two places:
 
-    - a definition-list term line: a line that is not itself a definition body
-      (definition lines start with ``:``) and whose next non-blank line is one.
+    - a definition-list term line: an unindented line that is not itself a
+      definition body (definition lines start with ``:``) and whose next
+      non-blank line is one. Indented lines are continuations of a definition,
+      even when another ``:`` definition of the same term follows them.
       That covers single terms and multi-token term lines (``MUSTs`` /
       ``SHOULDs``);
     - the prose block under ``covering_prose_heading`` (up to the next
@@ -340,7 +342,9 @@ def glossary_keys(text: str, covering_prose_heading: str) -> set[str]:
 
 
 def _is_term_line(lines: list[str], i: int) -> bool:
-    """True if the next non-blank line after ``lines[i]`` is a definition body."""
+    """True if ``lines[i]`` is unindented and the next non-blank line is a definition."""
+    if lines[i][:1].isspace():
+        return False
     for nxt in lines[i + 1:]:
         if nxt.strip():
             return nxt.lstrip().startswith(":")

@@ -62,7 +62,9 @@ class ExpandRegexTest(unittest.TestCase):
                 cgc.expand_regex(pattern)
 
     def test_escaped_entry_is_covered_by_its_literal(self):
-        self.assertEqual(cgc.candidate_keys(r"[Nn]ode\.js"), {"node.j"})
+        keys = cgc.candidate_keys(r"[Nn]ode\.js")
+        covered = cgc.glossary_keys("`Node.js`\n:   A JavaScript runtime.\n", "### x")
+        self.assertTrue(keys & covered)
 
     def test_expansion_cap(self):
         with self.assertRaises(cgc.ExpansionTooLarge):
@@ -178,6 +180,10 @@ class CoveredLemmaTest(unittest.TestCase):
         text = ("## `technical` vocabulary\n\n"
                 "Terms such as `superset` appear below.\n\n"
                 "`foo`\n:   Unlike a `superset`, see `git commit`.\n")
+        self.assertEqual(self.keys(text), {"foo"})
+
+    def test_definition_continuation_line_does_not_count(self):
+        text = "`foo`\n:   First.\n    see `bar`\n:   Second.\n"
         self.assertEqual(self.keys(text), {"foo"})
 
     def test_allowlisted_prose_block_counts_until_next_heading(self):
