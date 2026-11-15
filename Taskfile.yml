@@ -21,6 +21,11 @@ tasks:
     cmds:
       - python3 scripts/check_glossary_coverage.py --write-stubs
 
+  glossary:test:
+    desc: Run the glossary-coverage checker's regression tests
+    cmds:
+      - python3 -m unittest discover -s scripts/tests
+
   docs:
     desc: Build the MkDocs site in strict mode
     cmds:

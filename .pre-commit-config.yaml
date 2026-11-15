@@ -20,3 +20,11 @@ repos:
         # Re-run whenever a vocabulary, a glossary, or the checker itself changes.
         files: '^(src/styles/config/vocabularies/.*/accept\.txt|docs/(en|de)/glossary\.md|scripts/(check_glossary_coverage\.py|glossary_aliases\.yml))$'
         pass_filenames: false
+    -   id: glossary-checker-tests
+        name: glossary-coverage checker regression tests
+        entry: python -m unittest discover -s scripts/tests
+        language: python
+        additional_dependencies: ['pyyaml']
+        # The checker, its tests, and the corpus the corpus test reads.
+        files: '^(scripts/|src/styles/config/vocabularies/.*/accept\.txt|docs/(en|de)/glossary\.md)'
+        pass_filenames: false
