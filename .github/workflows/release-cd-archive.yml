@@ -8,28 +8,48 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: read
+
+# One archive run per release tag at a time. A delivery workflow is never
+# cancelled mid-upload, so a second run for the same tag queues instead.
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.tag || github.event.release.tag_name }}
+  cancel-in-progress: false
+
 jobs:
   archive:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write  # gh release upload
+    env:
+      TAG: ${{ inputs.tag || github.event.release.tag_name }}
     steps:
-    - uses: actions/checkout@master
-    - name: Copy the Readmes
-      run: |
-        mkdir -p ./build/nolte-styles
-        cp -R src/* ./build/nolte-styles/
-        cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
-        cp LICENSE ./build/nolte-styles/LICENSE
-
-    - uses: vimtor/action-zip@v1.2
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
-        files: ./build/
-        dest: nolte-styles.zip
-        recursive: true
+        # Build from the release's own tag, also on a manual recovery run
+        # (which would otherwise check out the dispatching branch).
+        # Fully qualified, so a branch named like the tag can't be built instead.
+        ref: refs/tags/${{ env.TAG }}
+        persist-credentials: false
 
-    - name: Upload Release
-      uses: ncipollo/release-action@v1.20.0
+    - uses: go-task/setup-task@a00fbb05ce67b35648be3c78cbc9fd85354c757e # v2.2.0
       with:
-          tag: ${{ inputs.tag || github.event.release.tag_name }}
-          artifacts: "nolte-styles.zip"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          allowUpdates: true
+        # An exact version skips the release-list API call, so the action needs
+        # no token: keep the job's contents:write token out of its inputs.
+        version: 3.54.0
+        repo-token: ''
+        # sha256 of task_linux_amd64.tar.gz from the v3.54.0 task_checksums.txt
+        checksum: 680859dbb4d881a9c72d4d9a8f510825450849af8567deacd7302c01124416fb
+
+    - name: Build nolte-styles.zip
+      run: task build
+
+    # Attach the archive only. `gh release upload` never touches the release's
+    # name, body, or draft state, and without --clobber it fails rather than
+    # replace an asset that is already published.
+    - name: Attach nolte-styles.zip to the release
+      env:
+        GH_TOKEN: ${{ github.token }}
+        GH_REPO: ${{ github.repository }}
+      run: gh release upload -- "$TAG" build/nolte-styles.zip
