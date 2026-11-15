@@ -44,18 +44,22 @@ ALIASES_PATH = Path(__file__).resolve().parent / "glossary_aliases.yml"
 # brand-new group section is created with. Existing group headings are located
 # by regex (see _group_section) rather than a literal, so either language's form
 # is found; `group_heading` only decides how a missing section is written.
+# `covering_prose_heading` names the one prose block whose backticked forms
+# count as covered without a definition of their own (see glossary_keys).
 GLOSSARIES = {
     "en": {
         "path": REPO_ROOT / "docs" / "en" / "glossary.md",
         "placeholder": "TODO: define",
         "subheading": "### Uncovered terms (TODO: categorise + define)",
         "group_heading": "## `{group}` vocabulary",
+        "covering_prose_heading": "### Inflected and possessive forms",
     },
     "de": {
         "path": REPO_ROOT / "docs" / "de" / "glossary.md",
         "placeholder": "TODO: definieren",
         "subheading": "### Nicht abgedeckte Begriffe (TODO: einsortieren + definieren)",
         "group_heading": "## Vokabular `{group}`",
+        "covering_prose_heading": "### Beugungs- und Possessivformen",
     },
 }
 
@@ -299,22 +303,46 @@ def parse_vocabularies(aliases: dict[str, str], ignore: set[str]) -> list[dict]:
     return entries
 
 
-def glossary_keys(text: str) -> set[str]:
-    """Normalized keys of every backtick lemma in a glossary's text.
+def glossary_keys(text: str, covering_prose_heading: str) -> set[str]:
+    """Normalized keys of every lemma a glossary's text defines.
 
-    A lemma is any backtick token on a line that is *not* a definition body
-    (definition lines start with ``:``). That captures definition-list terms,
-    multi-token term lines (``MUSTs`` / ``SHOULDs``), and prose paragraphs that
-    list inflected forms, while ignoring backtick tokens inside definitions
-    (``git commit``, ``--sref``) that would otherwise mask a real gap.
+    A backtick token counts as a defined lemma in exactly two places:
+
+    - a definition-list term line: a line that is not itself a definition body
+      (definition lines start with ``:``) and whose next non-blank line is one.
+      That covers single terms and multi-token term lines (``MUSTs`` /
+      ``SHOULDs``);
+    - the prose block under ``covering_prose_heading`` (up to the next
+      heading), which lists inflected and possessive forms that carry no
+      meaning beyond their base word.
+
+    Backticks anywhere else, in section intros or inside definitions
+    (``git commit``, ``--sref``), don't count, so a term merely mentioned in
+    prose can't satisfy its own coverage.
     """
+    lines = text.splitlines()
     keys: set[str] = set()
-    for raw in text.splitlines():
-        if raw.lstrip().startswith(":"):
+    in_covering_prose = False
+    for i, raw in enumerate(lines):
+        stripped = raw.strip()
+        if stripped.startswith("#"):
+            in_covering_prose = stripped == covering_prose_heading
+            continue
+        if stripped.startswith(":"):
+            continue
+        if not in_covering_prose and not _is_term_line(lines, i):
             continue
         for token in BACKTICK_TOKEN.findall(raw):
             keys.add(normalize_key(token))
     return keys
+
+
+def _is_term_line(lines: list[str], i: int) -> bool:
+    """True if the next non-blank line after ``lines[i]`` is a definition body."""
+    for nxt in lines[i + 1:]:
+        if nxt.strip():
+            return nxt.lstrip().startswith(":")
+    return False
 
 
 # --------------------------------------------------------------------------- #
@@ -337,7 +365,8 @@ def compute_gaps() -> tuple[list[dict], list[tuple[dict, str, list[dict]]]]:
     per_glossary = []
     for cfg in GLOSSARIES.values():
         text = cfg["path"].read_text(encoding="utf-8")
-        per_glossary.append((cfg, text, find_gaps(entries, glossary_keys(text))))
+        covered = glossary_keys(text, cfg["covering_prose_heading"])
+        per_glossary.append((cfg, text, find_gaps(entries, covered)))
     return entries, per_glossary
 
 

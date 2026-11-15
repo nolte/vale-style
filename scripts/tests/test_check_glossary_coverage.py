@@ -164,6 +164,38 @@ class GapReportingTest(unittest.TestCase):
         self.assertEqual(reads.count("de.md"), 1)
 
 
+class CoveredLemmaTest(unittest.TestCase):
+    HEADING = "### Inflected and possessive forms"
+
+    def keys(self, text):
+        return cgc.glossary_keys(text, self.HEADING)
+
+    def test_definition_term_lines_count(self):
+        text = "`foo`\n:   Foo.\n\n`MUSTs` / `SHOULDs`\n\n:   Keywords.\n"
+        self.assertEqual(self.keys(text), {"foo", "must", "should"})
+
+    def test_prose_mention_does_not_count(self):
+        text = ("## `technical` vocabulary\n\n"
+                "Terms such as `superset` appear below.\n\n"
+                "`foo`\n:   Unlike a `superset`, see `git commit`.\n")
+        self.assertEqual(self.keys(text), {"foo"})
+
+    def test_allowlisted_prose_block_counts_until_next_heading(self):
+        text = (self.HEADING + "\n\nForms: `commit's`, `rebased`.\n\n"
+                "## `esphome` vocabulary\n\nIntro with `later`.\n")
+        self.assertEqual(self.keys(text), {"commit", "rebased"})
+
+    def test_other_heading_is_not_allowlisted(self):
+        text = "### Some other forms\n\nForms: `commit's`.\n"
+        self.assertEqual(self.keys(text), set())
+
+    def test_real_glossaries_carry_the_configured_heading(self):
+        for lang, cfg in cgc.GLOSSARIES.items():
+            with self.subTest(lang=lang):
+                lines = cfg["path"].read_text(encoding="utf-8").splitlines()
+                self.assertIn(cfg["covering_prose_heading"], lines)
+
+
 class StubWritingTest(unittest.TestCase):
     def test_stub_lands_in_existing_group_section(self):
         with TempRepo({"technical": "bar\n"}, EN_HEAD + "`foo`\n:   Foo.\n", DE_HEAD):
