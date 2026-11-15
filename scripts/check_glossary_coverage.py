@@ -68,20 +68,46 @@ class ExpansionTooLarge(Exception):
 
 # --------------------------------------------------------------------------- #
 # Regex expansion: a small recursive-descent expander for the subset of regex
-# syntax that appears in accept.txt — literals, [..] classes (with x-y ranges),
-# (..|..) groups, and a trailing `?` quantifier on any of those.
+# syntax that appears in accept.txt — literals, escaped punctuation (\\. \\+),
+# [..] classes (with x-y ranges), (..|..) groups, and a trailing `?` quantifier
+# on any of those.
 # --------------------------------------------------------------------------- #
 
-def _expand_class(body: str) -> set[str]:
-    chars: set[str] = set()
+def _unescape(body: str) -> list[tuple[str, bool]]:
+    """Split ``body`` into ``(char, was_escaped)`` pairs, resolving ``\\x`` escapes.
+
+    Only escaped punctuation (``\\.``, ``\\+``, ``\\?``, ...) is a literal; an
+    escaped letter or digit is a regex shorthand (``\\d``, ``\\w``, ``\\b``) outside
+    the expandable subset, so it raises ValueError and the caller falls back.
+    """
+    chars: list[tuple[str, bool]] = []
     i = 0
     while i < len(body):
-        if i + 2 < len(body) and body[i + 1] == "-":
-            for code in range(ord(body[i]), ord(body[i + 2]) + 1):
+        if body[i] == "\\":
+            if i + 1 >= len(body):
+                raise ValueError(f"dangling escape in {body!r}")
+            if body[i + 1].isalnum():
+                raise ValueError(f"unsupported escape \\{body[i + 1]} in {body!r}")
+            chars.append((body[i + 1], True))
+            i += 2
+        else:
+            chars.append((body[i], False))
+            i += 1
+    return chars
+
+
+def _expand_class(body: str) -> set[str]:
+    tokens = _unescape(body)
+    chars: set[str] = set()
+    i = 0
+    while i < len(tokens):
+        # An unescaped "-" between two characters is a range; "\\-" is literal.
+        if i + 2 < len(tokens) and tokens[i + 1] == ("-", False):
+            for code in range(ord(tokens[i][0]), ord(tokens[i + 2][0]) + 1):
                 chars.add(chr(code))
             i += 3
         else:
-            chars.add(body[i])
+            chars.add(tokens[i][0])
             i += 1
     return chars
 
@@ -92,11 +118,24 @@ def _cap(strings: set[str]) -> set[str]:
     return strings
 
 
+def _class_end(pattern: str, start: int) -> int:
+    """Index of the ``]`` closing the class opened at ``start``, skipping ``\\]``."""
+    i = start + 1
+    while i < len(pattern):
+        if pattern[i] == "\\":
+            i += 2
+            continue
+        if pattern[i] == "]":
+            return i
+        i += 1
+    raise ValueError(f"unterminated class in {pattern!r}")
+
+
 def expand_regex(pattern: str) -> set[str]:
     """Expand a (restricted) Vale-vocab regex to the set of literals it matches.
 
-    Supports literals, ``[..]`` classes with ``x-y`` ranges, ``(..|..)`` groups,
-    and a trailing ``?`` on any atom. Raises ExpansionTooLarge if the product
+    Supports literals, ``\\``-escaped punctuation, ``[..]`` classes with ``x-y``
+    ranges, ``(..|..)`` groups, and a trailing ``?`` on any atom. Raises ExpansionTooLarge if the product
     blows past EXPANSION_CAP, or ValueError on syntax outside this subset; the
     caller falls back to a mechanical single-key stem in that case.
     """
@@ -131,8 +170,13 @@ def expand_regex(pattern: str) -> set[str]:
                 break
             pos += 1  # consume ')'
             return _cap(alternatives)
+        if ch == "\\":
+            # Escaped character: \\. -> "." (see _unescape for what is allowed).
+            ((literal, _escaped),) = _unescape(pattern[pos:pos + 2])
+            pos += 2
+            return {literal}
         if ch == "[":
-            end = pattern.index("]", pos)
+            end = _class_end(pattern, pos)
             chars = _expand_class(pattern[pos + 1:end])
             pos = end + 1  # consume past ']'
             return _cap(chars)

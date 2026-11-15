@@ -43,6 +43,27 @@ class ExpandRegexTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             cgc.expand_regex("foo(bar")
 
+    def test_escaped_punctuation_is_literal(self):
+        self.assertEqual(cgc.expand_regex(r"node\.js"), {"node.js"})
+        self.assertEqual(cgc.expand_regex(r"C\+\+"), {"C++"})
+        # An escaped "?" is a literal, not the optional quantifier.
+        self.assertEqual(cgc.expand_regex(r"why\?"), {"why?"})
+        # A real "?" after an escaped atom still makes that atom optional.
+        self.assertEqual(cgc.expand_regex(r"back\.?end"), {"back.end", "backend"})
+
+    def test_escapes_inside_a_class(self):
+        self.assertEqual(cgc.expand_regex(r"[\.]x"), {".x"})
+        self.assertEqual(cgc.expand_regex(r"a[x\-z]"), {"ax", "a-", "az"})
+        self.assertEqual(cgc.expand_regex(r"[a\]]b"), {"ab", "]b"})
+
+    def test_unsupported_or_dangling_escape_raises(self):
+        for pattern in (r"\d+", "foo\\"):
+            with self.subTest(pattern=pattern), self.assertRaises(ValueError):
+                cgc.expand_regex(pattern)
+
+    def test_escaped_entry_is_covered_by_its_literal(self):
+        self.assertEqual(cgc.candidate_keys(r"[Nn]ode\.js"), {"node.j"})
+
     def test_expansion_cap(self):
         with self.assertRaises(cgc.ExpansionTooLarge):
             cgc.expand_regex("[a-z][a-z][a-z]")
