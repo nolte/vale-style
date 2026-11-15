@@ -43,7 +43,7 @@ peripheral). A whole category is marked `none — <reason>` when it does not app
 
 - **nolte (repository maintainer)** — _category_: operator · _surface_: GitHub Releases UI, `Taskfile.yml`, `.github/workflows/release-*` · _expects_: runnable `task build` / `task test` / `task docs`; reproducible release cuts via release-drafter → `release-cd-archive.yml`; predictable SemVer bumps · _status_: `assumed` · _criticality_: primary
   - Open questions: none beyond ordinary release hygiene.
-- **GitHub Actions runners / platform** — _category_: operator · _surface_: workflow YAML, reusable workflows pinned to `nolte/gh-plumbing@v1.1.12` · _expects_: stable pinned versions, deterministic builds, no unpinned actions · _status_: `assumed` · _criticality_: secondary
+- **GitHub Actions runners / platform** — _category_: operator · _surface_: workflow YAML, reusable workflows pinned to `nolte/gh-plumbing@v1.1.19` · _expects_: stable pinned versions, deterministic builds, no unpinned actions · _status_: `assumed` · _criticality_: secondary
   - Open questions: none.
 - **Renovate / Mend bot** — _category_: operator · _surface_: `renovate.json5`, Probot Settings · _expects_: readable dependency definitions, PRs against `develop`, grouped `group:all` updates · _status_: `assumed` · _criticality_: peripheral
   - Open questions: is the Mend dashboard reachable and showing activity for this repo? (verifiable via Renovate-app installation check)

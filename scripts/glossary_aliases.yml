@@ -1,0 +1,33 @@
+# Overrides for the glossary-coverage gate (scripts/check_glossary_coverage.py).
+#
+# accept.txt entries are Vale regexes. The checker mechanically normalizes each
+# entry to a lowercase comparison key (strip a leading [Aa]-style case class,
+# drop trailing optional inflection groups like s?, (s|ed|ing)?, ('s)?). A few
+# entries are not single lemmas and cannot be derived mechanically; list them
+# here. Keys are the *raw* accept.txt lines, verbatim.
+
+# entry -> comparison key the glossary actually carries.
+# Use when an entry's readable lemma differs from the mechanical stem, or when
+# an accepted variant is intentionally documented inside a sibling lemma's
+# definition (the glossary folds inflections in rather than listing each form).
+aliases:
+  # Variants the glossary documents within a sibling entry's definition.
+  "[Ii]nvokable": invocable        # "...also 'invokable'."
+  "[Tt]riaged": triage             # "...triaged, triaging, triages."
+  "[Tt]riaging": triage
+  "decompounder": decompounding    # "...the component that does it is a decompounder."
+  "deserialisation": deserialise   # "...the act is deserialisation."
+  "rebasing": rebase               # "...also rebases, rebasing."
+  "severities": severity           # "...plural severities."
+  "tokenization": tokenizer        # "...the act is tokenization."
+  "Reauth": reauthenticate         # "...also the short forms Reauth and Reauthentication..."
+  "Reauthentication": reauthenticate
+
+# Entries that are patterns, not discrete lemmas: the glossary documents them
+# in prose (e.g. a range note) rather than as their own definition-list term.
+# Listing one here exempts it from the coverage requirement. Keep this list
+# short and justified — each line is a hole in the gate.
+ignore:
+  # GPIO pin range: documented in both glossaries as the `GPIO00`–`GPIO39`
+  # range note, matched by this regex. There is no single lemma to define.
+  - "GPIO(0[0-9]|[1-3][0-9])"

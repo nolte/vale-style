@@ -11,6 +11,21 @@ tasks:
     cmds:
       - vale .
 
+  glossary:check:
+    desc: Fail if any accept.txt term lacks a glossary entry (EN and DE)
+    cmds:
+      - python3 scripts/check_glossary_coverage.py
+
+  glossary:stubs:
+    desc: Scaffold TODO glossary stubs for any uncovered accept.txt terms
+    cmds:
+      - python3 scripts/check_glossary_coverage.py --write-stubs
+
+  glossary:test:
+    desc: Run the glossary-coverage checker's regression tests
+    cmds:
+      - python3 -m unittest discover -s scripts/tests
+
   docs:
     desc: Build the MkDocs site in strict mode
     cmds:
@@ -24,8 +39,11 @@ tasks:
   build:
     desc: Build the nolte-styles.zip release artefact
     cmds:
-      - rm -rf ./build/nolte-styles
+      # Start clean: `zip -r` updates an existing archive in place, so a stale
+      # nolte-styles.zip would keep entries that were removed from src/.
+      - rm -rf ./build/nolte-styles ./build/nolte-styles.zip
       - mkdir -p ./build/nolte-styles
       - cp -R src/* ./build/nolte-styles/
       - cp src/.vale.ini ./build/nolte-styles/.vale.ini
+      - cp LICENSE ./build/nolte-styles/LICENSE
       - (cd ./build && zip -r nolte-styles.zip nolte-styles)

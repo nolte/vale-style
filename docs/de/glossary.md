@@ -6,11 +6,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 ### Werkzeuge, Produkte und Marken
 
+`aiohttp`
+:   Asynchrone HTTP-Client- und Server-Bibliothek für Pythons asyncio.
+
+`Anchore`
+:   Unternehmen hinter dem SBOM-Generator Syft und weiteren Werkzeugen für Container-Sicherheit.
+
 `Ansible`
 :   Agentenloses Werkzeug für IT-Automatisierung und Konfigurationsmanagement.
 
 `Anthropic`
 :   KI-Sicherheitsunternehmen, das die Claude-Modelle entwickelt.
+
+`arXiv`
+:   Open-Access-Preprint-Server für wissenschaftliche Arbeiten, betrieben von der Cornell University.
 
 `asdf`
 :   Versionsmanager, der über eine einzige CLI mehrere Sprach-Runtimes verwaltet.
@@ -20,6 +29,18 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Atlassian`
 :   Softwarehersteller hinter Jira, Confluence und Bitbucket.
+
+`Bazel`
+:   Googles Open-Source-Build- und Testwerkzeug für große mehrsprachige Repositorys.
+
+`bootc`
+:   Werkzeug, das ein Betriebssystem aus einem bootfähigen OCI-Container-Image bootet und aktualisiert.
+
+`Bugsink`
+:   Selbst gehosteter Error-Tracker, kompatibel mit den Sentry-SDKs.
+
+`Buildroot`
+:   Build-System, das ein minimales Embedded-Linux-Root-Dateisystem aus Quellen kompiliert.
 
 `Bun`
 :   Schnelle All-in-one-JavaScript-Runtime, Bundler und Paketmanager.
@@ -33,6 +54,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Cloudflare`
 :   Anbieter von Edge-Netzwerk, CDN und Sicherheitsdiensten.
 
+`Codecov`
+:   Gehosteter Dienst, der Testabdeckungsdaten aus der CI sammelt und auswertet.
+
 `Contentful`
 :   API-first Headless-Content-Management-System.
 
@@ -41,6 +65,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `cookiecutter`
 :   Scaffolding-Werkzeug, das aus Antworten eine Projektvorlage rendert.
+
+`Datadog`
+:   Gehostete Plattform für Monitoring und Observability.
 
 `dayjs`
 :   Minimalistische JavaScript-Bibliothek für Datum und Zeit.
@@ -57,6 +84,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `DOMPurify`
 :   Clientseitiger HTML-Sanitizer, der XSS-anfälliges Markup entfernt.
 
+`Echobind`
+:   Software-Beratung, deren Engineering-Blog die Specs zur Vererbung von `tsconfig.json` zitieren.
+
 `Eleventy`
 :   Static-Site-Generator, auch „11ty“ geschrieben.
 
@@ -66,11 +96,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `ESPHome`
 :   Framework, das Firmware für ESP-basierte Geräte baut, häufig mit Home Assistant.
 
+`Fairwinds`
+:   Kubernetes-Beratung hinter Open-Source-Werkzeugen wie Polaris und Goldilocks.
+
 `Figma`
 :   Browserbasiertes, kollaboratives Werkzeug für Interface-Design.
 
 `FLUX`
 :   Eine Familie von Text-zu-Bild-Modellen von Black Forest Labs.
+
+`Fulcio`
+:   Zertifizierungsstelle von Sigstore, die kurzlebige, an eine OIDC-Identität gebundene Signaturzertifikate ausstellt.
+
+`Geckoboard`
+:   Gehostetes Produkt für KPI-Dashboards.
 
 `Gemini`
 :   Googles Familie multimodaler großer Sprachmodelle.
@@ -84,17 +123,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `godoc`
 :   Dokumentationsgenerator von Go.
 
+`Grafana`
+:   Open-Source-Plattform für Dashboards und Observability von Grafana Labs.
+
 `Grammarly`
 :   Kommerzieller Schreibassistent und Grammatikprüfer.
 
 `Graphviz`
 :   Toolkit zur Graph-Visualisierung, gesteuert über die Sprache DOT.
 
+`greenboot`
+:   Health-Check-Framework für OSTree- und bootc-Systeme, das ein gescheitertes Update zurückrollt.
+
+`hadolint`
+:   Linter für Dockerfiles, der eingebettete Shell-Befehle zusätzlich mit ShellCheck prüft.
+
+`Igalia`
+:   Open-Source-Beratungsunternehmen, das zu Browser-Engines, Grafik und Embedded Linux beiträgt.
+
 `Imagen`
 :   Googles Text-zu-Bild-Modell.
 
 `Inkbot`
 :   Drittanbieter-Designstudio, auf das in den Specs des Projekts verwiesen wird.
+
+`Jinja2`
+:   Python-Templating-Engine; der Paketname lautet Jinja2.
 
 `Jira`
 :   Atlassians Werkzeug zur Vorgangs- und Projektverfolgung.
@@ -105,17 +159,47 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `kamerplanter`
 :   Ein nolte-Projekt (ein Zimmerpflanzen-Pflegehelfer).
 
+`Klipfolio`
+:   Gehostetes Produkt für Dashboards und Kennzahlen.
+
+`kubelet`
+:   Der Kubernetes-Node-Agent, der die Pods eines Knotens startet und überwacht.
+
+`Kustomize`
+:   Template-freies Werkzeug, das Kubernetes-YAML über Overlays anpasst.
+
+`Kyverno`
+:   Kubernetes-native Policy-Engine, die Ressourcen validiert, verändert und verifiziert.
+
+`libvirt`
+:   Bibliothek und Daemon zur Verwaltung von Virtualisierung, Grundlage von Werkzeugen wie `virsh` und `virt-manager`.
+
 `Mailchimp`
 :   Plattform für E-Mail-Marketing und Newsletter.
 
 `Mantine`
 :   React-Bibliothek für Komponenten und Hooks.
 
+`Marmelab`
+:   Französische Webentwicklungs-Agentur und Open-Source-Herausgeber.
+
+`Mergify`
+:   Dienst, der das Mergen von Pull Requests automatisiert, einschließlich Merge Queues.
+
 `Midjourney`
 :   Generativer KI-Bilddienst.
 
+`Midlibrary`
+:   Online-Katalog von Midjourney-Stilen und Style-Reference-Codes.
+
 `MkDocs`
 :   Static-Site-Generator für Projektdokumentation, hier mit dem Material-Theme genutzt.
+
+`mkosi`
+:   Werkzeug des systemd-Projekts zum Bau maßgeschneiderter, reproduzierbarer Betriebssystem-Images.
+
+`mmdebstrap`
+:   Schnellere, reproduzierbare Alternative zu `debootstrap` zum Anlegen von Debian-Root-Dateisystemen.
 
 `Mockito`
 :   Ein Mocking-Framework für Java-Unit-Tests.
@@ -135,6 +219,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `nginx`
 :   Performanter Webserver und Reverse Proxy.
 
+`nixpkgs`
+:   Paketsammlung und Modul-Repository des Paketmanagers Nix und von NixOS.
+
 `nolte`
 :   Der GitHub-Account, der dieses Paket veröffentlicht.
 
@@ -147,6 +234,18 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Numonic`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
 
+`OSTree`
+:   Versionskontroll-ähnliches System, das Betriebssystem-Bäume atomar ausrollt und zurückrollt.
+
+`OTel`
+:   Gängige Kurzform von OpenTelemetry.
+
+`Pengutronix`
+:   Embedded-Linux-Beratungsunternehmen hinter dem Update-Framework RAUC.
+
+`PicoContainer`
+:   Leichtgewichtiger Dependency-Injection-Container für Java.
+
 `pitest`
 :   Ein Mutation-Testing-Framework für Java (PIT).
 
@@ -155,6 +254,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Probot`
 :   Framework zum Bau von GitHub Apps; trägt die geteilten Settings- und Labelling-Bots.
+
+`Protobuf`
+:   Kurzform von Protocol Buffers, Googles binärem Datenaustauschformat; OTLP nutzt es als Wire-Format.
 
 `Pyright`
 :   Microsofts statischer Typprüfer für Python.
@@ -165,20 +267,41 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Recharts`
 :   React-Charting-Bibliothek auf Basis von D3.
 
+`Redoc`
+:   Open-Source-Renderer von Redocly, der ein OpenAPI-Dokument in Referenzdokumentation umsetzt.
+
+`Rekor`
+:   Append-only-Transparenzlog von Sigstore für Signaturen und Attestierungen.
+
 `Renovate`
 :   Werkzeug zur automatisierten Aktualisierung von Abhängigkeiten, hier über ein geteiltes Preset konfiguriert.
 
 `SDXL`
 :   Stable Diffusion XL, ein Text-zu-Bild-Modell.
 
+`Semgrep`
+:   Musterbasiertes Werkzeug zur statischen Analyse, das Fehler und Sicherheitslücken im Quellcode findet.
+
 `Shiki`
 :   Syntax-Highlighter, der TextMate-Grammatiken und Editor-Themes nutzt.
+
+`Sigstore`
+:   Open-Source-Projekt zum Signieren und Verifizieren von Software-Artefakten mit kurzlebigen Zertifikaten.
 
 `Sinon`
 :   Eine JavaScript-Bibliothek für Test-Spies, -Stubs und -Mocks.
 
+`Skaffold`
+:   Kommandozeilen-Werkzeug, das Build, Push und Deployment für die Kubernetes-Entwicklung automatisiert.
+
 `Skywork`
 :   Drittanbieter-KI-Dienst, auf den in den Specs des Projekts verwiesen wird.
+
+`Snyk`
+:   Developer-Security-Unternehmen, das Abhängigkeiten, Container und Code auf Schwachstellen prüft.
+
+`Sonrai`
+:   Sonrai Security, ein Unternehmen für Identitäts- und Zugriffssicherheit in der Cloud.
 
 `Spotify`
 :   Der Musik-Streaming-Dienst.
@@ -189,8 +312,14 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Supabase`
 :   Quelloffene Backend-Plattform auf Basis von PostgreSQL.
 
+`SWUpdate`
+:   Update-Framework für Embedded Linux, das A/B- oder In-place-Images installiert.
+
 `Syft`
 :   Ein Werkzeug, das eine Software-Stückliste (SBOM) aus Images und Dateisystemen erzeugt.
+
+`systemd`
+:   Init-System und Service-Manager der meisten aktuellen Linux-Distributionen.
 
 `Tailwind`
 :   Utility-first-CSS-Framework.
@@ -200,6 +329,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Tauri`
 :   Framework zum Bau von Desktop-Apps mit Web-Frontend und Rust-Kern.
+
+`Tenki`
+:   Anbieter, dessen Blog die Specs zu GitHub-Merge-Queues zitieren.
 
 `Testcontainers`
 :   Eine Bibliothek, die Wegwerf-Docker-Container für Integrationstests bereitstellt.
@@ -237,8 +369,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Wayback`
 :   Wie in Wayback Machine, dem Web-Snapshot-Dienst des Internet Archive.
 
+`Weaveworks`
+:   Ehemaliges Cloud-native-Unternehmen, das den Begriff GitOps und die RED-Monitoring-Methode geprägt hat.
+
+`WebDriver`
+:   W3C-Standardschnittstelle zur Fernsteuerung eines Browsers, implementiert von Selenium.
+
 `Webheads`
 :   Drittanbieter-Marke, auf die in den Specs des Projekts verwiesen wird.
+
+`Yocto`
+:   Yocto Project, das Build-Framework der Linux Foundation für eigene Embedded-Linux-Distributionen.
+
+`Zalando`
+:   Europäischer Online-Händler, dessen RESTful API Guidelines eine viel zitierte Referenz sind.
 
 `Zlib`
 :   Eine verlustfreie Datenkompressionsbibliothek; auch der Name ihrer permissiven Lizenz.
@@ -253,6 +397,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `AC`
 :   Akzeptanzkriterium — eine Bedingung, die eine Änderung erfüllen muss, um als fertig zu gelten (Plural ACs).
+
+`actionability`
+:   Ob ein Element gerade eine Nutzeraktion empfangen kann: sichtbar, stabil, aktiviert und nicht verdeckt.
 
 `addon`
 :   Eine Komponente, die eine Host-Anwendung erweitert.
@@ -269,17 +416,26 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `agent`
 :   Ein autonomes Programm, das Aufgaben im Auftrag eines Nutzers erledigt.
 
+`aggregatable`
+:   Über Instanzen oder Reihen hinweg zusammenfassbar, wie eine Metrik.
+
 `allowlist`
 :   Eine explizite Menge erlaubter Einheiten; das einschließende Gegenstück zur Denylist.
 
 `alphanumerics`
 :   Zeichen, die Buchstaben oder Ziffern sind.
 
+`analysability`
+:   Teilmerkmal der Wartbarkeit nach ISO/IEC 25010: wie leicht sich die Ursache eines Fehlers finden lässt.
+
 `anonymisation`
 :   Das irreversible Entfernen personenbezogener Daten, sodass Personen nicht mehr identifizierbar sind.
 
 `API`
 :   Application Programming Interface — ein definierter Vertrag zwischen Softwarekomponenten.
+
+`appender`
+:   Komponente eines Logging-Frameworks, die Log-Ereignisse an ein Ziel schreibt.
 
 `async`
 :   Asynchron — den Aufrufer nicht blockierend, während eine Operation läuft.
@@ -289,6 +445,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `attestation`
 :   Eine signierte Aussage über Herkunft oder Integrität eines Artefakts, etwa Build-Provenance.
+
+`attestor`
+:   Partei oder Komponente, die eine signierte Attestierung über ein Artefakt erzeugt.
 
 `auditability`
 :   Das Maß, in dem die Aktionen eines Systems im Nachhinein überprüfbar sind.
@@ -305,6 +464,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `automerge`
 :   Das automatische Mergen eines Pull Requests, sobald alle erforderlichen Checks grün sind.
 
+`autoscaler`
+:   Controller, der die Anzahl von Replikaten oder Knoten an die Last anpasst.
+
+`autoscaling`
+:   Automatisches Anpassen der Kapazität an die Last.
+
 `backend`
 :   Der serverseitige Teil einer Anwendung.
 
@@ -314,14 +479,23 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `backoff`
 :   Das schrittweise Erhöhen der Wartezeit zwischen Wiederholungen.
 
+`backtick`
+:   Das Gravis-Zeichen, das Inline-Code in Markdown begrenzt.
+
 `bluetooth`
 :   Standard für drahtlose Verbindung über kurze Distanz.
 
 `boolean`
 :   Ein Wert, der entweder wahr oder falsch ist.
 
+`breakpoint`
+:   Viewport-Breite, an der ein responsives Layout wechselt; auch ein Haltepunkt im Debugger.
+
 `bundler`
 :   Ein Werkzeug, das Quellmodule zu auslieferbaren Bundles zusammenfasst.
+
+`cacheable`
+:   Darf von einem Cache gespeichert und wiederverwendet werden.
 
 `callout`
 :   Ein optisch hervorgehobener Hinweis bzw. eine Admonition in der Dokumentation.
@@ -347,6 +521,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `colocated`
 :   Am selben Ort abgelegt, z. B. eine Testdatei neben dem getesteten Code.
 
+`combinational`
+:   Von einer Kombination von Eingangsbedingungen abhängig, wie beim Entscheidungstabellentest.
+
+`composable`
+:   Wiederverwendbare Funktion, die zustandsbehaftete Logik kapselt, etwa in Vue; auch: kombinierbar.
+
 `conformant`
 :   Einer Spezifikation oder einem Standard entsprechend.
 
@@ -365,6 +545,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `CVE`
 :   Common Vulnerabilities and Exposures — eine öffentliche Kennung für eine Sicherheitslücke.
 
+`cyclomatic`
+:   Wie in zyklomatischer Komplexität: die Anzahl unabhängiger Pfade durch den Code.
+
+`dashboarding`
+:   Erstellen und Pflegen von Dashboards.
+
 `datastore`
 :   Ein System, das Daten persistiert (Datenbank, Key-Value-Store, Objektspeicher).
 
@@ -379,6 +565,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `deduplicate`
 :   Doppelte Einträge entfernen.
+
+`delimitation`
+:   Aussage darüber, wo der Zuständigkeitsbereich eines Artefakts endet und der eines anderen beginnt.
 
 `denylist`
 :   Eine explizite Menge blockierter Einheiten; Gegenstück zur Allowlist.
@@ -397,6 +586,15 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `diffable`
 :   Zeilenweise als Diff vergleichbar.
+
+`discriminability`
+:   Die Eigenschaft, unterscheidbar zu sein.
+
+`discriminable`
+:   Von ähnlichen Elementen unterscheidbar.
+
+`distroless`
+:   Container-Image, das nur die Anwendung und ihre Laufzeit enthält, ohne Paketmanager oder Shell einer Distribution.
 
 `Dockerfile`
 :   Eine Textanleitung, die beschreibt, wie ein Container-Image gebaut wird.
@@ -446,6 +644,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Goodhart`
 :   Wie in Goodharts Gesetz: Wird ein Maß zum Ziel, taugt es nicht mehr als gutes Maß.
 
+`GQM`
+:   Goal/Question/Metric, eine Methode, Metriken aus Zielen abzuleiten.
+
 `Guillemets`
 :   Winkelförmige Anführungszeichen (« »).
 
@@ -460,6 +661,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `hotfix`
 :   Eine dringende Korrektur, die direkt auf eine veröffentlichte Version angewandt wird.
+
+`HTMLElement`
+:   Die Basis-DOM-Schnittstelle, die jeder HTML-Elementtyp erweitert.
 
 `idempotency`
 :   Die Eigenschaft, dass das Wiederholen einer Operation dasselbe Ergebnis liefert wie ihr einmaliges Ausführen.
@@ -476,8 +680,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `inspectable`
 :   Zur Laufzeit oder per Werkzeug untersuchbar.
 
+`interactability`
+:   Ob mit einem Element an seiner Position interagiert werden kann.
+
+`IP`
+:   Internet Protocol — das Adressierungsschema der Netzwerkschicht; eine IP-Adresse identifiziert einen Host.
+
+`keyless`
+:   Signieren ohne langlebigen privaten Schlüssel, mit einem kurzlebigen, an eine Identität gebundenen Zertifikat.
+
 `Komposita`
 :   Zusammengesetzte Wörter, etwa in der Lesbarkeitsanalyse.
+
+`KPI`
+:   Key Performance Indicator, eine Schlüsselkennzahl.
 
 `latents`
 :   Die komprimierten Latent-Space-Repräsentationen, in denen ein generatives Modell arbeitet.
@@ -488,11 +704,20 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `lektorat`
 :   Eine redaktionelle Durchsicht und Überarbeitung von Prosa.
 
+`linearization`
+:   Überführen einer Hierarchie in eine einzige Reihenfolge, wie bei der C3-Methodenauflösung.
+
+`listbox`
+:   ARIA-Widget-Rolle für eine Liste, aus der Nutzer Optionen auswählen.
+
 `liveness`
 :   Ob ein laufender Prozess gesund genug ist, um weiter zu bedienen, wie bei einer Liveness-Probe.
 
 `LIX`
 :   Ein Lesbarkeitsindex auf Basis von Wort- und Satzlänge.
+
+`LLM`
+:   Large Language Model — ein neuronales Modell, das auf Text trainiert wird, um Sprache zu erzeugen und zu verstehen.
 
 `lockfile`
 :   Eine Datei, die exakt aufgelöste Abhängigkeitsversionen festschreibt.
@@ -509,17 +734,29 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `memoise`
 :   Das Ergebnis einer Funktion für wiederholte gleiche Eingaben zwischenspeichern.
 
+`memoize`
+:   Das Ergebnis einer Funktion für gegebene Eingaben zwischenspeichern; US-Schreibweise von memoise.
+
 `mergeable`
 :   Konfliktfrei mergebar.
 
+`middleware`
+:   Softwareschicht zwischen einer Anfrage und ihrem Handler, die übergreifendes Verhalten ergänzt.
+
 `misclassification`
 :   Die Zuordnung von etwas zur falschen Kategorie.
+
+`misconfiguration`
+:   Eine fehlerhafte Konfigurationseinstellung.
 
 `mitigation`
 :   Eine Maßnahme, die Wahrscheinlichkeit oder Auswirkung eines Risikos senkt.
 
 `mockist`
 :   Ein Teststil, der Mocks bevorzugt, um die getestete Einheit zu isolieren, im Gegensatz zum klassizistischen Stil.
+
+`modifiability`
+:   Teilmerkmal der Wartbarkeit nach ISO/IEC 25010: wie leicht sich Code ohne Fehler ändern lässt.
 
 `monorepo`
 :   Ein einzelnes Repository, das viele Projekte enthält.
@@ -532,6 +769,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `MUSTs` / `SHOULDs`
 :   Pluralisierte RFC-2119-Anforderungsschlüsselwörter.
+
+`namespacing`
+:   Gruppieren von Namen unter einem Namensraum, um Kollisionen zu vermeiden.
 
 `nano`
 :   Die kleinste Variante einer Modellfamilie, z. B. Gemini Nano.
@@ -548,14 +788,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `OAuth`
 :   Offener Standard für delegierte Autorisierung.
 
+`OKR`
+:   Objectives and Key Results, ein Rahmenwerk für Zielsetzung.
+
 `OQ`
 :   Open Question — ein in einer Spec festgehaltener offener Punkt.
+
+`overfitting`
+:   Anpassen eines Modells oder Tests so eng an seine Stichprobe, dass es nicht verallgemeinert.
+
+`parallelisation`
+:   Gleichzeitiges Ausführen von Arbeit; britische Schreibweise.
+
+`param`
+:   Parameter — eine benannte Eingabe für eine Funktion, einen Befehl oder ein Template; Plural params.
 
 `parseable`
 :   Parsebar.
 
+`passthrough`
+:   Unverändertes Weiterreichen von Daten oder Aufrufen.
+
 `permalink`
 :   Eine dauerhafte URL, die stets auf dieselbe Ressource zeigt.
+
+`plaintext`
+:   Unverschlüsselte Daten.
 
 `postcondition`
 :   Eine Bedingung, die nach einer Operation garantiert gilt.
@@ -565,6 +823,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `PR`
 :   Pull Request — eine zur Review und zum Merge eingereichte Änderung.
+
+`prober`
+:   Komponente, die synthetische Anfragen sendet, um einen Dienst von außen zu prüfen.
 
 `pseudonymisation`
 :   Das Ersetzen identifizierender Felder durch Pseudonyme, sodass eine Re-Identifizierung Zusatzdaten braucht.
@@ -587,14 +848,32 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `rebase`
 :   Commits auf eine neue Basis verschieben; auch rebases, rebasing.
 
+`referenceable`
+:   Über einen stabilen Bezeichner referenzierbar.
+
 `reflog`
 :   Gits Protokoll darüber, wohin Referenzen gezeigt haben (`git reflog`).
+
+`regenerable`
+:   Aus seinen Quellen neu erzeugbar und daher gefahrlos verwerfbar.
 
 `renderer`
 :   Eine Komponente, die ein Modell oder Markup in visuelle Ausgabe umwandelt.
 
+`REST`
+:   Representational State Transfer — ein Architekturstil für HTTP-APIs.
+
+`reusability`
+:   Teilmerkmal der Wartbarkeit nach ISO/IEC 25010: wie gut sich ein Bestandteil in mehr als einem System verwenden lässt.
+
 `reusable`
 :   In anderem Kontext wiederverwendbar.
+
+`Rimay`
+:   Kontrollierte natürliche Sprache zum Formulieren eindeutiger funktionaler Anforderungen.
+
+`roadmapping`
+:   Planen und Pflegen einer Roadmap.
 
 `ruleset`
 :   Eine benannte, gruppierte Sammlung von Regeln.
@@ -620,6 +899,15 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `scriptable`
 :   Per Skript steuerbar statt nur interaktiv.
 
+`scrollable`
+:   Scrollbar.
+
+`scroller`
+:   Element, das seinen eigenen Inhalt scrollt.
+
+`SDK`
+:   Software Development Kit, ein Entwicklungsbaukasten.
+
 `SDKs`
 :   Software Development Kits — Bibliotheken und Werkzeuge zum Entwickeln auf einer Plattform.
 
@@ -637,6 +925,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `SLA`
 :   Service-Level Agreement.
+
+`SLI`
+:   Service Level Indicator: ein gemessenes Signal der Dienstqualität.
+
+`SLO`
+:   Service Level Objective: ein Zielwert für einen SLI.
 
 `snackbar`
 :   Eine kurze, nicht-blockierende Benachrichtigung an einem Bildschirmrand.
@@ -656,11 +950,17 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `subcommand`
 :   Ein verschachtelter Befehl unter einem CLI-Hauptbefehl, z. B. `git commit`.
 
+`subpath`
+:   Pfad unterhalb eines gegebenen Wurzelpfads.
+
 `Subresource`
 :   Eine Ressource, die eine Seite zusätzlich zu sich selbst lädt, wie bei Subresource Integrity.
 
 `stylers`
 :   Komponenten oder Werkzeuge, die visuelle Gestaltung anwenden.
+
+`subtree`
+:   Teil eines Baums unterhalb eines Knotens, etwa eines Verzeichnisses.
 
 `superset`
 :   Eine Menge, die eine andere vollständig enthält, z. B. TypeScript über JavaScript.
@@ -680,20 +980,50 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `thresholding`
 :   Das Anwenden eines Schwellenwerts zum Klassifizieren oder Filtern.
 
+`tiering`
+:   Einordnen von Elementen in Stufen.
+
+`todo`
+:   Eine Code-Annotation, die noch zu erledigende Arbeit markiert.
+
+`TODO`
+:   Markierung für unerledigte Arbeit in Code oder Text.
+
 `tokenizer`
 :   Eine Komponente, die Text in Tokens zerlegt; der Vorgang ist die Tokenisierung.
 
 `tooltip`
 :   Ein kleiner Hinweis, der bei Hover oder Fokus erscheint.
 
+`traceparent`
+:   HTTP-Header aus W3C Trace Context, der Trace- und Parent-Span-ID trägt.
+
+`tracestate`
+:   HTTP-Header aus W3C Trace Context, der herstellerspezifische Trace-Daten trägt.
+
+`transpiled`
+:   Von einer Quellsprache in eine andere auf ähnlicher Ebene übersetzt.
+
+`trustworthily`
+:   Auf vertrauenswürdige Weise.
+
 `typecheck`
 :   Ein Programm gegen seine Typregeln prüfen.
+
+`undetectably`
+:   Auf nicht erkennbare Weise.
 
 `Unlicense`
 :   Eine Software-Lizenz, die einer Public-Domain-Freigabe gleichkommt.
 
+`unmount`
+:   Ein eingehängtes Dateisystem oder eine gerenderte Komponente entfernen.
+
 `unparseable`
 :   Nicht parsebar.
+
+`unscoped`
+:   Ohne deklarierten Geltungsbereich.
 
 `untyped`
 :   Ohne statische Typinformation.
@@ -908,8 +1238,23 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in den Specs des Projekts zu Lesbarkeit, redaktionellem Stil, Testing, Software-Handwerk und Datenschutz auftauchen; die drei Begriffe zur Farbwahrnehmung stammen aus dem Bereich Barrierefreiheit.
 
+`Adzic`
+:   Gojko Adzic, Autor von *Specification by Example*.
+
 `Bamberger`
 :   Mitbegründer der deutschsprachigen Lesbarkeitsforschung, gemeinsam mit Vanecek.
+
+`Basili`
+:   Victor Basili, Mitbegründer des Goal/Question/Metric-Paradigmas.
+
+`Berghout`
+:   Mitautor, mit van Solingen, von *The Goal/Question/Metric Method*.
+
+`Boehm`
+:   Barry Boehm, Software-Engineering-Forscher, der das IKIWISI-Syndrom benannt hat.
+
+`Caldiera`
+:   Mitautor des Goal/Question/Metric-Paradigmas.
 
 `Carliner`
 :   Saul Carliner, Autor im Bereich technische Kommunikation.
@@ -920,11 +1265,20 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Cohn`
 :   Mike Cohn, Autor zu agiler Schätzung und der Testpyramide.
 
+`Denzin`
+:   Norman K. Denzin, Soziologe, der die Formen der Triangulation in der Forschung systematisiert hat.
+
 `Desrosiers`
 :   Nachname, der als Quelle in den Specs zu Lesbarkeit/Schreiben zitiert wird.
 
+`Dinwiddie`
+:   George Dinwiddie, Agile-Coach, der die Three-Amigos-Praxis bekannt gemacht hat.
+
 `Dodds`
 :   Kent C. Dodds, Autor zu Testing und React (die Testing-Trophy).
+
+`Doran`
+:   George T. Doran, der 1981 die SMART-Kriterien eingeführt hat.
 
 `Duden`
 :   Das maßgebliche deutsche Rechtschreibwörterbuch.
@@ -935,8 +1289,20 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Flesch`
 :   Rudolf Flesch, Urheber des Flesch-Reading-Ease-Werts.
 
+`Gnesi`
+:   Forscherin im Requirements Engineering zu Mehrdeutigkeit, mit Ferrari und Spoletini.
+
+`Gojko`
+:   Vorname von Gojko Adzic.
+
 `Habib`
 :   Nachname, der als Quelle in den Specs des Projekts zitiert wird.
+
+`Hidekazu`
+:   Vorname von Hidekazu Konishi.
+
+`Inozemtseva`
+:   Laura Inozemtseva, Mitautorin der ICSE-2014-Studie, nach der Testabdeckung nicht stark mit der Wirksamkeit einer Testsuite korreliert.
 
 `Kalzumeus`
 :   Blog und Handle des Software-Autors Patrick McKenzie.
@@ -947,6 +1313,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Kissane`
 :   Erin Kissane, Autorin im Bereich Content-Strategie.
 
+`Konishi`
+:   Hidekazu Konishi, Autor eines technischen Blogs zu AWS, zitiert zur Auswertung von IAM-Policies.
+
 `Lannon`
 :   John Lannon, Lehrbuchautor für technisches Schreiben.
 
@@ -956,11 +1325,20 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Meszaros`
 :   Gerard Meszaros, Autor eines grundlegenden Buchs über Unit-Test-Muster und Test-Doubles.
 
+`Mikulcik`
+:   Simon Mikulcik, Autor, zitiert zum JSON-Schema-Schlüsselwort `unevaluatedProperties`.
+
 `Ottinger`
 :   Tim Ottinger, Autor im Bereich Software-Handwerk.
 
+`Polanyi`
+:   Michael Polanyi, Philosoph, der den Begriff des stillschweigenden Wissens (tacit knowledge) geprägt hat.
+
 `Pradel`
 :   Nachname, der als Quelle in den Test-Specs des Projekts zitiert wird.
+
+`Rombach`
+:   H. Dieter Rombach, Mitautor des Goal/Question/Metric-Paradigmas.
 
 `Sadowski`
 :   Nachname, der als Quelle in den Software-Engineering-Specs des Projekts zitiert wird.
@@ -970,6 +1348,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `Schuchert`
 :   Brett Schuchert, Autor im Bereich Software-Handwerk.
+
+`Spoletini`
+:   Forscherin im Requirements Engineering zu Mehrdeutigkeit in Interviews, mit Ferrari und Gnesi.
 
 `Stockton`
 :   Nachname, der als Quelle in den Specs zu Schreiben/Lesbarkeit zitiert wird.
@@ -982,6 +1363,12 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `Vocke`
 :   Ham Vocke, Autor eines viel zitierten Artikels zur Testpyramide.
+
+`Wilkie`
+:   Tom Wilkie, der die RED-Monitoring-Methode definiert hat.
+
+`Wynne`
+:   Matt Wynne, Mitautor von *The Cucumber Book*.
 
 `Zinsser`
 :   William Zinsser, Autor von „On Writing Well“.
@@ -1008,6 +1395,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `deps`
 :   Kurzform von dependencies (Abhängigkeiten).
+
+`dev`
+:   Kurzform für Entwicklung oder Entwickler, etwa in einer dev-Umgebung oder einer dev-Abhängigkeit.
 
 `DMs`
 :   Direktnachrichten.
@@ -1069,9 +1459,73 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `virtualenv`
 :   Ein Python-Werkzeug für virtuelle Umgebungen bzw. eine solche Umgebung.
 
+### Begriffe zu Home-Assistant-Integration und Pflanzenpflege
+
+Diese Begriffe stammen aus der Home-Assistant-Integration [`kamerplanter-ha`](https://github.com/nolte/kamerplanter-ha): Vokabular der Home-Assistant-Plattform und des Config-Flows sowie die dort dokumentierten Begriffe zur Pflanzenpflege.
+
+`automation`
+:   Eine Home-Assistant-Regel, die Aktionen bei Ereignissen, Zuständen oder nach Zeitplan auslöst; Plural automations.
+
+`coordinator`
+:   Ein Home-Assistant-`DataUpdateCoordinator`, der das Polling bündelt und die abgerufenen Daten an mehrere Entitäten verteilt.
+
+`drench`
+:   Eine Gießmethode, die den Wurzelbereich durchtränkt, oft zur Ausbringung einer Behandlung.
+
+`EC`
+:   Elektrische Leitfähigkeit — ein Maß für die Nährstoffkonzentration im Wasser oder Substrat einer Pflanze.
+
+`EntityDescription`
+:   Eine Home-Assistant-Dataclass, die die Metadaten einer Entität deklariert, sodass eine Entitätsklasse viele Datenpunkte bedienen kann.
+
+`fertigation`
+:   Ausbringung von Dünger, gelöst im Bewässerungswasser.
+
+`foliar`
+:   Auf die Blätter einer Pflanze aufgebracht, etwa als Blattdüngung oder -spray.
+
+`HACS`
+:   Home Assistant Community Store — die Registry zum Installieren eigener Integrationen und Karten.
+
+`hassfest`
+:   Home Assistants Werkzeug zur Validierung von Manifest und Metadaten, das in der CI läuft.
+
+`Homeassistant`
+:   Kompakte Schreibweise der Home-Assistant-Plattform, verwendet in Bezeichnern und Paketnamen.
+
+`houseplant`
+:   Eine Zimmerpflanze; Plural houseplants.
+
+`IPM`
+:   Integriertes Schädlingsmanagement (Integrated Pest Management) — Kombination biologischer, kultureller und chemischer Maßnahmen.
+
+`Kamerplanter`
+:   Das Backend für Zimmerpflanzenpflege, mit dem sich diese Integration verbindet; auch die Possessivform Kamerplanter's.
+
+`kp`
+:   Kurzbezeichner für Kamerplanter, genutzt in Schlüsseln und Abkürzungen.
+
+`Lovelace`
+:   Home Assistants UI-Framework für Dashboards und Karten.
+
+`mS`
+:   Millisiemens — die Einheit, in der die elektrische Leitfähigkeit (EC) angegeben wird.
+
+`pH`
+:   Der Säure- oder Basengrad des Wassers oder Substrats einer Pflanze.
+
+`reauthenticate`
+:   Die Anmeldedaten einer Integration erneut bereitstellen, nachdem sie abgelaufen oder widerrufen wurden; auch die Kurzformen Reauth und Reauthentication sowie der Schritt im Config-Flow.
+
+`runtime_data`
+:   Der typisierte Home-Assistant-Slot `ConfigEntry.runtime_data`, der die Live-Objekte einer Integration hält statt `hass.data`.
+
+`tenant`
+:   Ein isolierter Konto-Bereich in einem mandantenfähigen Backend; Plural tenants.
+
 ### Beugungs- und Possessivformen
 
-Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `Gemma's`, `maintainer's`, `navigations`, `README's` und `rebased`.
+Einige Einträge existieren nur, damit die Rechtschreibprüfung eine Beugungs- oder Possessivform akzeptiert, und tragen keine Bedeutung über ihr Grundwort hinaus: `commit's`, `criteria's`, `else's`, `Gemma's`, `HA's`, `maintainer's`, `navigations`, `README's` und `rebased`.
 
 ## Vokabular `esphome`
 

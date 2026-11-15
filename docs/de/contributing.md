@@ -20,12 +20,14 @@ Das Verzeichnis `src/styles/nolte-styles/` ist die Heimat für eigene Vale-Regel
 
 ## Änderungen lokal testen
 
-Baue das Paket-Zip genauso wie CI und richte dann ein Testprojekt auf das lokale Zip aus:
+Baue das Paket-Zip genauso wie CI (`task build` führt genau diese Schritte aus) und richte dann ein Testprojekt auf das lokale Zip aus:
 
 ```sh
+rm -rf ./build/nolte-styles ./build/nolte-styles.zip
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
-cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp src/.vale.ini ./build/nolte-styles/.vale.ini
+cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
@@ -57,7 +59,7 @@ Sie führen `check-yaml`, `end-of-file-fixer` und `trailing-whitespace` aus — 
 Releases werden über GitHub Releases veröffentlicht:
 
 1. Release-Drafter pflegt einen Release-Entwurf auf `main`, während PRs gemergt werden.
-2. Das Veröffentlichen des Entwurfs löst `.github/workflows/release-cd-archive.yml` aus, das `nolte-styles.zip` baut und an das Release anhängt.
+2. Das Veröffentlichen des Entwurfs löst `.github/workflows/release-cd-archive.yml` aus, das `nolte-styles.zip` mit `task build` baut und an das Release anhängt.
 3. `release-cd-deliver-docs.yml` veröffentlicht die aktualisierte MkDocs-Seite.
 
 Es gibt keine Versionsdatei im Repo — der Release-Tag *ist* die Version.

@@ -20,12 +20,14 @@ The directory `src/styles/nolte-styles/` is the home for custom Vale rule YAMLs.
 
 ## Testing changes locally
 
-Build the package zip the same way CI does, then point a test project at the local zip:
+Build the package zip the same way CI does (`task build` runs exactly these steps), then point a test project at the local zip:
 
 ```sh
+rm -rf ./build/nolte-styles ./build/nolte-styles.zip
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
-cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp src/.vale.ini ./build/nolte-styles/.vale.ini
+cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
@@ -57,7 +59,7 @@ They run `check-yaml`, `end-of-file-fixer`, and `trailing-whitespace` — the sa
 Releases are cut through GitHub Releases:
 
 1. Release-drafter maintains a draft release on `main` as PRs merge.
-2. Publishing the draft triggers `.github/workflows/release-cd-archive.yml`, which builds `nolte-styles.zip` and attaches it to the release.
+2. Publishing the draft triggers `.github/workflows/release-cd-archive.yml`, which builds `nolte-styles.zip` with `task build` and attaches it to the release.
 3. `release-cd-deliver-docs.yml` publishes the updated MkDocs site.
 
 There is no version file in the repo — the release tag *is* the version.

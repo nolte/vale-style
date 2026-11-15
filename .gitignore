@@ -4,3 +4,10 @@ build
 
 .github/styles/*
 !.github/styles/.keep
+
+# Transient per-worktree resume plans (see spec/project/parallel-working-copies)
+.resume/
+
+# Python bytecode cache (scripts/)
+__pycache__/
+*.pyc

@@ -24,6 +24,7 @@ The release archive `nolte-styles.zip` unpacks to:
     │   │           └── accept.txt
     │   └── nolte-styles
     │       └── .keep
+    ├── LICENSE
     └── .vale.ini
 ```
 <!--archive-structure-end-->
@@ -68,13 +69,15 @@ Activate additional vocabularies by listing them in `Vocab` — either comma-sep
 ## Build the archive locally
 
 ```sh
+rm -rf ./build/nolte-styles ./build/nolte-styles.zip
 mkdir -p ./build/nolte-styles
 cp -R src/* ./build/nolte-styles/
-cp -R src/.vale.ini ./build/nolte-styles/.vale.ini
+cp src/.vale.ini ./build/nolte-styles/.vale.ini
+cp LICENSE ./build/nolte-styles/LICENSE
 (cd ./build && zip -r nolte-styles.zip nolte-styles)
 ```
 
-The second `cp` is required: `cp -R src/*` does not include the leading-dot `.vale.ini`. The release workflow (`.github/workflows/release-cd-archive.yml`) does the same two copies.
+The second `cp` is required: `cp -R src/*` does not include the leading-dot `.vale.ini`. The third `cp` ships the `LICENSE` inside the archive. The leading `rm -rf` clears a stale archive, because `zip -r` would otherwise update it in place. The block mirrors `task build`, which the release workflow (`.github/workflows/release-cd-archive.yml`) runs.
 
 ## Specifications
 
@@ -83,3 +86,7 @@ Curation rules for the vocabularies and for the `nolte-styles` placeholder style
 ## Releases
 
 Publishing a GitHub Release triggers the archive workflow, which attaches `nolte-styles.zip` to the release. Version bumps happen by cutting a release — there is no version file to edit.
+
+## License
+
+[MIT](LICENSE) — Copyright (c) 2024-2026 nolte.
