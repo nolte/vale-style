@@ -1,3 +1,6 @@
+# Interim measure: archive build + attach stays repo-local until the reusable
+# pre-publish asset step with provenance from nolte/gh-plumbing#446 exists;
+# then this workflow is retired in favour of it.
 on:
   release:
     types: [published]
