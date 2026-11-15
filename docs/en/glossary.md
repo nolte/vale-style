@@ -9,6 +9,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `aiohttp`
 :   Asynchronous HTTP client and server library for Python's asyncio.
 
+`Anchore`
+:   Company behind the SBOM generator Syft and other container-security tools.
+
 `Ansible`
 :   Automation and configuration-management tool that needs no agent on managed hosts.
 
@@ -63,6 +66,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `cookiecutter`
 :   Project-scaffolding tool that renders a template from a set of answers.
 
+`Datadog`
+:   Hosted monitoring and observability platform.
+
 `dayjs`
 :   Minimalist JavaScript date/time library.
 
@@ -78,6 +84,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `DOMPurify`
 :   Client-side HTML sanitiser that strips XSS-prone markup.
 
+`Echobind`
+:   Software consultancy whose engineering blog the specs cite on `tsconfig.json` inheritance.
+
 `Eleventy`
 :   Static-site generator, also written "11ty".
 
@@ -86,6 +95,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `ESPHome`
 :   Framework that builds firmware for ESP-based devices, commonly with Home Assistant.
+
+`Fairwinds`
+:   Kubernetes consultancy behind open-source tools such as Polaris and Goldilocks.
 
 `Figma`
 :   Browser-based collaborative interface-design tool.
@@ -168,8 +180,17 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Mantine`
 :   React component and hooks library.
 
+`Marmelab`
+:   French web-development agency and open-source publisher.
+
+`Mergify`
+:   Service that automates pull-request merging, including merge queues.
+
 `Midjourney`
 :   Generative-AI image service.
+
+`Midlibrary`
+:   Online catalogue of Midjourney styles and style-reference codes.
 
 `MkDocs`
 :   Static-site generator for project documentation, used here with the Material theme.
@@ -258,6 +279,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `SDXL`
 :   Stable Diffusion XL, a text-to-image generation model.
 
+`Semgrep`
+:   Pattern-based static-analysis tool that finds bugs and security issues in source code.
+
 `Shiki`
 :   Syntax highlighter that uses TextMate grammars and editor themes.
 
@@ -272,6 +296,12 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Skywork`
 :   Third-party AI service referenced in the project's specs.
+
+`Snyk`
+:   Developer-security company that scans dependencies, containers, and code for vulnerabilities.
+
+`Sonrai`
+:   Sonrai Security, a cloud identity and access-security company.
 
 `Spotify`
 :   The music-streaming service.
@@ -299,6 +329,9 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `Tauri`
 :   Framework for building desktop apps with a web frontend and a Rust core.
+
+`Tenki`
+:   Vendor whose blog the specs cite on GitHub merge queues.
 
 `Testcontainers`
 :   A library that runs throwaway Docker containers for integration tests.
@@ -1232,6 +1265,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Cohn`
 :   Mike Cohn, an author on agile estimation and the test pyramid.
 
+`Denzin`
+:   Norman K. Denzin, sociologist who systematised the forms of triangulation in research.
+
 `Desrosiers`
 :   Surname cited as a source in the readability/writing specs.
 
@@ -1262,6 +1298,12 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Habib`
 :   Surname cited as a source in the project's specs.
 
+`Hidekazu`
+:   Given name of Hidekazu Konishi.
+
+`Inozemtseva`
+:   Laura Inozemtseva, co-author of the ICSE 2014 study finding that coverage is not strongly correlated with test-suite effectiveness.
+
 `Kalzumeus`
 :   The blog and handle of software writer Patrick McKenzie.
 
@@ -1271,6 +1313,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 `Kissane`
 :   Erin Kissane, a content-strategy author.
 
+`Konishi`
+:   Hidekazu Konishi, author of a technical blog on AWS, cited on IAM policy evaluation.
+
 `Lannon`
 :   John Lannon, a technical-writing textbook author.
 
@@ -1279,6 +1324,9 @@ These surnames are accepted because they appear as cited authors or sources in t
 
 `Meszaros`
 :   Gerard Meszaros, author of a foundational book on unit-test patterns and test doubles.
+
+`Mikulcik`
+:   Simon Mikulcik, author cited on the JSON Schema keyword `unevaluatedProperties`.
 
 `Ottinger`
 :   Tim Ottinger, a software-craft author.

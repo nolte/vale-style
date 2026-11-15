@@ -9,6 +9,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `aiohttp`
 :   Asynchrone HTTP-Client- und Server-Bibliothek für Pythons asyncio.
 
+`Anchore`
+:   Unternehmen hinter dem SBOM-Generator Syft und weiteren Werkzeugen für Container-Sicherheit.
+
 `Ansible`
 :   Agentenloses Werkzeug für IT-Automatisierung und Konfigurationsmanagement.
 
@@ -63,6 +66,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `cookiecutter`
 :   Scaffolding-Werkzeug, das aus Antworten eine Projektvorlage rendert.
 
+`Datadog`
+:   Gehostete Plattform für Monitoring und Observability.
+
 `dayjs`
 :   Minimalistische JavaScript-Bibliothek für Datum und Zeit.
 
@@ -78,6 +84,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `DOMPurify`
 :   Clientseitiger HTML-Sanitizer, der XSS-anfälliges Markup entfernt.
 
+`Echobind`
+:   Software-Beratung, deren Engineering-Blog die Specs zur Vererbung von `tsconfig.json` zitieren.
+
 `Eleventy`
 :   Static-Site-Generator, auch „11ty“ geschrieben.
 
@@ -86,6 +95,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `ESPHome`
 :   Framework, das Firmware für ESP-basierte Geräte baut, häufig mit Home Assistant.
+
+`Fairwinds`
+:   Kubernetes-Beratung hinter Open-Source-Werkzeugen wie Polaris und Goldilocks.
 
 `Figma`
 :   Browserbasiertes, kollaboratives Werkzeug für Interface-Design.
@@ -168,8 +180,17 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Mantine`
 :   React-Bibliothek für Komponenten und Hooks.
 
+`Marmelab`
+:   Französische Webentwicklungs-Agentur und Open-Source-Herausgeber.
+
+`Mergify`
+:   Dienst, der das Mergen von Pull Requests automatisiert, einschließlich Merge Queues.
+
 `Midjourney`
 :   Generativer KI-Bilddienst.
+
+`Midlibrary`
+:   Online-Katalog von Midjourney-Stilen und Style-Reference-Codes.
 
 `MkDocs`
 :   Static-Site-Generator für Projektdokumentation, hier mit dem Material-Theme genutzt.
@@ -258,6 +279,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `SDXL`
 :   Stable Diffusion XL, ein Text-zu-Bild-Modell.
 
+`Semgrep`
+:   Musterbasiertes Werkzeug zur statischen Analyse, das Fehler und Sicherheitslücken im Quellcode findet.
+
 `Shiki`
 :   Syntax-Highlighter, der TextMate-Grammatiken und Editor-Themes nutzt.
 
@@ -272,6 +296,12 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Skywork`
 :   Drittanbieter-KI-Dienst, auf den in den Specs des Projekts verwiesen wird.
+
+`Snyk`
+:   Developer-Security-Unternehmen, das Abhängigkeiten, Container und Code auf Schwachstellen prüft.
+
+`Sonrai`
+:   Sonrai Security, ein Unternehmen für Identitäts- und Zugriffssicherheit in der Cloud.
 
 `Spotify`
 :   Der Musik-Streaming-Dienst.
@@ -299,6 +329,9 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `Tauri`
 :   Framework zum Bau von Desktop-Apps mit Web-Frontend und Rust-Kern.
+
+`Tenki`
+:   Anbieter, dessen Blog die Specs zu GitHub-Merge-Queues zitieren.
 
 `Testcontainers`
 :   Eine Bibliothek, die Wegwerf-Docker-Container für Integrationstests bereitstellt.
@@ -1232,6 +1265,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Cohn`
 :   Mike Cohn, Autor zu agiler Schätzung und der Testpyramide.
 
+`Denzin`
+:   Norman K. Denzin, Soziologe, der die Formen der Triangulation in der Forschung systematisiert hat.
+
 `Desrosiers`
 :   Nachname, der als Quelle in den Specs zu Lesbarkeit/Schreiben zitiert wird.
 
@@ -1262,6 +1298,12 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Habib`
 :   Nachname, der als Quelle in den Specs des Projekts zitiert wird.
 
+`Hidekazu`
+:   Vorname von Hidekazu Konishi.
+
+`Inozemtseva`
+:   Laura Inozemtseva, Mitautorin der ICSE-2014-Studie, nach der Testabdeckung nicht stark mit der Wirksamkeit einer Testsuite korreliert.
+
 `Kalzumeus`
 :   Blog und Handle des Software-Autors Patrick McKenzie.
 
@@ -1271,6 +1313,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 `Kissane`
 :   Erin Kissane, Autorin im Bereich Content-Strategie.
 
+`Konishi`
+:   Hidekazu Konishi, Autor eines technischen Blogs zu AWS, zitiert zur Auswertung von IAM-Policies.
+
 `Lannon`
 :   John Lannon, Lehrbuchautor für technisches Schreiben.
 
@@ -1279,6 +1324,9 @@ Diese Nachnamen werden akzeptiert, weil sie als zitierte Autoren oder Quellen in
 
 `Meszaros`
 :   Gerard Meszaros, Autor eines grundlegenden Buchs über Unit-Test-Muster und Test-Doubles.
+
+`Mikulcik`
+:   Simon Mikulcik, Autor, zitiert zum JSON-Schema-Schlüsselwort `unevaluatedProperties`.
 
 `Ottinger`
 :   Tim Ottinger, Autor im Bereich Software-Handwerk.
