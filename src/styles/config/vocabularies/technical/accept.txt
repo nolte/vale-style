@@ -20,6 +20,7 @@ attestable
 attestation
 [Aa]uditability
 auditable
+[Aa]uto-tag(s|ged|ging)?
 [Aa]utoallow(s|ed|ing)?
 [Aa]utodetect(s|ed|ing|ion)?
 [Aa]utofix(es|ed|ing)?
@@ -29,7 +30,6 @@ autofocus
 [Aa]utomatable
 [Aa]utomations?
 [Aa]utomerge[ds]?
-[Aa]uto-tag(s|ged|ging)?
 [Bb]ackend
 backlink
 backoff
@@ -180,11 +180,11 @@ Kissane
 Komposita
 kp
 Lannon
-libvirt
 [Ll]atents
 Lc
 ledes?
 [Ll]ektor(at|ing|iert|ieren)?
+libvirt
 [Ll]inkability
 liveness
 LIX
@@ -197,18 +197,18 @@ lossy
 lowercased
 Mailchimp
 maintainer's
-mkosi
 [Mm]andatoriness
 Mantine
 Matuschak
 memoise
-mmdebstrap
 [Mm]ergeable
 Meszaros
 Midjourney
 misclassification
 mitigations
 MkDocs
+mkosi
+mmdebstrap
 mockist
 Mockito
 monolingually
@@ -220,7 +220,6 @@ multimodal
 MUSTs
 mutmut
 mypy
-nixpkgs
 [Nn]amespace[ds]?
 [Nn]ano
 navigations
@@ -228,6 +227,7 @@ Netlify
 Newswire
 NFRs
 nginx
+nixpkgs
 nolte
 nominalisation
 nominalisations
@@ -265,8 +265,8 @@ PYSECs?
 queryable
 querystring
 reachability
-READMEs?
 README's
+READMEs?
 Reauth
 [Rr]eauthenticat(e|es|ed|ing|ion)?
 Reauthentication
