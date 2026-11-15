@@ -252,8 +252,8 @@ def parse_vocabularies(aliases: dict[str, str], ignore: set[str]) -> list[dict]:
     return entries
 
 
-def glossary_keys(path: str | Path) -> set[str]:
-    """Normalized keys of every backtick lemma in a glossary file.
+def glossary_keys(text: str) -> set[str]:
+    """Normalized keys of every backtick lemma in a glossary's text.
 
     A lemma is any backtick token on a line that is *not* a definition body
     (definition lines start with ``:``). That captures definition-list terms,
@@ -262,7 +262,7 @@ def glossary_keys(path: str | Path) -> set[str]:
     (``git commit``, ``--sref``) that would otherwise mask a real gap.
     """
     keys: set[str] = set()
-    for raw in Path(path).read_text(encoding="utf-8").splitlines():
+    for raw in text.splitlines():
         if raw.lstrip().startswith(":"):
             continue
         for token in BACKTICK_TOKEN.findall(raw):
@@ -278,15 +278,27 @@ def find_gaps(entries: list[dict], covered: set[str]) -> list[dict]:
     return [e for e in entries if not (e["keys"] & covered)]
 
 
-def check() -> int:
+def compute_gaps() -> tuple[list[dict], list[tuple[dict, str, list[dict]]]]:
+    """Shared load -> parse -> per-language gap pipeline.
+
+    Returns the vocabulary entries and, per glossary, ``(cfg, text, gaps)``.
+    Each glossary file is read exactly once; the text is handed on so the stub
+    writer doesn't re-read it.
+    """
     aliases, ignore = load_overrides()
     entries = parse_vocabularies(aliases, ignore)
+    per_glossary = []
+    for cfg in GLOSSARIES.values():
+        text = cfg["path"].read_text(encoding="utf-8")
+        per_glossary.append((cfg, text, find_gaps(entries, glossary_keys(text))))
+    return entries, per_glossary
+
+
+def check() -> int:
+    entries, per_glossary = compute_gaps()
     exit_code = 0
-    for lang, cfg in GLOSSARIES.items():
-        path = cfg["path"]
-        covered = glossary_keys(path)
-        gaps = find_gaps(entries, covered)
-        rel = path.relative_to(REPO_ROOT)
+    for cfg, _text, gaps in per_glossary:
+        rel = cfg["path"].relative_to(REPO_ROOT)
         if gaps:
             exit_code = 1
             print(f"✗ {rel}: {len(gaps)} accept.txt term(s) without a glossary entry:")
@@ -304,17 +316,14 @@ def check() -> int:
 
 
 def write_stubs() -> int:
-    aliases, ignore = load_overrides()
-    entries = parse_vocabularies(aliases, ignore)
+    _entries, per_glossary = compute_gaps()
     total_written = 0
-    for lang, cfg in GLOSSARIES.items():
+    for cfg, text, gaps in per_glossary:
         path = cfg["path"]
-        covered = glossary_keys(path)
-        gaps = find_gaps(entries, covered)
         if not gaps:
             print(f"✓ {path.relative_to(REPO_ROOT)}: nothing to stub")
             continue
-        _append_stubs(path, gaps, cfg["placeholder"], cfg["subheading"])
+        path.write_text(_append_stubs(text, gaps, cfg), encoding="utf-8")
         total_written += len(gaps)
         print(f"+ {path.relative_to(REPO_ROOT)}: scaffolded {len(gaps)} stub(s)")
     if total_written:
@@ -336,9 +345,9 @@ def _group_section(text: str, group: str) -> re.Match | None:
     return re.search(rf"^## .*`{re.escape(group)}`.*$", text, re.MULTILINE)
 
 
-def _append_stubs(path: Path, gaps: list[dict], placeholder: str, subheading: str) -> None:
-    """Append missing lemmas under a TODO subsection within each group section."""
-    text = path.read_text(encoding="utf-8")
+def _append_stubs(text: str, gaps: list[dict], cfg: dict) -> str:
+    """Return ``text`` with missing lemmas under a TODO subsection per group."""
+    placeholder, subheading = cfg["placeholder"], cfg["subheading"]
     by_group: dict[str, list[dict]] = {}
     for e in gaps:
         by_group.setdefault(e["group"], []).append(e)
@@ -356,7 +365,7 @@ def _append_stubs(path: Path, gaps: list[dict], placeholder: str, subheading: st
         nxt = text.find("\n## ", match.end())
         insert_at = len(text) if nxt == -1 else nxt + 1
         text = text[:insert_at].rstrip() + "\n\n" + subsection + "\n\n" + text[insert_at:]
-    path.write_text(text.rstrip() + "\n", encoding="utf-8")
+    return text.rstrip() + "\n"
 
 
 def main(argv: list[str] | None = None) -> int:

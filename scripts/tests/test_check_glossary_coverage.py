@@ -69,17 +69,89 @@ class CorpusTest(unittest.TestCase):
         self.assertEqual(code, 0, out.getvalue())
 
 
+class TempRepo:
+    """Point the checker at a throwaway vocabulary + glossary pair."""
+
+    def __init__(self, accept: dict[str, str], en: str, de: str):
+        self._tmp = tempfile.TemporaryDirectory()
+        root = Path(self._tmp.name)
+        self.vocab = root / "vocab"
+        for group, body in accept.items():
+            (self.vocab / group).mkdir(parents=True)
+            (self.vocab / group / "accept.txt").write_text(body, encoding="utf-8")
+        self.en = root / "en.md"
+        self.de = root / "de.md"
+        self.en.write_text(en, encoding="utf-8")
+        self.de.write_text(de, encoding="utf-8")
+        self.aliases = root / "aliases.yml"
+        self.aliases.write_text("aliases: {}\nignore: []\n", encoding="utf-8")
+
+    def __enter__(self):
+        self._saved = (cgc.VOCAB_ROOT, cgc.ALIASES_PATH, cgc.REPO_ROOT,
+                       {k: dict(v) for k, v in cgc.GLOSSARIES.items()})
+        cgc.VOCAB_ROOT = self.vocab
+        cgc.ALIASES_PATH = self.aliases
+        cgc.REPO_ROOT = self.vocab.parent
+        cgc.GLOSSARIES["en"]["path"] = self.en
+        cgc.GLOSSARIES["de"]["path"] = self.de
+        return self
+
+    def __exit__(self, *exc):
+        cgc.VOCAB_ROOT, cgc.ALIASES_PATH, cgc.REPO_ROOT, glossaries = self._saved
+        for k, v in glossaries.items():
+            cgc.GLOSSARIES[k] = v
+        self._tmp.cleanup()
+
+
+def run_quiet(fn):
+    out = io.StringIO()
+    with contextlib.redirect_stdout(out), contextlib.redirect_stderr(io.StringIO()):
+        code = fn()
+    return code, out.getvalue()
+
+
+EN_HEAD = "# Glossary\n\n## `technical` vocabulary\n\n"
+DE_HEAD = "# Glossar\n\n## Vokabular `technical`\n\n"
+
+
+class GapReportingTest(unittest.TestCase):
+    def test_gap_is_reported_per_language(self):
+        with TempRepo({"technical": "[Ff]oo\nbar\n"},
+                      EN_HEAD + "`foo`\n:   Foo.\n",
+                      DE_HEAD + "`foo`\n:   Foo.\n\n`bar`\n:   Bar.\n"):
+            code, out = run_quiet(cgc.check)
+        self.assertEqual(code, 1)
+        self.assertIn("✗ en.md: 1 accept.txt term(s) without a glossary entry:", out)
+        self.assertIn("[technical] bar  (lemma: bar)", out)
+        self.assertIn("✓ de.md: all 2 vocabulary terms covered", out)
+
+    def test_each_glossary_is_read_once(self):
+        with TempRepo({"technical": "bar\n"}, EN_HEAD, DE_HEAD):
+            reads = []
+            original = Path.read_text
+
+            def counting(self, *a, **kw):
+                reads.append(self.name)
+                return original(self, *a, **kw)
+
+            Path.read_text = counting
+            try:
+                run_quiet(cgc.write_stubs)
+            finally:
+                Path.read_text = original
+        self.assertEqual(reads.count("en.md"), 1)
+        self.assertEqual(reads.count("de.md"), 1)
+
+
 class StubWritingTest(unittest.TestCase):
     def test_stub_lands_in_existing_group_section(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "glossary.md"
-            path.write_text("# Glossary\n\n## `technical` vocabulary\n\n`foo`\n:   Foo.\n",
-                            encoding="utf-8")
-            gaps = [{"group": "technical", "lemma": "bar"}]
-            cgc._append_stubs(path, gaps, "TODO: define", "### Uncovered")
-            text = path.read_text(encoding="utf-8")
-            self.assertIn("### Uncovered\n\n`bar`\n:   TODO: define", text)
+        with TempRepo({"technical": "bar\n"}, EN_HEAD + "`foo`\n:   Foo.\n", DE_HEAD):
+            run_quiet(cgc.write_stubs)
+            text = cgc.GLOSSARIES["en"]["path"].read_text(encoding="utf-8")
+            self.assertIn("`bar`\n:   TODO: define", text)
             self.assertEqual(text.count("## `technical` vocabulary"), 1)
+            code, _ = run_quiet(cgc.check)
+        self.assertEqual(code, 0)
 
 
 if __name__ == "__main__":
