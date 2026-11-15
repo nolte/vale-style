@@ -28,6 +28,10 @@ class ExpandRegexTest(unittest.TestCase):
             {"Agent", "Agents", "agent", "agents"},
         )
 
+    def test_case_insensitive_flag_is_dropped(self):
+        self.assertEqual(cgc.expand_regex("(?i)MUSTs"), {"MUSTs"})
+        self.assertEqual(cgc.candidate_keys("(?i)MUSTs"), {"must"})
+
     def test_class_range(self):
         self.assertEqual(cgc.expand_regex("v[1-3]"), {"v1", "v2", "v3"})
 

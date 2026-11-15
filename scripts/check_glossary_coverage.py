@@ -68,6 +68,9 @@ GLOSSARIES = {
 # Guard against a pathological regex expanding to an enormous literal set.
 EXPANSION_CAP = 5000
 
+# Inline flag a Vale vocabulary entry may start with to match case-insensitively.
+CASE_INSENSITIVE_FLAG = "(?i)"
+
 BACKTICK_TOKEN = re.compile(r"`([^`]+)`")
 
 
@@ -144,11 +147,15 @@ def expand_regex(pattern: str) -> set[str]:
     """Expand a (restricted) Vale-vocab regex to the set of literals it matches.
 
     Supports literals, ``\\``-escaped punctuation, ``[..]`` classes with ``x-y``
-    ranges, ``(..|..)`` groups, and a trailing ``?`` on any atom. Raises ExpansionTooLarge if the product
+    ranges, ``(..|..)`` groups, and a trailing ``?`` on any atom. A leading
+    ``(?i)`` flag is accepted and dropped: it widens what Vale matches to every
+    casing (and stops Vale.Terms forcing one), but the literals as written are
+    the forms the entry stands for. Raises ExpansionTooLarge if the product
     blows past EXPANSION_CAP, or ValueError on syntax outside this subset; the
     caller falls back to a mechanical single-key stem in that case.
     """
 
+    pattern = pattern.removeprefix(CASE_INSENSITIVE_FLAG)
     pos = 0
 
     def parse_sequence(stop: set[str]) -> set[str]:

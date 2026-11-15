@@ -1,5 +1,5 @@
 achievability
-ACs?
+ACs
 [Aa]ctionability
 addon
 ADRs?
@@ -156,7 +156,6 @@ fertigation
 Figma
 Fishburne
 Flesch
-FLUX
 focusable
 foliar
 formatters?
@@ -216,8 +215,7 @@ Jinja2?
 Jira
 JUnit
 Kalzumeus
-kamerplanter
-Kamerplanter('?s)?
+[Kk]amerplanter('?s)?
 kebab
 [Kk]eyless
 Kincaid
@@ -240,7 +238,7 @@ libvirt
 [Ll]inkability
 [Ll]istbox
 liveness
-LIX
+(?i)LIX
 LLMs?
 lockfiles?
 lookups?
@@ -275,10 +273,10 @@ Mockito
 monolingually
 [Mm]onorepos?
 MRs
-mS
+(?i)mS
 MUI('s)?
 multimodal
-MUSTs
+(?i)MUSTs
 mutmut
 mypy
 [Nn]amespace[ds]?
@@ -329,7 +327,7 @@ prepended
 Probot
 protan
 Protobuf
-PRs?
+(?i)PRs?
 pseudonymisation
 px
 [Pp]yright
@@ -361,7 +359,6 @@ Renovate
 [Rr]epointing
 [Rr]epos?
 [Rr]epurpose
-REST
 [Rr]etarget(s|ed|ing)?
 [Rr]etconning
 [Rr]eusability
@@ -457,8 +454,7 @@ textstat
 Thoughtworks
 thresholding
 [Tt]iering
-[Tt]odo
-TODOs?
+(TODO|[Tt]odo)s?
 tokenization
 tokenizer
 tokenizers
