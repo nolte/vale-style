@@ -68,6 +68,9 @@ GLOSSARIES = {
 # Guard against a pathological regex expanding to an enormous literal set.
 EXPANSION_CAP = 5000
 
+# Inline flag a Vale vocabulary entry may start with to match case-insensitively.
+CASE_INSENSITIVE_FLAG = "(?i)"
+
 BACKTICK_TOKEN = re.compile(r"`([^`]+)`")
 
 
@@ -144,11 +147,15 @@ def expand_regex(pattern: str) -> set[str]:
     """Expand a (restricted) Vale-vocab regex to the set of literals it matches.
 
     Supports literals, ``\\``-escaped punctuation, ``[..]`` classes with ``x-y``
-    ranges, ``(..|..)`` groups, and a trailing ``?`` on any atom. Raises ExpansionTooLarge if the product
+    ranges, ``(..|..)`` groups, and a trailing ``?`` on any atom. A leading
+    ``(?i)`` flag is accepted and dropped: it widens what Vale matches to every
+    casing (and stops Vale.Terms forcing one), but the literals as written are
+    the forms the entry stands for. Raises ExpansionTooLarge if the product
     blows past EXPANSION_CAP, or ValueError on syntax outside this subset; the
     caller falls back to a mechanical single-key stem in that case.
     """
 
+    pattern = pattern.removeprefix(CASE_INSENSITIVE_FLAG)
     pos = 0
 
     def parse_sequence(stop: set[str]) -> set[str]:
@@ -243,7 +250,7 @@ def display_lemma(pattern: str) -> str:
 
 def _mechanical_lemma(pattern: str) -> str:
     """Fallback lemma derivation for patterns ``expand_regex`` can't expand."""
-    s = pattern
+    s = pattern.removeprefix(CASE_INSENSITIVE_FLAG)
     # Leading case class [Aa] -> lowercase first letter.
     m = re.match(r"^\[([A-Za-z])[A-Za-z]\]", s)
     if m:
@@ -283,15 +290,19 @@ def candidate_keys(pattern: str) -> set[str]:
     return {normalize_key(lit) for lit in literals if lit}
 
 
+def iter_accept_entries(vocab_root: Path | None = None):
+    """Yield (group, entry) for every non-blank accept.txt line, in file order."""
+    for accept in sorted((vocab_root or VOCAB_ROOT).glob("*/accept.txt")):
+        for raw in accept.read_text(encoding="utf-8").splitlines():
+            if line := raw.strip():
+                yield accept.parent.name, line
+
+
 def parse_vocabularies(aliases: dict[str, str], ignore: set[str]) -> list[dict]:
     """One record per accept.txt entry across all vocabulary groups."""
     entries: list[dict] = []
-    for accept in sorted(VOCAB_ROOT.glob("*/accept.txt")):
-        group = accept.parent.name
-        for raw in accept.read_text(encoding="utf-8").splitlines():
-            line = raw.strip()
-            if not line or line in ignore:
-                continue
+    for group, line in iter_accept_entries():
+        if line not in ignore:
             if line in aliases:
                 keys = {normalize_key(aliases[line])}
             else:

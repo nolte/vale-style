@@ -6,9 +6,10 @@ Die Pflegeregeln für dieses Paket sind in der [Spec „Vocabulary and Style Cur
 
 1. Wähle die engste passende Gruppe: projektübergreifende Begriffe gehören in `src/styles/config/vocabularies/technical/accept.txt`; ESPHome-spezifische Hardware, GPIO-Pins oder YAML-Schlüssel in `src/styles/config/vocabularies/esphome/accept.txt`. Lege eine neue Gruppe nur an, wenn eine klar abgegrenzte Domäne es rechtfertigt — und aktualisiere im selben PR `docs/en/vocabularies.md`, `docs/de/vocabularies.md` und die Liste in der `README.md`.
 2. Bestätige vor dem Hinzufügen, dass ein aktuelles englisches Wörterbuch den Begriff weiterhin markiert. Wörter, die Vales Basis-Wörterbuch bereits kennt, gehören nicht in `accept.txt`.
-3. Füge den Begriff in einer eigenen Zeile hinzu. Bevorzuge eine **Regex, die Varianten zusammenfasst** (`LEDs?`, `[Hh]ostnames?`, `GPIO(0[0-9]|[1-3][0-9])`) gegenüber mehreren wörtlichen Einträgen.
+3. Füge den Begriff in einer eigenen Zeile hinzu. Bevorzuge eine **Regex, die Varianten zusammenfasst** (`CLIs?`, `[Hh]ostnames?`, `GPIO(0[0-9]|[1-3][0-9])`) gegenüber mehreren wörtlichen Einträgen.
 4. Halte Einträge case-sensitiv, sofern der Begriff nicht wirklich jede Schreibweise treffen soll — das Vokabular dient zugleich als sanfter Hinweis auf die korrekte Schreibweise.
 5. `accept.txt`-Dateien enthalten ausschließlich Regex-Einträge: keine Leerzeilen, keine Kommentarzeilen, weil Vale jede Zeile als Muster behandelt.
+6. Führe `task vocab:check` aus. Vale macht aus jedem Eintrag eine `Vale.Terms`-Ersetzung, daher darf ein Eintrag weder eine Form melden, die ein anderer Eintrag akzeptiert, noch einem gewöhnlichen englischen Wort seine Schreibweise aufzwingen (`REST` meldete früher „the rest of"). Der Check nennt den betroffenen Eintrag; die Abhilfen stehen unter [Wie Einträge gematcht werden](vocabularies.md#wie-eintrage-gematcht-werden).
 
 ## Eine Vale-Regel hinzufügen
 

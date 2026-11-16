@@ -31,7 +31,7 @@ ESPHome-specific terms. Opt-in: activate alongside `technical` when your docs co
 - **Hardware identifiers** — `ESP8285`, `HLW8012`, `SP111`, `NOUS`, `A1T`, `Gosund`.
 - **GPIO pins** — the regex `GPIO(0[0-9]|[1-3][0-9])` accepts any zero-padded two-digit pin name from `GPIO00` through `GPIO39`, so ESP8266 and ESP32 pin references both lint clean. Bare `GPIO` is accepted separately.
 - **YAML config keys** — `baud_rate`, `status_led`, `restore_mode`, `restore_from_flash`, `early_pin_init`, `turn_on_action`, `turn_off_action`.
-- **Domain words** — `automations`, `Datetime`, `dBm`, `hostname`, `hostnames`, `LED`, `LEDs`.
+- **Domain words** — `automations`, `Datetime`, `dBm`, `hostname`, `hostnames`, `LEDs`.
 
 ## How entries are matched
 
@@ -42,10 +42,20 @@ Each line in `accept.txt` is a **regex**, not a literal string. This is a Vale c
 | `ESPHome` | `ESPHome` |
 | `[Aa]llowlist` | `allowlist`, `Allowlist` |
 | `[hH]ostnames?` | `hostname`, `hostnames`, `Hostname`, `Hostnames` |
-| `LEDs?` | `LED`, `LEDs` |
+| `CLIs?` | `CLI`, `CLIs` |
 | `GPIO(0[0-9]|[1-3][0-9])` | `GPIO00`–`GPIO39` |
 
-Keep entries **case-sensitive by default**: write `[Aa]llowlist` rather than `(?i)allowlist`, so the vocabulary still flags unintended cross-case variants. For product or brand names, do not use a bracket-class entry at all — use the canonical casing the upstream publishes (`MkDocs`, `Probot`, `Claude`, `npm`, `mypy`, `Vitest`, `Pyright`) so off-brand casings in prose stay flagged.
+Keep entries **case-sensitive by default**: write `[Aa]llowlist` rather than `(?i)allowlist`, so the vocabulary still flags unintended cross-case variants. For product or brand names, do not use a bracket-class entry at all — use the canonical casing the upstream publishes (`MkDocs`, `Probot`, `Claude`, `Vitest`, `Pyright`) so off-brand casings in prose stay flagged. The one exception is a name whose canonical casing is lowercase: `[Nn]pm`, `[Mm]ypy`, and `[Kk]amerplanter('?s)?` let the name open a sentence.
+
+Vale also turns every entry into a `Vale.Terms` substitution, which flags any case-insensitive match that differs from the accepted form. An entry therefore must not flag a form another entry accepts, must not flag its own form at the start of a sentence, and must not force its casing onto an ordinary English word: a bare `REST` entry made Vale report "the rest of" in every consumer, and a bare `cron` entry reported "Cron jobs run nightly." `task vocab:check` (`scripts/check_vocab_terms.py`, also a pre-commit hook) refuses all three. Fix a reported entry with the narrowest remedy that works:
+
+- Give a plain lowercase entry a first-letter class: `[Cc]ron`, not `cron`. Mixed-case and underscore forms (`pH`, `baud_rate`) keep their casing.
+- Drop it when Vale already accepts its forms unaided, possessive included. `REST` and `REST's` pass spelling without any entry; `LIX's` does not, because Vale accepts a possessive only for a vocabulary entry, so that entry stays as `(?i)LIX`.
+- Keep only the form that needs accepting: `LEDs`, not `LEDs?`, because `LED` passes unaided and the singular entry forced "led".
+- Merge colliding entries into one pattern, such as `(TODO|[Tt]odo)s?`.
+- Add a leading `(?i)` flag, such as `(?i)MUSTs`, when the form must stay accepted but its casing must not be enforced.
+
+A brand whose casing is enforced on purpose although its lowercase or capitalised form is an ordinary word (`Renovate`, `Tailwind`, `pH`) is recorded with a reason in `scripts/vocab_terms_allow.yml`.
 
 ## Keeping the glossary in sync
 

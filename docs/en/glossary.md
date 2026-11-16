@@ -102,9 +102,6 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 `Figma`
 :   Browser-based collaborative interface-design tool.
 
-`FLUX`
-:   A family of text-to-image generation models by Black Forest Labs.
-
 `Fulcio`
 :   Sigstore's certificate authority that issues short-lived signing certificates bound to an OIDC identity.
 
@@ -859,9 +856,6 @@ Every term this package's vocabularies accept, defined. Entries are grouped into
 
 `renderer`
 :   A component that turns a model or markup into visual output.
-
-`REST`
-:   Representational State Transfer — an architectural style for HTTP APIs.
 
 `reusability`
 :   ISO/IEC 25010 maintainability sub-characteristic: how well an asset can be used in more than one system.
