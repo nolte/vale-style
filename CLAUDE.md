@@ -13,7 +13,7 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 - `src/styles/config/vocabularies/<group>/accept.txt` — the actual vocabularies. One entry per line; Vale treats entries as regex, so patterns like `[Aa]llowlist` or `CLIs?` are intentional and expand both cases/forms. Existing groups: `technical`, `esphome`.
 - `src/styles/nolte-styles/` — placeholder for a future custom Vale style (currently only `.keep`). `src/.vale.ini` already references `nolte-styles` in `BasedOnStyles`, so adding rule YAML here will light up automatically in the next release.
 - `docs/{en,de}/glossary.md` — every term any `accept.txt` accepts is defined here, in both languages. `scripts/check_glossary_coverage.py` (`task glossary:check`, also a pre-commit hook) expands each regex entry to its accepted forms and fails on any term missing from either glossary, so a vocabulary term can't ship undefined. Hard cases — variants folded into a sibling's definition, or non-lemma patterns like the GPIO pin range — are recorded in `scripts/glossary_aliases.yml`. To add a term: edit `accept.txt`, run `task glossary:stubs`, fill the `TODO` in both files. See the [curation spec](spec/vocabulary-and-style-curation/en.md).
-- `scripts/check_vocab_terms.py` (`task vocab:check`, also a pre-commit hook) — Vale turns every `accept.txt` entry into a `Vale.Terms` substitution, so this check lints every expanded form against the shipped vocabularies (each group alone and all together) and fails when an accepted form gets flagged, or when an entry forces its casing onto an ordinary English word (v0.2.0's `REST` flagged "the rest of" in consumers, #40). Deliberate brand casing goes into `scripts/vocab_terms_allow.yml` with a reason. It needs `vale` on `PATH`; the pre-commit hook installs the PyPI `vale` wrapper.
+- `scripts/check_vocab_terms.py` (`task vocab:check`, also a pre-commit hook) — Vale turns every `accept.txt` entry into a `Vale.Terms` substitution, so this check lints every expanded form against the shipped vocabularies (each group alone and all together) and fails when an accepted form or the sentence-initial capital of a lowercase form gets flagged (so a plain lowercase entry is written `[Cc]ron`), or when an entry forces its casing onto an ordinary English word (v0.2.0's `REST` flagged "the rest of" in consumers, #40). Deliberate brand casing goes into `scripts/vocab_terms_allow.yml` with a reason. `task vocab:check` and `task glossary:test` run through their pre-commit hooks, which install the pinned PyPI `vale` wrapper, so local and CI runs use the same Vale.
 
 ## Task entry points
 
@@ -23,7 +23,7 @@ A single release artifact, `nolte-styles.zip`, that downstream projects consume 
 - `task test` — `vale .` against this repo's own Markdown
 - `task glossary:check` — fail if any `accept.txt` term lacks a glossary entry (EN and DE)
 - `task glossary:stubs` — scaffold `TODO` glossary stubs for uncovered terms
-- `task glossary:test` — the glossary and Vale.Terms checkers' regression tests (`unittest` under `scripts/tests/`, also a pre-commit hook; the Vale.Terms tests skip without `vale`)
+- `task glossary:test` — the glossary and Vale.Terms checkers' regression tests (`unittest` under `scripts/tests/`, run through its pre-commit hook)
 - `task vocab:check` — fail if an `accept.txt` entry makes `Vale.Terms` flag an accepted form or an ordinary English word
 - `task docs` — `mkdocs build --strict`
 - `task docs:serve` — live-reload MkDocs preview

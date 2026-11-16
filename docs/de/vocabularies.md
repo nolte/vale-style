@@ -45,16 +45,17 @@ Jede Zeile in `accept.txt` ist eine **Regex**, kein wörtlicher String. Das ist 
 | `CLIs?` | `CLI`, `CLIs` |
 | `GPIO(0[0-9]|[1-3][0-9])` | `GPIO00`–`GPIO39` |
 
-Halte Einträge **standardmäßig case-sensitiv**: schreibe `[Aa]llowlist` statt `(?i)allowlist`, damit das Vokabular ungewollte Schreibweisen in anderer Groß-/Kleinschreibung weiterhin markiert. Verwende für Produkt- oder Markennamen gar keine Bracket-Klasse — nutze die kanonische Schreibweise des jeweiligen Herstellers (`MkDocs`, `Probot`, `Claude`, `npm`, `mypy`, `Vitest`, `Pyright`), damit abweichende Schreibweisen im Text markiert bleiben. Die einzige Ausnahme ist ein Projekt, dessen eigener kanonischer Name kleingeschrieben ist: `[Kk]amerplanter('?s)?` erlaubt den Namen auch am Satzanfang.
+Halte Einträge **standardmäßig case-sensitiv**: schreibe `[Aa]llowlist` statt `(?i)allowlist`, damit das Vokabular ungewollte Schreibweisen in anderer Groß-/Kleinschreibung weiterhin markiert. Verwende für Produkt- oder Markennamen gar keine Bracket-Klasse — nutze die kanonische Schreibweise des jeweiligen Herstellers (`MkDocs`, `Probot`, `Claude`, `Vitest`, `Pyright`), damit abweichende Schreibweisen im Text markiert bleiben. Die einzige Ausnahme ist ein Name, dessen kanonische Schreibweise klein ist: `[Nn]pm`, `[Mm]ypy` und `[Kk]amerplanter('?s)?` erlauben den Namen auch am Satzanfang.
 
-Außerdem macht Vale aus jedem Eintrag eine `Vale.Terms`-Ersetzung, die jeden Treffer ohne Beachtung der Groß-/Kleinschreibung meldet, der von der akzeptierten Form abweicht. Ein Eintrag darf deshalb weder eine Form melden, die ein anderer Eintrag akzeptiert, noch einem gewöhnlichen englischen Wort seine Schreibweise aufzwingen: Ein bloßer `REST`-Eintrag ließ Vale in jedem Consumer „the rest of" melden. `task vocab:check` (`scripts/check_vocab_terms.py`, auch als pre-commit-Hook) verhindert beides. Korrigiere einen gemeldeten Eintrag mit der engsten wirksamen Abhilfe:
+Außerdem macht Vale aus jedem Eintrag eine `Vale.Terms`-Ersetzung, die jeden Treffer ohne Beachtung der Groß-/Kleinschreibung meldet, der von der akzeptierten Form abweicht. Ein Eintrag darf deshalb weder eine Form melden, die ein anderer Eintrag akzeptiert, noch seine eigene Form am Satzanfang melden, noch einem gewöhnlichen englischen Wort seine Schreibweise aufzwingen: Ein bloßer `REST`-Eintrag ließ Vale in jedem Consumer „the rest of" melden, ein bloßer `cron`-Eintrag „Cron jobs run nightly.". `task vocab:check` (`scripts/check_vocab_terms.py`, auch als pre-commit-Hook) verhindert alle drei Fälle. Korrigiere einen gemeldeten Eintrag mit der engsten wirksamen Abhilfe:
 
+- Gib einem rein kleingeschriebenen Eintrag eine Klasse für den Anfangsbuchstaben: `[Cc]ron` statt `cron`. Formen mit gemischter Schreibung oder Unterstrich (`pH`, `baud_rate`) behalten ihre Schreibweise.
 - Streiche ihn, wenn Vale seine Formen schon ohne ihn akzeptiert, die Possessivform eingeschlossen. `REST` und `REST's` bestehen die Rechtschreibprüfung ohne Eintrag; `LIX's` nicht, weil Vale eine Possessivform nur für einen Vocabulary-Eintrag akzeptiert, daher bleibt dieser Eintrag als `(?i)LIX`.
 - Behalte nur die Form, die akzeptiert werden muss: `LEDs` statt `LEDs?`, weil `LED` ohne Eintrag besteht und der Singular-Eintrag „led" erzwang.
 - Führe kollidierende Einträge zu einem Muster zusammen, etwa `(TODO|[Tt]odo)s?`.
 - Ergänze ein vorangestelltes `(?i)`-Flag, etwa `(?i)MUSTs`, wenn die Form akzeptiert bleiben, ihre Schreibweise aber nicht erzwungen werden soll.
 
-Eine Marke, deren Schreibweise bewusst erzwungen wird, obwohl ihre Kleinschreibung ein gewöhnliches Wort ist (`Renovate`, `Tailwind`), steht mit Begründung in `scripts/vocab_terms_allow.yml`.
+Eine Marke, deren Schreibweise bewusst erzwungen wird, obwohl ihre Klein- oder Großschreibung ein gewöhnliches Wort ist (`Renovate`, `Tailwind`, `pH`), steht mit Begründung in `scripts/vocab_terms_allow.yml`.
 
 ## Das Glossar synchron halten
 

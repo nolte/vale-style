@@ -24,12 +24,12 @@ tasks:
   glossary:test:
     desc: Run the regression tests of the glossary-coverage and Vale.Terms checkers
     cmds:
-      - python3 -m unittest discover -s scripts/tests
+      - pre-commit run glossary-checker-tests --all-files
 
   vocab:check:
     desc: Fail if an accept.txt entry makes Vale.Terms flag an accepted form or an ordinary word
     cmds:
-      - python3 scripts/check_vocab_terms.py
+      - pre-commit run vocab-terms --all-files
 
   docs:
     desc: Build the MkDocs site in strict mode

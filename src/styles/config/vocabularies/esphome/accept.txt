@@ -1,4 +1,4 @@
-automations
+[Aa]utomations
 Datetime
 [hH]ostnames?
 dBm

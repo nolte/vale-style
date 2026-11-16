@@ -91,12 +91,24 @@ class VocabTermsCheckTest(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("a, b: accepted form 'kamerplanter'", err)
 
-    def test_shipped_vocabularies_pass(self):
-        err = io.StringIO()
-        with contextlib.redirect_stderr(err), contextlib.redirect_stdout(io.StringIO()):
-            code = cvt.check()
-        self.assertEqual(code, 0, err.getvalue())
+    def test_sentence_initial_lowercase_form_fails(self):
+        code, err = self.run_check({"fx": ["cron"]})
+        self.assertEqual(code, 1)
+        self.assertIn("sentence-initial 'Cron' of accepted form 'cron'", err)
 
+    def test_sentence_initial_case_class_passes(self):
+        code, err = self.run_check({"fx": ["[Cc]ron", "arXiv", "baud_rate"]})
+        self.assertEqual(code, 0, err)
+
+    def test_capitalised_ordinary_word_forcing_fails(self):
+        code, err = self.run_check({"fx": ["MRs"]})
+        self.assertEqual(code, 1)
+        self.assertIn("entry 'MRs' makes Vale.Terms flag the ordinary word 'Mrs'", err)
+
+    def test_forcing_is_attributed_to_the_reporting_entry(self):
+        code, err = self.run_check({"fx": ["Bun", "BUN"]}, allow={"Bun": "brand casing"})
+        self.assertEqual(code, 1)
+        self.assertIn("entry 'BUN' makes Vale.Terms flag", err)
 
 if __name__ == "__main__":
     unittest.main()
