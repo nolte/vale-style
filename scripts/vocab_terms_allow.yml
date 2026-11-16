@@ -1,0 +1,15 @@
+# accept.txt entries whose lowercase or capitalised form is an ordinary English
+# word, but whose casing is enforced on purpose: Vale.Terms flags that spelling
+# in consumer prose. Read by scripts/check_vocab_terms.py (task vocab:check);
+# an entry here that no longer forces any word fails the check.
+allow:
+  "APIs?": the acronym; capitalised "Apis" (the bee genus) is rare in technical prose
+  CI: acronym; capitalised "Ci" (the curie symbol) is rare in technical prose
+  "HA's": Home Assistant possessive; capitalised "Ha's" is rare in technical prose
+  LoRA: the fine-tuning method; capitalised "Lora" is rare in technical prose
+  pH: the acidity scale; capitalised "Ph" is never its correct spelling
+  "Anthropic('s)?": the company name; lowercase "anthropic" is rare in technical prose
+  Bun: the JavaScript runtime; lowercase "bun" is rare in technical prose
+  Gemma: the model family; lowercase "gemma" is rare in technical prose
+  Renovate: the dependency bot; its CLI name stays lowercase inside code spans
+  Tailwind: the CSS framework; lowercase "tailwind" is rare in technical prose

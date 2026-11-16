@@ -20,11 +20,19 @@ repos:
         # Re-run whenever a vocabulary, a glossary, or the checker itself changes.
         files: '^(src/styles/config/vocabularies/.*/accept\.txt|docs/(en|de)/glossary\.md|scripts/(check_glossary_coverage\.py|glossary_aliases\.yml))$'
         pass_filenames: false
+    -   id: vocab-terms
+        name: no accept.txt entry makes Vale.Terms flag accepted forms or ordinary words
+        entry: python scripts/check_vocab_terms.py
+        language: python
+        # The PyPI `vale` wrapper fetches the matching Vale release binary.
+        additional_dependencies: ['pyyaml', 'vale==3.17.1.0']
+        files: '^(src/styles/config/vocabularies/.*/accept\.txt|scripts/(check_vocab_terms\.py|check_glossary_coverage\.py|vocab_terms_allow\.yml))$'
+        pass_filenames: false
     -   id: glossary-checker-tests
-        name: glossary-coverage checker regression tests
+        name: glossary-coverage and Vale.Terms checker regression tests
         entry: python -m unittest discover -s scripts/tests
         language: python
-        additional_dependencies: ['pyyaml']
-        # The checker, its tests, and the corpus the corpus test reads.
-        files: '^(scripts/|src/styles/config/vocabularies/.*/accept\.txt|docs/(en|de)/glossary\.md)'
+        additional_dependencies: ['pyyaml', 'vale==3.17.1.0']
+        # The checkers and their tests; the fixture tests drive Vale.
+        files: '^scripts/'
         pass_filenames: false

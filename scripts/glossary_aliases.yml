@@ -15,11 +15,11 @@ aliases:
   "[Ii]nvokable": invocable        # "...also 'invokable'."
   "[Tt]riaged": triage             # "...triaged, triaging, triages."
   "[Tt]riaging": triage
-  "decompounder": decompounding    # "...the component that does it is a decompounder."
-  "deserialisation": deserialise   # "...the act is deserialisation."
-  "rebasing": rebase               # "...also rebases, rebasing."
-  "severities": severity           # "...plural severities."
-  "tokenization": tokenizer        # "...the act is tokenization."
+  "[Dd]ecompounder": decompounding    # "...the component that does it is a decompounder."
+  "[Dd]eserialisation": deserialise   # "...the act is deserialisation."
+  "[Rr]ebasing": rebase               # "...also rebases, rebasing."
+  "[Ss]everities": severity           # "...plural severities."
+  "[Tt]okenization": tokenizer        # "...the act is tokenization."
   "Reauth": reauthenticate         # "...also the short forms Reauth and Reauthentication..."
   "Reauthentication": reauthenticate
 

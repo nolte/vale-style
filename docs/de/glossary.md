@@ -102,9 +102,6 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 `Figma`
 :   Browserbasiertes, kollaboratives Werkzeug für Interface-Design.
 
-`FLUX`
-:   Eine Familie von Text-zu-Bild-Modellen von Black Forest Labs.
-
 `Fulcio`
 :   Zertifizierungsstelle von Sigstore, die kurzlebige, an eine OIDC-Identität gebundene Signaturzertifikate ausstellt.
 
@@ -859,9 +856,6 @@ Jeder Begriff, den die Vokabulare dieses Pakets akzeptieren, erklärt. Die Eintr
 
 `renderer`
 :   Eine Komponente, die ein Modell oder Markup in visuelle Ausgabe umwandelt.
-
-`REST`
-:   Representational State Transfer — ein Architekturstil für HTTP-APIs.
 
 `reusability`
 :   Teilmerkmal der Wartbarkeit nach ISO/IEC 25010: wie gut sich ein Bestandteil in mehr als einem System verwenden lässt.
